@@ -1,8 +1,8 @@
 version 3
-run D2DMulticast-1to2-0-20260710-11:02:43-691558
+run D2DMulticast-1to2-0-20260710-11:28:18-707349
 attr configname D2DMulticast-1to2
-attr datetime 20260710-11:02:43
-attr datetimef 20260710-110243
+attr datetime 20260710-11:28:18
+attr datetimef 20260710-112818
 attr experiment D2DMulticast-1to2
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.SingleCell_D2DMulticast
-attr processid 691558
+attr processid 707349
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -30,8 +30,7 @@ config *.eNB.mobility.initialX 300m
 config *.eNB.mobility.initialY 300m
 config *.numUeCell 0
 config *.numUeD2D 3
-config *.ue*[*].macCellId 1
-config *.ue*[*].masterId 1
+config *.ue*[*].servingNodeId 1
 config *.ue*[*].mobility.initFromDisplayString false
 config *.ueD2D[0].mobility.initialX 290m
 config *.ueD2D[0].mobility.initialY 350m
@@ -602,7 +601,7 @@ scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac sentPacketToUpperLayer:s
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromLowerLayer:count 1960
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 1960
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:count 490
-scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 20090
+scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 19600
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -612,10 +611,10 @@ scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.phy averageCqiUl:mean 15
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.phy averageCqiUl:count 490
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.phy averageCqiDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.phy averageCqiDl:count 0
-scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] measuredSinrUl:mean 58.204664289443997
-scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] measuredSinrDl:mean 73.714472141859034
+scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] measuredSinrUl:mean 63.846486541398491
+scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] measuredSinrDl:mean 79.806002113562116
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] rcvdSinrD2D:mean -nan
-scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] rcvdSinrUl:mean 60.388643968781061
+scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] rcvdSinrUl:mean 58.03826650666835
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic packetDropInterfaceDown:count 0
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic packetDropInterfaceDown:sum(packetBytes) 0
@@ -770,9 +769,9 @@ scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.phy averageCqiUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.phy averageCqiUl:count 0
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.phy averageCqiDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.phy averageCqiDl:count 0
-scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] measuredSinrUl:mean 58.928183761999513
-scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] measuredSinrDl:mean 66.618897944069943
-scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] rcvdSinrD2D:mean 55.641392883702807
+scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] measuredSinrUl:mean 54.51987498791744
+scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] measuredSinrDl:mean 76.418932673572627
+scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] rcvdSinrD2D:mean 61.235418058438782
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[1].cellularNic packetDropInterfaceDown:count 0
@@ -929,9 +928,9 @@ scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.phy averageCqiUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.phy averageCqiUl:count 0
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.phy averageCqiDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.phy averageCqiDl:count 0
-scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] measuredSinrUl:mean 50.743241268254444
-scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] measuredSinrDl:mean 66.346560240197576
-scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] rcvdSinrD2D:mean 43.875218283694821
+scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] measuredSinrUl:mean 58.060777770107386
+scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] measuredSinrDl:mean 75.637722750790971
+scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] rcvdSinrD2D:mean 49.469243458430391
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[2].cellularNic packetDropInterfaceDown:count 0

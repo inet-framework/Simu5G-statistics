@@ -1,8 +1,8 @@
 version 3
-run VideoStreaming-0-20260710-11:02:52-691673
+run VideoStreaming-0-20260710-11:28:32-707488
 attr configname VideoStreaming
-attr datetime 20260710-11:02:52
-attr datetimef 20260710-110252
+attr datetime 20260710-11:28:32
+attr datetimef 20260710-112832
 attr experiment VideoStreaming
 attr inifile omnetpp.ini
 attr iterationvars "$numUEs=1, $packetLen=1000B"
@@ -10,7 +10,7 @@ attr iterationvarsd numUEs=1/packetLen=1000B
 attr iterationvarsf numUEs=1,packetLen=1000B-
 attr measurement "$numUEs=1, $packetLen=1000B"
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 691673
+attr processid 707488
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -35,8 +35,7 @@ config **.mobility.constraintAreaMinX 300m
 config **.mobility.constraintAreaMinY 200m
 config **.mobility.constraintAreaMaxX 800m
 config **.mobility.constraintAreaMaxY 400m
-config **.ue[*].masterId 1
-config **.ue[*].macCellId 1
+config **.ue[*].servingNodeId 1
 config **.ue[*].mobility.initFromDisplayString false
 config **.ue[*].mobility.typename StationaryMobility
 config **.ue[*].app[*].typename UdpVideoStreamClient
@@ -393,7 +392,7 @@ scalar SingleCell.eNB.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 20
 scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:count 5335
 scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 5368
 scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:count 3000
-scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 2064000
+scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 2062000
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -582,20 +581,20 @@ scalar SingleCell.ue[0].cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 
 scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:count 2003
 scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 1037003
 scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromUpperLayer:count 2
-scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 64
+scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 62
 scalar SingleCell.ue[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell.ue[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell.ue[0].cellularNic.mac macBufferOverFlowDl:mean -nan
 scalar SingleCell.ue[0].cellularNic.phy distance:mean -nan
-scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:mean 12
+scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:mean 10
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:count 1
-scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:mean 14
+scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:mean 15
 scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:count 2000
-scalar SingleCell.ue[0].cellularNic.channelModel[0] measuredSinrUl:mean 23.101350848029554
-scalar SingleCell.ue[0].cellularNic.channelModel[0] measuredSinrDl:mean 32.034443821426898
+scalar SingleCell.ue[0].cellularNic.channelModel[0] measuredSinrUl:mean 19.79354838185689
+scalar SingleCell.ue[0].cellularNic.channelModel[0] measuredSinrDl:mean 41.88416582436458
 scalar SingleCell.ue[0].cellularNic.channelModel[0] rcvdSinrD2D:mean -nan
-scalar SingleCell.ue[0].cellularNic.channelModel[0] rcvdSinrUl:mean 21.915559055010206
-scalar SingleCell.ue[0].cellularNic.channelModel[0] rcvdSinrDl:mean 32.034443821429107
+scalar SingleCell.ue[0].cellularNic.channelModel[0] rcvdSinrUl:mean 22.515416860257275
+scalar SingleCell.ue[0].cellularNic.channelModel[0] rcvdSinrDl:mean 41.884165824366399
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:count 0
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.ue[0].cellularNic packetDropNoCarrier:count 0

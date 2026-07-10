@@ -1,8 +1,8 @@
 version 3
-run DoubleConnection-CBR-UL-0-20260710-11:04:51-692853
+run DoubleConnection-CBR-UL-0-20260710-11:31:19-708644
 attr configname DoubleConnection-CBR-UL
-attr datetime 20260710-11:04:51
-attr datetimef 20260710-110451
+attr datetime 20260710-11:31:19
+attr datetimef 20260710-113119
 attr experiment DoubleConnection-CBR-UL
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.MultiCell_withSecondaryGnb
-attr processid 692853
+attr processid 708644
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -87,10 +87,8 @@ config *.masterEnb2.x2App[1].client.connectAddress "\"masterEnb1%x2ppp1\""
 config *.numUe 1
 config **.dynamicCellAssociation true
 config **.enableHandover true
-config *.ue[*].macCellId 1
-config *.ue[*].masterId 1
-config *.ue[*].nrMacCellId 2
-config *.ue[*].nrMasterId 2
+config *.ue[*].servingNodeId 1
+config *.ue[*].nrServingNodeId 2
 config *.ue[*].mobility.typename LinearMobility
 config *.ue[*].mobility.initialX 300m
 config *.ue[*].mobility.initialY 350m
@@ -200,7 +198,7 @@ scalar MultiCell_withSecondaryGnb.server.app[1] cbrReceivedBytes:mean 1000
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrReceivedBytes:sum 778000
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrReceivedThroughput:simu5g_rateavg 19948.717948717949
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrJitter:mean -nan
-scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:mean 0.014598473629161729
+scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:mean 0.014621609875948363
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameLoss:mean -0.0012547051442910462
 scalar MultiCell_withSecondaryGnb.router.lo[0].lo rcvdPkFromHl:count 0
 scalar MultiCell_withSecondaryGnb.router.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
@@ -433,7 +431,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcPduThroughput
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcPduDelayD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcThroughputD2D:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcDelayD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 110850.24602464106
+scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 110843.4960558818
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcPduThroughputUl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.rlc.um rlcPduThroughputDl:simu5g_rateavg -nan
@@ -492,7 +490,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macThroughputUl:sim
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macDelayUl:mean -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macDelayDl:mean -nan
-scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macCellThroughputUl:simu5g_rateavg 117670.74430928966
+scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macCellThroughputUl:simu5g_rateavg 117670.04215510502
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac macCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac sentPacketToLowerLayer:count 1600
 scalar MultiCell_withSecondaryGnb.masterEnb1.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 1600
@@ -697,7 +695,7 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcPduThrough
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcPduDelayD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcThroughputD2D:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcDelayD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 113230.76244177994
+scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 113232.09579271331
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcPduThroughputUl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.rlc.um rlcPduThroughputDl:simu5g_rateavg -nan
@@ -756,7 +754,7 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macThroughputUl:
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macDelayUl:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macDelayDl:mean -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macCellThroughputUl:simu5g_rateavg 122894.76356664009
+scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macCellThroughputUl:simu5g_rateavg 122902.36640222387
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac macCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac sentPacketToLowerLayer:count 1602
 scalar MultiCell_withSecondaryGnb.secondaryGnb1.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 1602
@@ -924,7 +922,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcPduThroughput
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcPduDelayD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcThroughputD2D:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcDelayD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 43091.750881384192
+scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 43091.618427755864
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcPduThroughputUl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.rlc.um rlcPduThroughputDl:simu5g_rateavg -nan
@@ -983,7 +981,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macThroughputUl:sim
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macDelayUl:mean -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macDelayDl:mean -nan
-scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macCellThroughputUl:simu5g_rateavg 43379.686333631405
+scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macCellThroughputUl:simu5g_rateavg 43379.672520379063
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac macCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac sentPacketToLowerLayer:count 2381
 scalar MultiCell_withSecondaryGnb.masterEnb2.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 2381
@@ -1188,7 +1186,7 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcPduThrough
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcPduDelayD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcThroughputD2D:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcDelayD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 43069.988273434661
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 43070.088007929633
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcPduThroughputUl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.um rlcPduThroughputDl:simu5g_rateavg -nan
@@ -1223,7 +1221,7 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.am rlcPacketLoss
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.am rlcPacketLossDl:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.am rlcCellPacketLossUl:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.rlc.am rlcCellPacketLossDl:mean -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:mean 0.090561780467167508
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:mean 0.091100228199276947
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksDl:mean 0
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macCellPacketLossD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macCellThroughputD2D:simu5g_rateavg -nan
@@ -1247,14 +1245,14 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macThroughputUl:
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macDelayUl:mean -nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macDelayDl:mean -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macCellThroughputUl:simu5g_rateavg 43377.627217331188
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macCellThroughputUl:simu5g_rateavg 43377.666407740871
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macCellThroughputDl:simu5g_rateavg -nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:count 2198
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 2198
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:count 2204
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 2204
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUpperLayer:count 876
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 452454
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:count 4981
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 461875
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:count 4984
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 464555
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromUpperLayer:count 0
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac macBufferOverFlowD2D:mean -nan
@@ -1496,7 +1494,7 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac sentPacketToUpperLayer:s
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromLowerLayer:count 3981
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 3981
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:count 2409
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 1647102
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 1645506
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -1532,11 +1530,11 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcCellThroughputUl
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:simu5g_rateavg 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:simu5g_rateavg -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:mean 0.0040197889182056546
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:mean 0.0040316622691291357
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayDl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:simu5g_rateavg 28551.679805266154
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:simu5g_rateavg 28550.344343915898
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputDl:simu5g_rateavg -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:mean 0.014523960332411687
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:mean 0.014547707034258653
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:count 1516
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:sum(packetBytes) 783014
@@ -1571,50 +1569,50 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateD2D:mean 
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macPacketLossD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macThroughputD2D:simu5g_rateavg -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:mean 1.0032981530343008
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:mean 1.0052770448548813
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_4th_Ul:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:mean -nan
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:mean 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Dl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:mean 0
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:mean 0.14285714285714285
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:mean 0.0032981530343007917
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:mean 0.0046174142480211082
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:mean 0.0032873109796186721
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:mean 0.0052493438320209973
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macCellPacketLossUl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macCellPacketLossDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macPacketLossUl:mean 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macPacketLossDl:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macThroughputUl:simu5g_rateavg 30306.639840858275
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macThroughputUl:simu5g_rateavg 30308.076695101961
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macThroughputDl:simu5g_rateavg -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:mean 0.0040197889182056546
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:mean 0.0040316622691291357
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macCellThroughputUl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macCellThroughputDl:simu5g_rateavg -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac rcvdD2DModeSwitchNotification:count 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:count 2279
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:sum(packetBytes) 791264
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:count 2282
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:sum(packetBytes) 793944
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer:count 1516
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer:sum(packetBytes) 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:count 3800
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:sum(packetBytes) 3800
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:count 3806
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:sum(packetBytes) 3806
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:count 2274
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:sum(packetBytes) 1564512
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:sum(packetBytes) 1562996
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macBufferOverFlowD2D:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macBufferOverFlowUl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macBufferOverFlowDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy distance:mean 114.22680083374659
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:mean 14.902695595003287
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:count 1521
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:mean 14.902230971128608
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:count 1524
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:mean 37.673292288810231
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:mean 29.67329228881022
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:mean -nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:mean 37.606150612827797
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:mean 37.581206491336879
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:mean -nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic packetDropInterfaceDown:sum(packetBytes) 0
@@ -4353,10 +4351,10 @@ scalar MultiCell_withSecondaryGnb.server.app[0] cbrRcvdPkt:vector:max 797
 scalar MultiCell_withSecondaryGnb.server.app[0] cbrRcvdPkt:vector:starttime 1.0450026628000002
 scalar MultiCell_withSecondaryGnb.server.app[0] cbrRcvdPkt:vector:endtime 39.89500266280001
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:count 778
-scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:sum 11.357612483487825
+scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:sum 11.375612483487826
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:sumweights 778
-scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:mean 0.014598473629161729
-scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:stddev 0.0019611413421071898
+scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:mean 0.014621609875948363
+scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:stddev 0.0020179393244312751
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:min 0.014487045295999999
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:max 0.067487045295999998
 scalar MultiCell_withSecondaryGnb.server.app[1] cbrFrameDelay:vector:starttime 1.0420035736000004
@@ -4464,7 +4462,7 @@ scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:co
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:sum 127636480
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:mean 320694.67336683418
-scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:stddev 52531.331735192995
+scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:stddev 52854.644513216495
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:max 411200.00000000006
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue incomingDataRate:vector:starttime 0.10000000000000001
@@ -4482,7 +4480,7 @@ scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:co
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:sum 127636480
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:mean 320694.67336683418
-scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:stddev 52531.331735192995
+scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:stddev 52854.644513216495
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:max 411200.00000000006
 scalar MultiCell_withSecondaryGnb.router.ppp[0].queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -5364,7 +5362,7 @@ scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:count 
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:sum 127636480
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:mean 320694.67336683418
-scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:stddev 52531.331735192995
+scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:stddev 52854.644513216495
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:max 411200.00000000006
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue incomingDataRate:vector:starttime 0.10000000000000001
@@ -5382,7 +5380,7 @@ scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:count 
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:sum 127636480
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:mean 320694.67336683418
-scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:stddev 52531.331735192995
+scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:stddev 52854.644513216495
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:max 411200.00000000006
 scalar MultiCell_withSecondaryGnb.pgw.pppIf.queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -8622,7 +8620,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:sum 77629440
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:mean 195048.84422110554
-scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:stddev 168958.96740084424
+scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:stddev 169066.94973699364
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:max 425600.00000000006
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue incomingDataRate:vector:starttime 0.10000000000000001
@@ -8640,7 +8638,7 @@ scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:sum 77629440
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:mean 195048.84422110554
-scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:stddev 168958.96740084424
+scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:stddev 169066.94973699364
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:min 0
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:max 425600.00000000006
 scalar MultiCell_withSecondaryGnb.masterEnb2.pppIf.queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -9851,11 +9849,11 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFr
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max -inf
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime nan
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):endtime nan
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):count 4981
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sum 461875
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 4981
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):mean 92.727363983135916
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):stddev 252.89991978997725
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):count 4984
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sum 464555
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 4984
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):mean 93.209269662921344
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):stddev 253.58534527709193
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):min 1
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):max 896
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):starttime 18.027010000000001
@@ -9869,9 +9867,9 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUppe
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):max 894
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):starttime 18.036000000000001
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):endtime 39.892000000000003
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):count 2198
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sum 2198
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sumweights 2198
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):count 2204
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sum 2204
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sumweights 2204
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):mean 1
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):stddev 0
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):min 1
@@ -9888,10 +9886,10 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksD
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksDl:vector:starttime 1
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksDl:vector:endtime 40
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:count 39001
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:sum 3532
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:sum 3553
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:sumweights 39001
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:mean 0.090561780467167508
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:stddev 0.74723654634224512
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:mean 0.091100228199276947
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:stddev 0.74968918156396691
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:min 0
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:max 7
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.cellularNic.mac avgServedBlocksUl:vector:starttime 1
@@ -10179,9 +10177,9 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:sum 37290560
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:mean 93694.874371859303
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:stddev 85226.044078549661
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:stddev 85441.929264457402
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:min 0
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:max 171040
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:max 256560.00000000003
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:starttime 0.10000000000000001
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue incomingDataRate:vector:endtime 39.800000000000004
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingPacketLengths:vector:count 439
@@ -10197,9 +10195,9 @@ scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:sum 37290560
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:sumweights 398
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:mean 93694.874371859303
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:stddev 85226.044078549661
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:stddev 85441.929264457402
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:min 0
-scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:max 171040
+scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:max 256560.00000000003
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:starttime 0.10000000000000001
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue outgoingDataRate:vector:endtime 39.800000000000004
 scalar MultiCell_withSecondaryGnb.secondaryGnb2.x2ppp[0].queue droppedPacketLengthsQueueOverflow:vector:count 0
@@ -11049,10 +11047,10 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac harqErrorRate_4th_Dl:vec
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 2409
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 1647102
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 1645506
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 2409
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 683.72851805728521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 430.00399946510265
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 683.06600249066003
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 429.4694277974001
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 31
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 1975
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 1.0309898148010002
@@ -11310,19 +11308,19 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vec
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:count 758
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sum 11.009161931968059
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sum 11.02716193196806
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sumweights 758
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:mean 0.014523960332411687
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:stddev 0.00048601670648046525
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:mean 0.014547707034258653
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:stddev 0.00068669216706960579
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:min 0.014484382496
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:max 0.020484382496
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:max 0.026484382495999999
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:starttime 1.042
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:endtime 39.892000000000003
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:count 758
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sum 12570043.455912761
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sum 12567543.849018559
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sumweights 758
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:mean 16583.170786164592
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:stddev 23981.795720819948
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:mean 16579.873151739524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:stddev 23963.086977542556
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:min 60.380237061377777
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:max 514499.99999999994
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:starttime 1.042
@@ -11346,12 +11344,12 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:count 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sum 6.093999999999772
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sum 6.1119999999997692
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sumweights 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:mean 0.0040197889182056546
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:stddev 0.00034412210249059602
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:mean 0.0040316622691291357
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:stddev 0.00048643663654683475
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:min 0.0040000000000000001
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:max 0.01
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:max 0.016
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:starttime 1.036
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:endtime 39.892000000000003
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:count 1516
@@ -11454,19 +11452,19 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayDl:vector:max 
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayDl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:count 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:sum 6.093999999999772
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:sum 6.1119999999997692
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:sumweights 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:mean 0.0040197889182056546
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:stddev 0.00034412210249059602
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:mean 0.0040316622691291357
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:stddev 0.00048643663654683475
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:min 0.0040000000000000001
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:max 0.01
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:max 0.016
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:starttime 1.036
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac macDelayUl:vector:endtime 39.892000000000003
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:count 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sum 5
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sumweights 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:mean 0.0032873109796186721
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:stddev 0.057259585758641797
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:count 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sum 8
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sumweights 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:mean 0.0052493438320209973
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:stddev 0.072285661381278413
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:min 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:max 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRateUl:vector:starttime 1.0369999999999999
@@ -11490,19 +11488,19 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsDl:vecto
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:count 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sum 1521
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sum 1524
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sumweights 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:mean 1.0032981530343008
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:stddev 0.057353683748219274
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:mean 1.0052770448548813
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:stddev 0.081072772757655384
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:min 1
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:max 2
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:max 3
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:starttime 1.0369999999999999
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:endtime 39.893000000000001
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:count 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sum 5
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sum 7
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sumweights 1516
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:mean 0.0032981530343007917
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:stddev 0.057353683748219315
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:mean 0.0046174142480211082
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:stddev 0.067816867068009226
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:min 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:max 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:starttime 1.0369999999999999
@@ -11516,15 +11514,15 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:v
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:max -inf
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:endtime nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:count 5
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:sum 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:sumweights 5
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:mean 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:stddev 0
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:count 7
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:sum 1
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:sumweights 7
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:mean 0.14285714285714285
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:stddev 0.37796447300922725
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:min 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:max 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:starttime 1.349
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:endtime 22.649000000000001
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:max 1
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:starttime 1.1990000000000001
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Ul:vector:endtime 22.849
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:sum 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:sumweights 0
@@ -11534,15 +11532,15 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:v
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:max -inf
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_2nd_Dl:vector:endtime nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:count 0
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:count 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:sum 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:sumweights 0
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:mean -nan
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:sumweights 1
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:mean 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:stddev nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:min inf
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:max -inf
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:starttime nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:endtime nan
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:min 0
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:max 0
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:starttime 21.805
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Ul:vector:endtime 21.805
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Dl:vector:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Dl:vector:sum 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_3rd_Dl:vector:sumweights 0
@@ -11571,17 +11569,17 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:v
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):count 2274
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sum 1564512
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sum 1562996
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 2274
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):mean 688
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):stddev 389.98511821979577
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):mean 687.33333333333337
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):stddev 389.39921311811275
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):min 139
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):max 1031
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):max 1029
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):starttime 1.0275156175040001
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):endtime 39.887999999999998
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):count 3800
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sum 3800
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 3800
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):count 3806
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sum 3806
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 3806
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):mean 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):min 1
@@ -11597,11 +11595,11 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):max 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):starttime 1.032
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):endtime 39.887999999999998
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):count 2279
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sum 791264
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sumweights 2279
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):mean 347.19789381307589
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):stddev 391.27262351592339
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):count 2282
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sum 793944
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sumweights 2282
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):mean 347.91586327782647
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):stddev 391.51587942629016
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):min 1
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):max 896
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):starttime 1.028
@@ -11696,11 +11694,11 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:vector:mi
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:vector:max -inf
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiDl:vector:endtime nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:count 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:sum 22667
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:sumweights 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:mean 14.902695595003287
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:stddev 0.2964692982024098
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:count 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:sum 22711
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:sumweights 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:mean 14.902230971128608
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:stddev 0.29709958702113637
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:min 14
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:max 15
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrPhy averageCqiUl:vector:starttime 1.032
@@ -11723,11 +11721,11 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:max -inf
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:starttime nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:endtime nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:count 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sum 57198.955082111075
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sumweights 1521
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:mean 37.606150612827797
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:stddev 8.7881396228050193
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:count 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sum 57273.758692797404
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sumweights 1524
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:mean 37.581206491336879
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:stddev 8.7979328079745667
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:min 21.887533567692316
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:max 49.522965506624899
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:starttime 1.0329999999999999

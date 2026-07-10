@@ -1,8 +1,8 @@
 version 3
-run VoIP-UL-0-20260710-11:02:37-691446
+run VoIP-UL-0-20260710-11:28:09-707228
 attr configname VoIP-UL
-attr datetime 20260710-11:02:37
-attr datetimef 20260710-110237
+attr datetime 20260710-11:28:09
+attr datetimef 20260710-112809
 attr experiment VoIP-UL
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 691446
+attr processid 707228
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -39,10 +39,8 @@ config sim-time-limit 20s
 config *.gnb.mobility.initialX 450m
 config *.gnb.mobility.initialY 300m
 config *.numUe 1
-config *.ue[0].macCellId 0
-config *.ue[0].masterId 0
-config *.ue[0].nrMacCellId 1
-config *.ue[0].nrMasterId 1
+config *.ue[0].servingNodeId 0
+config *.ue[0].nrServingNodeId 1
 config *.ue[0].mobility.initialX 450m
 config *.ue[0].mobility.initialY 350m
 config sim-time-limit 20s
@@ -86,14 +84,14 @@ scalar SingleCell_Standalone.server.ppp[0].queue incomingPacketLengths:sum 0
 scalar SingleCell_Standalone.server.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.server.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
 scalar SingleCell_Standalone.server.ppp[0].ppp transmissionState:timeavg 0
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:count 697
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:sum(packetBytes) 52275
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:count 884
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:sum(packetBytes) 66300
 scalar SingleCell_Standalone.server.ppp[0].ppp txPk:count 0
 scalar SingleCell_Standalone.server.ppp[0].ppp txPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:count 0
 scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 0
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:count 697
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:sum(packetBytes) 47396
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:count 884
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:sum(packetBytes) 60112
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropIncorrectlyReceived:count 0
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropInterfaceDown:count 0
@@ -121,19 +119,19 @@ scalar SingleCell_Standalone.server.ipv4.arp arpReplySent:count 0
 scalar SingleCell_Standalone.server.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar SingleCell_Standalone.server.ipv4.arp arpRequestSent:count 0
 scalar SingleCell_Standalone.server.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar SingleCell_Standalone.server.udp packetReceived:count 697
-scalar SingleCell_Standalone.server.udp packetReceived:sum(packetBytes) 33456
+scalar SingleCell_Standalone.server.udp packetReceived:count 884
+scalar SingleCell_Standalone.server.udp packetReceived:sum(packetBytes) 42432
 scalar SingleCell_Standalone.server.udp packetSent:count 0
 scalar SingleCell_Standalone.server.udp packetSent:sum(packetBytes) 0
-scalar SingleCell_Standalone.server.udp passedUpPk:count 697
+scalar SingleCell_Standalone.server.udp passedUpPk:count 884
 scalar SingleCell_Standalone.server.udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.server.udp droppedPkBadChecksum:count 0
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:simu5g_rateavg 1626.3352240184179
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:simu5g_rateavg 1913.7927871360266
 scalar SingleCell_Standalone.server.app[0] voipPlayoutLoss:mean 0
 scalar SingleCell_Standalone.server.app[0] voipJitter:mean -nan
 scalar SingleCell_Standalone.server.app[0] voipTaildropLoss:mean 0
 scalar SingleCell_Standalone.server.app[0] voipMos:mean 4.4092858240000004
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:mean 0.0085214481462352575
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:mean 0.0086751757828687596
 scalar SingleCell_Standalone.server.app[0] voipFrameLoss:mean 0
 scalar SingleCell_Standalone.server.app[0] voipPlayoutDelay:mean 0
 scalar SingleCell_Standalone.router.lo[0].lo rcvdPkFromHl:count 0
@@ -150,19 +148,19 @@ scalar SingleCell_Standalone.router.ppp[0].queue queueLength:timeavg 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:last 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:max 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:timeavg 0
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPackets:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:sum 379168
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPackets:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:sum 379168
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPackets:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:sum 480896
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPackets:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:sum 480896
 scalar SingleCell_Standalone.router.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.router.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:timeavg 2.0910000000000165e-06
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:timeavg 2.6520000000000425e-06
 scalar SingleCell_Standalone.router.ppp[0].ppp rxPkOk:count 0
 scalar SingleCell_Standalone.router.ppp[0].ppp rxPkOk:sum(packetBytes) 0
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:count 697
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:sum(packetBytes) 52275
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:count 697
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 47396
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:count 884
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:sum(packetBytes) 66300
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:count 884
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 60112
 scalar SingleCell_Standalone.router.ppp[0].ppp passedUpPk:count 0
 scalar SingleCell_Standalone.router.ppp[0].ppp passedUpPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.router.ppp[0].ppp packetDropIncorrectlyReceived:count 0
@@ -186,14 +184,14 @@ scalar SingleCell_Standalone.router.ppp[1].queue incomingPacketLengths:sum 0
 scalar SingleCell_Standalone.router.ppp[1].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.router.ppp[1].queue droppedPacketLengthsQueueOverflow:sum 0
 scalar SingleCell_Standalone.router.ppp[1].ppp transmissionState:timeavg 0
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:count 697
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:sum(packetBytes) 52275
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:count 884
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:sum(packetBytes) 66300
 scalar SingleCell_Standalone.router.ppp[1].ppp txPk:count 0
 scalar SingleCell_Standalone.router.ppp[1].ppp txPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:count 0
 scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 0
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:count 697
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:sum(packetBytes) 47396
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:count 884
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:sum(packetBytes) 60112
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropIncorrectlyReceived:count 0
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropInterfaceDown:count 0
@@ -242,14 +240,14 @@ scalar SingleCell_Standalone.upf.ppp[0].queue incomingPacketLengths:sum 0
 scalar SingleCell_Standalone.upf.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.upf.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp transmissionState:timeavg 0
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:count 697
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:sum(packetBytes) 77367
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:count 884
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:sum(packetBytes) 98124
 scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:count 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:count 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 0
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:count 697
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:sum(packetBytes) 72488
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:count 884
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:sum(packetBytes) 91936
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropIncorrectlyReceived:count 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropInterfaceDown:count 0
@@ -283,19 +281,19 @@ scalar SingleCell_Standalone.upf.pppIf.queue queueLength:timeavg 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:last 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:max 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:timeavg 0
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPackets:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:sum 379168
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPackets:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:sum 379168
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPackets:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:sum 480896
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPackets:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:sum 480896
 scalar SingleCell_Standalone.upf.pppIf.queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.upf.pppIf.queue droppedPacketLengthsQueueOverflow:sum 0
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:timeavg 2.0910000000000165e-06
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:timeavg 2.6520000000000425e-06
 scalar SingleCell_Standalone.upf.pppIf.ppp rxPkOk:count 0
 scalar SingleCell_Standalone.upf.pppIf.ppp rxPkOk:sum(packetBytes) 0
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:count 697
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:sum(packetBytes) 52275
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:count 697
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 47396
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:count 884
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:sum(packetBytes) 66300
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:count 884
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 60112
 scalar SingleCell_Standalone.upf.pppIf.ppp passedUpPk:count 0
 scalar SingleCell_Standalone.upf.pppIf.ppp passedUpPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.upf.pppIf.ppp packetDropIncorrectlyReceived:count 0
@@ -306,11 +304,11 @@ scalar SingleCell_Standalone.upf.pppIf packetDropInterfaceDown:count 0
 scalar SingleCell_Standalone.upf.pppIf packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_Standalone.upf.pppIf packetDropNoCarrier:count 0
 scalar SingleCell_Standalone.upf.pppIf packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_Standalone.upf.udp packetReceived:count 697
-scalar SingleCell_Standalone.upf.udp packetReceived:sum(packetBytes) 58548
+scalar SingleCell_Standalone.upf.udp packetReceived:count 884
+scalar SingleCell_Standalone.upf.udp packetReceived:sum(packetBytes) 74256
 scalar SingleCell_Standalone.upf.udp packetSent:count 0
 scalar SingleCell_Standalone.upf.udp packetSent:sum(packetBytes) 0
-scalar SingleCell_Standalone.upf.udp passedUpPk:count 697
+scalar SingleCell_Standalone.upf.udp passedUpPk:count 884
 scalar SingleCell_Standalone.upf.udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.upf.udp droppedPkBadChecksum:count 0
 scalar SingleCell_Standalone.iUpf.lo[0].lo rcvdPkFromHl:count 0
@@ -327,19 +325,19 @@ scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:timeavg 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:last 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:max 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:timeavg 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPackets:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:sum 579904
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPackets:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:sum 579904
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPackets:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:sum 735488
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPackets:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:sum 735488
 scalar SingleCell_Standalone.iUpf.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:timeavg 3.0946799999999844e-06
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:timeavg 3.9249600000000308e-06
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rxPkOk:count 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rxPkOk:sum(packetBytes) 0
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:sum(packetBytes) 77367
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 72488
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:sum(packetBytes) 98124
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 91936
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp passedUpPk:count 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp passedUpPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp packetDropIncorrectlyReceived:count 0
@@ -363,14 +361,14 @@ scalar SingleCell_Standalone.iUpf.ppp[1].queue incomingPacketLengths:sum 0
 scalar SingleCell_Standalone.iUpf.ppp[1].queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.iUpf.ppp[1].queue droppedPacketLengthsQueueOverflow:sum 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp transmissionState:timeavg 0
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:count 697
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:sum(packetBytes) 77367
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:count 884
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:sum(packetBytes) 98124
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:count 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:count 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 0
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:count 697
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:sum(packetBytes) 72488
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:count 884
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:sum(packetBytes) 91936
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropIncorrectlyReceived:count 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropInterfaceDown:count 0
@@ -436,10 +434,10 @@ scalar SingleCell_Standalone.iUpf.udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.iUpf.udp droppedPkBadChecksum:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToLowerLayer:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToLowerLayer:sum(packetBytes) 0
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:count 697
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:sum(packetBytes) 47396
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:count 697
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:sum(packetBytes) 48093
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:count 884
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:sum(packetBytes) 60112
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:count 884
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:sum(packetBytes) 60996
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.tm rlcPacketLossUl:mean -nan
@@ -459,7 +457,7 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcPduThroughputD2D:simu5g_r
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 2805.4288718217626
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcCellThroughputUl:simu5g_rateavg 3301.2932103177081
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcCellThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcPduThroughputDl:simu5g_rateavg -nan
@@ -471,10 +469,10 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcDelayUl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um rlcDelayDl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToLowerLayer:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToLowerLayer:sum(packetBytes) 0
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:count 697
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:sum(packetBytes) 48093
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:count 697
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:sum(packetBytes) 49487
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:count 884
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:sum(packetBytes) 60996
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:count 884
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:sum(packetBytes) 62764
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.am rlcPacketLossTotal:mean -nan
@@ -494,7 +492,7 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc.am rlcPacketLossUl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.am rlcPacketLossDl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.am rlcCellPacketLossUl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.am rlcCellPacketLossDl:mean -nan
-scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:mean 0.0349
+scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:mean 0.044200000000000003
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:mean 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac macCellPacketLossD2D:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac macCellThroughputD2D:simu5g_rateavg -nan
@@ -518,14 +516,14 @@ scalar SingleCell_Standalone.gnb.cellularNic.mac macThroughputUl:simu5g_rateavg 
 scalar SingleCell_Standalone.gnb.cellularNic.mac macThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac macDelayUl:mean -nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac macDelayDl:mean -nan
-scalar SingleCell_Standalone.gnb.cellularNic.mac macCellThroughputUl:simu5g_rateavg 2968.0624296085316
+scalar SingleCell_Standalone.gnb.cellularNic.mac macCellThroughputUl:simu5g_rateavg 3492.6725268578625
 scalar SingleCell_Standalone.gnb.cellularNic.mac macCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:count 2093
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 2093
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:count 697
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 49487
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:count 4729
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 54913
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:count 2652
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 2652
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:count 884
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 62764
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:count 5102
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 68750
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:count 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac macBufferOverFlowD2D:mean -nan
@@ -546,19 +544,19 @@ scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:timeavg 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:last 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:max 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:timeavg 0
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPackets:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:sum 579904
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPackets:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:sum 579904
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPackets:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:sum 735488
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPackets:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:sum 735488
 scalar SingleCell_Standalone.gnb.pppIf.queue droppedPacketsQueueOverflow:count 0
 scalar SingleCell_Standalone.gnb.pppIf.queue droppedPacketLengthsQueueOverflow:sum 0
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:timeavg 3.0946799999999844e-06
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:timeavg 3.9249600000000308e-06
 scalar SingleCell_Standalone.gnb.pppIf.ppp rxPkOk:count 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp rxPkOk:sum(packetBytes) 0
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:count 697
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:sum(packetBytes) 77367
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:count 697
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 72488
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:count 884
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:sum(packetBytes) 98124
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:count 884
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 91936
 scalar SingleCell_Standalone.gnb.pppIf.ppp passedUpPk:count 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp passedUpPk:sum(packetBytes) 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp packetDropIncorrectlyReceived:count 0
@@ -619,8 +617,8 @@ scalar SingleCell_Standalone.gnb.ipv4.arp arpRequestSent:count 0
 scalar SingleCell_Standalone.gnb.ipv4.arp arpRequestSent:sum(packetBytes) 0
 scalar SingleCell_Standalone.gnb.udp packetReceived:count 0
 scalar SingleCell_Standalone.gnb.udp packetReceived:sum(packetBytes) 0
-scalar SingleCell_Standalone.gnb.udp packetSent:count 697
-scalar SingleCell_Standalone.gnb.udp packetSent:sum(packetBytes) 58548
+scalar SingleCell_Standalone.gnb.udp packetSent:count 884
+scalar SingleCell_Standalone.gnb.udp packetSent:sum(packetBytes) 74256
 scalar SingleCell_Standalone.gnb.udp passedUpPk:count 0
 scalar SingleCell_Standalone.gnb.udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.gnb.udp droppedPkBadChecksum:count 0
@@ -632,14 +630,14 @@ scalar SingleCell_Standalone.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:sum(packetBytes) 48162
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:sum(packetBytes) 60996
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromLowerLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromLowerLayer:sum(packetBytes) 0
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:sum(packetBytes) 47464
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:sum(packetBytes) 60112
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossUl:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossDl:mean -nan
@@ -768,18 +766,18 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:simu5
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:mean 0.0040000000000000027
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayDl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:simu5g_rateavg 2805.4288718217626
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:simu5g_rateavg 3301.2932103177081
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:mean 0.0085209505462352491
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:mean 0.0086746781828689022
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayDl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:sum(packetBytes) 49487
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:sum(packetBytes) 62764
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromLowerLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromLowerLayer:sum(packetBytes) 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:sum(packetBytes) 48162
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:sum(packetBytes) 60996
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.am rlcPacketLossTotal:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.am rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.am rlcCellThroughputDl:simu5g_rateavg -nan
@@ -821,34 +819,34 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macCellPacketLossUl:mean -n
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macCellPacketLossDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macPacketLossUl:mean 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macPacketLossDl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputUl:simu5g_rateavg 2968.0624296085316
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputUl:simu5g_rateavg 3492.6725268578625
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:mean 0.0040000000000000027
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macCellThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac rcvdD2DModeSwitchNotification:count 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:count 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:sum(packetBytes) 51579
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:sum(packetBytes) 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:count 2092
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:sum(packetBytes) 2092
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:count 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:sum(packetBytes) 99045
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:count 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:sum(packetBytes) 65416
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:sum(packetBytes) 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:count 2652
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:sum(packetBytes) 2652
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:count 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:sum(packetBytes) 123760
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macBufferOverFlowUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macBufferOverFlowDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy distance:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiD2D:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:mean 15
-scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:count 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:count 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:count 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:mean 53.767783643542316
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:mean 57.552864402990188
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:mean 50.067495889505196
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:mean 74.154434582531323
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:mean 56.894341716804817
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:mean 55.16117906166572
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic packetDropInterfaceDown:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic packetDropInterfaceDown:sum(packetBytes) 0
@@ -881,12 +879,12 @@ scalar SingleCell_Standalone.ue[0].ipv4.arp arpRequestSent:count 0
 scalar SingleCell_Standalone.ue[0].ipv4.arp arpRequestSent:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].udp packetReceived:count 0
 scalar SingleCell_Standalone.ue[0].udp packetReceived:sum(packetBytes) 0
-scalar SingleCell_Standalone.ue[0].udp packetSent:count 698
-scalar SingleCell_Standalone.ue[0].udp packetSent:sum(packetBytes) 33504
+scalar SingleCell_Standalone.ue[0].udp packetSent:count 884
+scalar SingleCell_Standalone.ue[0].udp packetSent:sum(packetBytes) 42432
 scalar SingleCell_Standalone.ue[0].udp passedUpPk:count 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:count 0
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:simu5g_rateavg 1632.4436118501083
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:simu5g_rateavg 1920.5943142592034
 scalar SingleCell_Standalone.server.ppp[0].queue queueingTime:histogram:count 0
 scalar SingleCell_Standalone.server.ppp[0].queue queueingTime:histogram:sumweights 0
 scalar SingleCell_Standalone.server.ppp[0].queue queueingTime:histogram:mean -nan
@@ -931,8 +929,8 @@ scalar SingleCell_Standalone.server.ppp[0].queue incomingPacketLengths:histogram
 scalar SingleCell_Standalone.server.ppp[0].queue incomingPacketLengths:histogram:rangemax 1
 scalar SingleCell_Standalone.server.ppp[0].queue incomingPacketLengths:histogram:underflows 0
 scalar SingleCell_Standalone.server.ppp[0].queue incomingPacketLengths:histogram:overflows 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:mean 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:min 0
@@ -942,8 +940,8 @@ scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:rangemin
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:rangemax 0.5
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:mean 544
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram:min 544
@@ -964,8 +962,8 @@ scalar SingleCell_Standalone.router.ppp[0].queue flowQueueingTime:histogram:rang
 scalar SingleCell_Standalone.router.ppp[0].queue flowQueueingTime:histogram:rangemax 1
 scalar SingleCell_Standalone.router.ppp[0].queue flowQueueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.router.ppp[0].queue flowQueueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:mean 544
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram:min 544
@@ -1063,8 +1061,8 @@ scalar SingleCell_Standalone.upf.ppp[0].queue incomingPacketLengths:histogram:ra
 scalar SingleCell_Standalone.upf.ppp[0].queue incomingPacketLengths:histogram:rangemax 1
 scalar SingleCell_Standalone.upf.ppp[0].queue incomingPacketLengths:histogram:underflows 0
 scalar SingleCell_Standalone.upf.ppp[0].queue incomingPacketLengths:histogram:overflows 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:mean 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:min 0
@@ -1074,8 +1072,8 @@ scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:rangemin -0.
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:rangemax 0.5
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:mean 544
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram:min 544
@@ -1096,8 +1094,8 @@ scalar SingleCell_Standalone.upf.pppIf.queue flowQueueingTime:histogram:rangemin
 scalar SingleCell_Standalone.upf.pppIf.queue flowQueueingTime:histogram:rangemax 1
 scalar SingleCell_Standalone.upf.pppIf.queue flowQueueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.upf.pppIf.queue flowQueueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:mean 544
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:min 544
@@ -1107,8 +1105,8 @@ scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:ran
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:rangemax 545
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:underflows 0
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram:overflows 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:mean 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:min 0
@@ -1118,8 +1116,8 @@ scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:rangemin -
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:rangemax 0.5
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:mean 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram:min 832
@@ -1140,8 +1138,8 @@ scalar SingleCell_Standalone.iUpf.ppp[0].queue flowQueueingTime:histogram:rangem
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowQueueingTime:histogram:rangemax 1
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowQueueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowQueueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:mean 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram:min 832
@@ -1239,8 +1237,8 @@ scalar SingleCell_Standalone.iUpf.pppIf.queue incomingPacketLengths:histogram:ra
 scalar SingleCell_Standalone.iUpf.pppIf.queue incomingPacketLengths:histogram:rangemax 1
 scalar SingleCell_Standalone.iUpf.pppIf.queue incomingPacketLengths:histogram:underflows 0
 scalar SingleCell_Standalone.iUpf.pppIf.queue incomingPacketLengths:histogram:overflows 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:mean 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:min 0
@@ -1250,8 +1248,8 @@ scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:rangemin -0.
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:rangemax 0.5
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:mean 832
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram:min 832
@@ -1272,8 +1270,8 @@ scalar SingleCell_Standalone.gnb.pppIf.queue flowQueueingTime:histogram:rangemin
 scalar SingleCell_Standalone.gnb.pppIf.queue flowQueueingTime:histogram:rangemax 1
 scalar SingleCell_Standalone.gnb.pppIf.queue flowQueueingTime:histogram:underflows 0
 scalar SingleCell_Standalone.gnb.pppIf.queue flowQueueingTime:histogram:overflows 0
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:mean 832
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram:min 832
@@ -1372,7 +1370,7 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.router.ppp[0].queue queueingTime:histogram
-field count 697
+field count 884
 field mean 0
 field stddev 0
 field min 0
@@ -1405,7 +1403,7 @@ bin	-0.080000000000000016	0
 bin	-0.059999999999999998	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	697
+bin	0	884
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.060000000000000053	0
@@ -1432,16 +1430,16 @@ bin	0.45999999999999996	0
 bin	0.47999999999999998	0
 bin	0.5	0
 statistic SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:histogram
-field count 697
+field count 884
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 379168
-field sqrsum 206267392
+field sum 480896
+field sqrsum 261607424
 bin	-inf	0
 bin	543	0
-bin	544	697
+bin	544	884
 bin	545	0
 statistic SingleCell_Standalone.router.ppp[0].queue flowQueueingTime:histogram
 field count 0
@@ -1455,16 +1453,16 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:histogram
-field count 697
+field count 884
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 379168
-field sqrsum 206267392
+field sum 480896
+field sqrsum 261607424
 bin	-inf	0
 bin	543	0
-bin	544	697
+bin	544	884
 bin	545	0
 statistic SingleCell_Standalone.router.ppp[1].queue queueingTime:histogram
 field count 0
@@ -1555,7 +1553,7 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.upf.pppIf.queue queueingTime:histogram
-field count 697
+field count 884
 field mean 0
 field stddev 0
 field min 0
@@ -1588,7 +1586,7 @@ bin	-0.080000000000000016	0
 bin	-0.059999999999999998	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	697
+bin	0	884
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.060000000000000053	0
@@ -1615,16 +1613,16 @@ bin	0.45999999999999996	0
 bin	0.47999999999999998	0
 bin	0.5	0
 statistic SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:histogram
-field count 697
+field count 884
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 379168
-field sqrsum 206267392
+field sum 480896
+field sqrsum 261607424
 bin	-inf	0
 bin	543	0
-bin	544	697
+bin	544	884
 bin	545	0
 statistic SingleCell_Standalone.upf.pppIf.queue flowQueueingTime:histogram
 field count 0
@@ -1638,19 +1636,19 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:histogram
-field count 697
+field count 884
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 379168
-field sqrsum 206267392
+field sum 480896
+field sqrsum 261607424
 bin	-inf	0
 bin	543	0
-bin	544	697
+bin	544	884
 bin	545	0
 statistic SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:histogram
-field count 697
+field count 884
 field mean 0
 field stddev 0
 field min 0
@@ -1683,7 +1681,7 @@ bin	-0.080000000000000016	0
 bin	-0.059999999999999998	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	697
+bin	0	884
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.060000000000000053	0
@@ -1710,16 +1708,16 @@ bin	0.45999999999999996	0
 bin	0.47999999999999998	0
 bin	0.5	0
 statistic SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:histogram
-field count 697
+field count 884
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 579904
-field sqrsum 482480128
+field sum 735488
+field sqrsum 611926016
 bin	-inf	0
 bin	831	0
-bin	832	697
+bin	832	884
 bin	833	0
 statistic SingleCell_Standalone.iUpf.ppp[0].queue flowQueueingTime:histogram
 field count 0
@@ -1733,16 +1731,16 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:histogram
-field count 697
+field count 884
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 579904
-field sqrsum 482480128
+field sum 735488
+field sqrsum 611926016
 bin	-inf	0
 bin	831	0
-bin	832	697
+bin	832	884
 bin	833	0
 statistic SingleCell_Standalone.iUpf.ppp[1].queue queueingTime:histogram
 field count 0
@@ -1833,7 +1831,7 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.gnb.pppIf.queue queueingTime:histogram
-field count 697
+field count 884
 field mean 0
 field stddev 0
 field min 0
@@ -1866,7 +1864,7 @@ bin	-0.080000000000000016	0
 bin	-0.059999999999999998	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	697
+bin	0	884
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.060000000000000053	0
@@ -1893,16 +1891,16 @@ bin	0.45999999999999996	0
 bin	0.47999999999999998	0
 bin	0.5	0
 statistic SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:histogram
-field count 697
+field count 884
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 579904
-field sqrsum 482480128
+field sum 735488
+field sqrsum 611926016
 bin	-inf	0
 bin	831	0
-bin	832	697
+bin	832	884
 bin	833	0
 statistic SingleCell_Standalone.gnb.pppIf.queue flowQueueingTime:histogram
 field count 0
@@ -1916,16 +1914,16 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:histogram
-field count 697
+field count 884
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 579904
-field sqrsum 482480128
+field sum 735488
+field sqrsum 611926016
 bin	-inf	0
 bin	831	0
-bin	832	697
+bin	832	884
 bin	833	0
 statistic SingleCell_Standalone.gnb.pppMEHostIf.queue queueingTime:histogram
 field count 0
@@ -2124,15 +2122,15 @@ scalar SingleCell_Standalone.server.ppp[0].ppp txPk:vector(packetBytes):min inf
 scalar SingleCell_Standalone.server.ppp[0].ppp txPk:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.server.ppp[0].ppp txPk:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.server.ppp[0].ppp txPk:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):sum 52275
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):sum 66300
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):mean 75
 scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):min 75
 scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):max 75
 scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):starttime 0.018000497600000005
-scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):endtime 19.986000497600006
+scalar SingleCell_Standalone.server.ppp[0].ppp rxPkOk:vector(packetBytes):endtime 19.729000497600005
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.server.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):sumweights 0
@@ -2160,15 +2158,15 @@ scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):
 scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.server.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):sum 47396
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):min 68
 scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):max 68
 scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):starttime 0.018000497600000005
-scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):endtime 19.986000497600006
+scalar SingleCell_Standalone.server.ppp[0].ppp passedUpPk:vector(packetBytes):endtime 19.729000497600005
 scalar SingleCell_Standalone.server.ppp[0] packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell_Standalone.server.ppp[0] packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.server.ppp[0] packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -2268,24 +2266,24 @@ scalar SingleCell_Standalone.server.udp packetSent:vector(packetBytes):min inf
 scalar SingleCell_Standalone.server.udp packetSent:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.server.udp packetSent:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.server.udp packetSent:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):count 697
-scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):sum 33456
-scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):count 884
+scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):sum 42432
+scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):mean 48
 scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):min 48
 scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):max 48
 scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):starttime 0.018000497600000005
-scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):endtime 19.986000497600006
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):count 698
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):sum 243253
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):sumweights 698
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):mean 348.5
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):stddev 201.63952985463936
+scalar SingleCell_Standalone.server.udp packetReceived:vector(packetBytes):endtime 19.729000497600005
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):count 885
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):sum 391170
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):sumweights 885
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):mean 442
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):stddev 255.62179093340222
 scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):min 0
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):max 697
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):max 884
 scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):starttime 0
-scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):endtime 19.986000497600006
+scalar SingleCell_Standalone.server.udp passedUpPk:vector(count):endtime 19.729000497600005
 scalar SingleCell_Standalone.server.udp droppedPkWrongPort:vector(count):count 1
 scalar SingleCell_Standalone.server.udp droppedPkWrongPort:vector(count):sum 0
 scalar SingleCell_Standalone.server.udp droppedPkWrongPort:vector(count):sumweights 1
@@ -2304,24 +2302,24 @@ scalar SingleCell_Standalone.server.udp droppedPkBadChecksum:vector(count):min 0
 scalar SingleCell_Standalone.server.udp droppedPkBadChecksum:vector(count):max 0
 scalar SingleCell_Standalone.server.udp droppedPkBadChecksum:vector(count):starttime 0
 scalar SingleCell_Standalone.server.udp droppedPkBadChecksum:vector(count):endtime 0
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:count 697
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:sum 5.9394493579259739
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:sumweights 697
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:mean 0.0085214481462352575
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:stddev 0.00020679026852094118
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:min 0.0080837104060000001
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:max 0.0089803021930000004
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:count 884
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:sum 7.6688553920559839
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:sumweights 884
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:mean 0.0086751757828687596
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:stddev 0.00018809254496647668
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:min 0.0084370985650000004
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:max 0.0088654018960000001
 scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:starttime 0.018000497600000005
-scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:endtime 19.986000497600006
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:count 697
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:sum 1176335.6791994045
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:sumweights 697
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:mean 1687.7125956949851
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:stddev 262.73749180273944
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:min 1287.7740048195178
+scalar SingleCell_Standalone.server.app[0] voipFrameDelay:vector:endtime 19.729000497600005
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:count 884
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:sum 1702009.1989722066
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:sumweights 884
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:mean 1925.3497725929938
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:stddev 82.950889079760231
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:min 1772.1940696067727
 scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:max 2222.1607918216664
 scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:starttime 0.018000497600000005
-scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:endtime 19.986000497600006
+scalar SingleCell_Standalone.server.app[0] voipReceivedThroughput:vector:endtime 19.729000497600005
 scalar SingleCell_Standalone.router.lo[0].lo rcvdPkFromHl:vector(packetBytes):count 0
 scalar SingleCell_Standalone.router.lo[0].lo rcvdPkFromHl:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.router.lo[0].lo rcvdPkFromHl:vector(packetBytes):sumweights 0
@@ -2358,65 +2356,65 @@ scalar SingleCell_Standalone.router.lo[0] packetDropNoCarrier:vector(packetBytes
 scalar SingleCell_Standalone.router.lo[0] packetDropNoCarrier:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.router.lo[0] packetDropNoCarrier:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.router.lo[0] packetDropNoCarrier:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:count 702
+scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:count 889
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:sum 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:sumweights 702
+scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:sumweights 889
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:mean 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:max 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:starttime 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:endtime 19.986000387600004
-scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:count 702
+scalar SingleCell_Standalone.router.ppp[0].queue queueLength:vector:endtime 19.729000387600006
+scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:count 889
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:sum 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:sumweights 702
+scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:sumweights 889
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:mean 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:max 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:starttime 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:endtime 19.986000387600004
-scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:count 697
+scalar SingleCell_Standalone.router.ppp[0].queue queueBitLength:vector:endtime 19.729000387600006
+scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:count 884
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:sum 0
-scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:mean 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:max 0
 scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:endtime 19.986000387600004
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:sum 379168
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue queueingTime:vector:endtime 19.729000387600006
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:sum 480896
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:mean 544
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:min 544
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:max 544
 scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[0].queue incomingPacketLengths:vector:endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:count 200
-scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:sum 3791680.0000000005
+scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:sum 4808960.0000000009
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:mean 18958.400000000001
-scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:stddev 11997.753786421772
+scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:mean 24044.800000000003
+scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:stddev 8490.1982480656552
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:max 27200.000000000004
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:starttime 0.10000000000000001
 scalar SingleCell_Standalone.router.ppp[0].queue incomingDataRate:vector:endtime 20
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:sum 379168
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:sum 480896
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:mean 544
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:min 544
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:max 544
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingPacketLengths:vector:endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:count 200
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:sum 3791680.0000000005
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:sum 4808960.0000000009
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:mean 18958.400000000001
-scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:stddev 11997.753786421772
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:mean 24044.800000000003
+scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:stddev 8490.1982480656552
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:max 27200.000000000004
 scalar SingleCell_Standalone.router.ppp[0].queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -2457,24 +2455,24 @@ scalar SingleCell_Standalone.router.ppp[0].queue flowOutgoingDataRate:vector:min
 scalar SingleCell_Standalone.router.ppp[0].queue flowOutgoingDataRate:vector:max -inf
 scalar SingleCell_Standalone.router.ppp[0].queue flowOutgoingDataRate:vector:starttime nan
 scalar SingleCell_Standalone.router.ppp[0].queue flowOutgoingDataRate:vector:endtime nan
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:count 1395
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:sum 697
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:sumweights 1395
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:mean 0.49964157706093187
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:stddev 0.50017917936428946
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:count 1769
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:sum 884
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:sumweights 1769
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:mean 0.49971735443753534
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:stddev 0.50014130281474689
 scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:min 0
 scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:max 1
 scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:starttime 0
-scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:endtime 19.986000447600006
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):sum 52275
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].ppp transmissionState:vector:endtime 19.729000447600004
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):sum 66300
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):mean 75
 scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):min 75
 scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):max 75
 scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[0].ppp txPk:vector(packetBytes):endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[0].ppp rxPkOk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.router.ppp[0].ppp rxPkOk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.router.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 0
@@ -2502,15 +2500,15 @@ scalar SingleCell_Standalone.router.ppp[0].ppp packetDropInterfaceDown:vector(pa
 scalar SingleCell_Standalone.router.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.router.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.router.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):count 697
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sum 47396
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):count 884
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):min 68
 scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):max 68
 scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[0].ppp passedUpPk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.router.ppp[0].ppp passedUpPk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.router.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 0
@@ -2655,15 +2653,15 @@ scalar SingleCell_Standalone.router.ppp[1].ppp txPk:vector(packetBytes):min inf
 scalar SingleCell_Standalone.router.ppp[1].ppp txPk:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.router.ppp[1].ppp txPk:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.router.ppp[1].ppp txPk:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):sum 52275
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):sum 66300
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):mean 75
 scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):min 75
 scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):max 75
 scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[1].ppp rxPkOk:vector(packetBytes):endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.router.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):sumweights 0
@@ -2691,15 +2689,15 @@ scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):
 scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.router.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):sum 47396
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):min 68
 scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):max 68
 scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):starttime 0.018000387600000004
-scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):endtime 19.986000387600004
+scalar SingleCell_Standalone.router.ppp[1].ppp passedUpPk:vector(packetBytes):endtime 19.729000387600006
 scalar SingleCell_Standalone.router.ppp[1] packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell_Standalone.router.ppp[1] packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.router.ppp[1] packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -2943,15 +2941,15 @@ scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:vector(packetBytes):min inf
 scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.upf.ppp[0].ppp txPk:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):sum 77367
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):sum 98124
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):mean 111
 scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):min 111
 scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):max 111
 scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.ppp[0].ppp rxPkOk:vector(packetBytes):endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes):sumweights 0
@@ -2979,15 +2977,15 @@ scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):min
 scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.upf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):sum 72488
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):sum 91936
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):mean 104
 scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):min 104
 scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):max 104
 scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.ppp[0].ppp passedUpPk:vector(packetBytes):endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.ppp[0] packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell_Standalone.upf.ppp[0] packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.upf.ppp[0] packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -3078,65 +3076,65 @@ scalar SingleCell_Standalone.upf.ipv4.arp arpReplySent:vector(packetBytes):min i
 scalar SingleCell_Standalone.upf.ipv4.arp arpReplySent:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.upf.ipv4.arp arpReplySent:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.upf.ipv4.arp arpReplySent:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:count 702
+scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:count 889
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:sum 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:sumweights 702
+scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:sumweights 889
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:mean 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:max 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:starttime 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:endtime 19.986000277600006
-scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:count 702
+scalar SingleCell_Standalone.upf.pppIf.queue queueLength:vector:endtime 19.729000277600004
+scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:count 889
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:sum 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:sumweights 702
+scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:sumweights 889
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:mean 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:max 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:starttime 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:endtime 19.986000277600006
-scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:count 697
+scalar SingleCell_Standalone.upf.pppIf.queue queueBitLength:vector:endtime 19.729000277600004
+scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:count 884
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:sum 0
-scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:mean 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:max 0
 scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:endtime 19.986000277600006
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:sum 379168
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue queueingTime:vector:endtime 19.729000277600004
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:sum 480896
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:mean 544
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:min 544
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:max 544
 scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.pppIf.queue incomingPacketLengths:vector:endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:count 200
-scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:sum 3791680.0000000005
+scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:sum 4808960.0000000009
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:mean 18958.400000000001
-scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:stddev 11997.753786421772
+scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:mean 24044.800000000003
+scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:stddev 8490.1982480656552
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:max 27200.000000000004
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:starttime 0.10000000000000001
 scalar SingleCell_Standalone.upf.pppIf.queue incomingDataRate:vector:endtime 20
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:sum 379168
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:sum 480896
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:mean 544
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:min 544
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:max 544
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingPacketLengths:vector:endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:count 200
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:sum 3791680.0000000005
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:sum 4808960.0000000009
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:mean 18958.400000000001
-scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:stddev 11997.753786421772
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:mean 24044.800000000003
+scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:stddev 8490.1982480656552
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:max 27200.000000000004
 scalar SingleCell_Standalone.upf.pppIf.queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -3177,24 +3175,24 @@ scalar SingleCell_Standalone.upf.pppIf.queue flowOutgoingDataRate:vector:min inf
 scalar SingleCell_Standalone.upf.pppIf.queue flowOutgoingDataRate:vector:max -inf
 scalar SingleCell_Standalone.upf.pppIf.queue flowOutgoingDataRate:vector:starttime nan
 scalar SingleCell_Standalone.upf.pppIf.queue flowOutgoingDataRate:vector:endtime nan
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:count 1395
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:sum 697
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:sumweights 1395
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:mean 0.49964157706093187
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:stddev 0.50017917936428946
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:count 1769
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:sum 884
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:sumweights 1769
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:mean 0.49971735443753534
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:stddev 0.50014130281474689
 scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:min 0
 scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:max 1
 scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:starttime 0
-scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:endtime 19.986000337600007
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):sum 52275
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.ppp transmissionState:vector:endtime 19.729000337600006
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):sum 66300
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):mean 75
 scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):min 75
 scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):max 75
 scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.pppIf.ppp txPk:vector(packetBytes):endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.pppIf.ppp rxPkOk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.upf.pppIf.ppp rxPkOk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.upf.pppIf.ppp rxPkOk:vector(packetBytes):sumweights 0
@@ -3222,15 +3220,15 @@ scalar SingleCell_Standalone.upf.pppIf.ppp packetDropInterfaceDown:vector(packet
 scalar SingleCell_Standalone.upf.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.upf.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.upf.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):count 697
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sum 47396
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):count 884
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):min 68
 scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):max 68
 scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.pppIf.ppp rcvdPkFromHl:vector(packetBytes):endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.pppIf.ppp passedUpPk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.upf.pppIf.ppp passedUpPk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.upf.pppIf.ppp passedUpPk:vector(packetBytes):sumweights 0
@@ -3267,24 +3265,24 @@ scalar SingleCell_Standalone.upf.udp packetSent:vector(packetBytes):min inf
 scalar SingleCell_Standalone.upf.udp packetSent:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.upf.udp packetSent:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.upf.udp packetSent:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):count 697
-scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):sum 58548
-scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):count 884
+scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):sum 74256
+scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):mean 84
 scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):min 84
 scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):max 84
 scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):starttime 0.018000277600000007
-scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):endtime 19.986000277600006
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):count 698
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):sum 243253
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):sumweights 698
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):mean 348.5
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):stddev 201.63952985463936
+scalar SingleCell_Standalone.upf.udp packetReceived:vector(packetBytes):endtime 19.729000277600004
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):count 885
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):sum 391170
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):sumweights 885
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):mean 442
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):stddev 255.62179093340222
 scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):min 0
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):max 697
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):max 884
 scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):starttime 0
-scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):endtime 19.986000277600006
+scalar SingleCell_Standalone.upf.udp passedUpPk:vector(count):endtime 19.729000277600004
 scalar SingleCell_Standalone.upf.udp droppedPkWrongPort:vector(count):count 1
 scalar SingleCell_Standalone.upf.udp droppedPkWrongPort:vector(count):sum 0
 scalar SingleCell_Standalone.upf.udp droppedPkWrongPort:vector(count):sumweights 1
@@ -3339,65 +3337,65 @@ scalar SingleCell_Standalone.iUpf.lo[0] packetDropNoCarrier:vector(packetBytes):
 scalar SingleCell_Standalone.iUpf.lo[0] packetDropNoCarrier:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.iUpf.lo[0] packetDropNoCarrier:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.iUpf.lo[0] packetDropNoCarrier:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:count 702
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:count 889
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:sum 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:sumweights 702
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:sumweights 889
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:mean 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:max 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:starttime 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:endtime 19.986000138800005
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:count 702
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueLength:vector:endtime 19.729000138800007
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:count 889
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:sum 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:sumweights 702
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:sumweights 889
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:mean 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:max 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:starttime 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:endtime 19.986000138800005
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:count 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueBitLength:vector:endtime 19.729000138800007
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:count 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:sum 0
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:mean 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:max 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:endtime 19.986000138800005
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:sum 579904
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue queueingTime:vector:endtime 19.729000138800007
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:sum 735488
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:mean 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:min 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:max 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingPacketLengths:vector:endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:count 200
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:sum 5799040
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:sum 7354880
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:mean 28995.200000000001
-scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:stddev 18349.505790998006
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:mean 36774.400000000001
+scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:stddev 12985.009085276899
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:max 41600
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:starttime 0.10000000000000001
 scalar SingleCell_Standalone.iUpf.ppp[0].queue incomingDataRate:vector:endtime 20
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:sum 579904
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:sum 735488
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:mean 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:min 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:max 832
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingPacketLengths:vector:endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:count 200
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:sum 5799040
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:sum 7354880
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:mean 28995.200000000001
-scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:stddev 18349.505790998006
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:mean 36774.400000000001
+scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:stddev 12985.009085276899
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:max 41600
 scalar SingleCell_Standalone.iUpf.ppp[0].queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -3438,24 +3436,24 @@ scalar SingleCell_Standalone.iUpf.ppp[0].queue flowOutgoingDataRate:vector:min i
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowOutgoingDataRate:vector:max -inf
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowOutgoingDataRate:vector:starttime nan
 scalar SingleCell_Standalone.iUpf.ppp[0].queue flowOutgoingDataRate:vector:endtime nan
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:count 1395
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:sum 697
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:sumweights 1395
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:mean 0.49964157706093187
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:stddev 0.50017917936428946
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:count 1769
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:sum 884
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:sumweights 1769
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:mean 0.49971735443753534
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:stddev 0.50014130281474689
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:min 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:max 1
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:starttime 0
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:endtime 19.986000227600005
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):sum 77367
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp transmissionState:vector:endtime 19.729000227600007
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):sum 98124
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):mean 111
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):min 111
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):max 111
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp txPk:vector(packetBytes):endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rxPkOk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rxPkOk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rxPkOk:vector(packetBytes):sumweights 0
@@ -3483,15 +3481,15 @@ scalar SingleCell_Standalone.iUpf.ppp[0].ppp packetDropInterfaceDown:vector(pack
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp packetDropInterfaceDown:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):count 697
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sum 72488
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):count 884
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sum 91936
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):mean 104
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):min 104
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):max 104
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[0].ppp rcvdPkFromHl:vector(packetBytes):endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp passedUpPk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp passedUpPk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.iUpf.ppp[0].ppp passedUpPk:vector(packetBytes):sumweights 0
@@ -3636,15 +3634,15 @@ scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:vector(packetBytes):min inf
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp txPk:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):sum 77367
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):sum 98124
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):mean 111
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):min 111
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):max 111
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes):endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes):sumweights 0
@@ -3672,15 +3670,15 @@ scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):mi
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp rcvdPkFromHl:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):sum 72488
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):sum 91936
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):mean 104
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):min 104
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):max 104
 scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):starttime 0.018000138800000006
-scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):endtime 19.986000138800005
+scalar SingleCell_Standalone.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes):endtime 19.729000138800007
 scalar SingleCell_Standalone.iUpf.ppp[1] packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell_Standalone.iUpf.ppp[1] packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.iUpf.ppp[1] packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -4005,24 +4003,24 @@ scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:v
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sum 48093
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sum 60996
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):mean 69
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):min 69
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):max 69
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):sum 47396
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):min 68
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):max 68
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):count 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.gnb.cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sumweights 0
@@ -4167,24 +4165,24 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):sum 49487
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):sum 62764
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):mean 71
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):min 71
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):sum 48093
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):sum 60996
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):mean 69
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):min 69
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):max 69
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToLowerLayer:vector(packetBytes):count 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToLowerLayer:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlc.um sentPacketToLowerLayer:vector(packetBytes):sumweights 0
@@ -4374,33 +4372,33 @@ scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:ve
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):count 4729
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sum 54913
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 4729
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):mean 11.611968703742864
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):stddev 25.526175819775666
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):count 5102
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sum 68750
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 5102
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):mean 13.475107800862407
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):stddev 27.252981897178255
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):max 73
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.002
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes):endtime 20
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):sum 49487
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):sum 62764
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):mean 71
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):min 71
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):count 2093
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sum 2093
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sumweights 2093
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes):endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):count 2652
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sum 2652
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):sumweights 2652
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):mean 1
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):max 1
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):starttime 0.010999999999999999
-scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):endtime 20
+scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:count 20000
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:sum 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:sumweights 20000
@@ -4411,10 +4409,10 @@ scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:max 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:starttime 0.001
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksDl:vector:endtime 20
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:count 20000
-scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:sum 698
+scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:sum 884
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:sumweights 20000
-scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:mean 0.0349
-scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:stddev 0.18353112592611964
+scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:mean 0.044200000000000003
+scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:stddev 0.20554433201531289
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:min 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:max 1
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:vector:starttime 0.001
@@ -4482,65 +4480,65 @@ scalar SingleCell_Standalone.gnb.cellularNic packetDropNoCarrier:vector(packetBy
 scalar SingleCell_Standalone.gnb.cellularNic packetDropNoCarrier:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic packetDropNoCarrier:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic packetDropNoCarrier:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:count 702
+scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:count 889
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:sum 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:sumweights 702
+scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:sumweights 889
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:mean 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:max 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:starttime 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:count 702
+scalar SingleCell_Standalone.gnb.pppIf.queue queueLength:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:count 889
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:sum 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:sumweights 702
+scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:sumweights 889
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:mean 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:max 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:starttime 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:count 697
+scalar SingleCell_Standalone.gnb.pppIf.queue queueBitLength:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:count 884
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:sum 0
-scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:mean 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:max 0
 scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:sum 579904
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue queueingTime:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:sum 735488
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:mean 832
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:min 832
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:max 832
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingPacketLengths:vector:endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:count 200
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:sum 5799040
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:sum 7354880
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:mean 28995.200000000001
-scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:stddev 18349.505790998006
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:mean 36774.400000000001
+scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:stddev 12985.009085276899
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:max 41600
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:starttime 0.10000000000000001
 scalar SingleCell_Standalone.gnb.pppIf.queue incomingDataRate:vector:endtime 20
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:count 697
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:sum 579904
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:count 884
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:sum 735488
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:mean 832
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:min 832
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:max 832
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingPacketLengths:vector:endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:count 200
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:sum 5799040
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:sum 7354880
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:sumweights 200
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:mean 28995.200000000001
-scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:stddev 18349.505790998006
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:mean 36774.400000000001
+scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:stddev 12985.009085276899
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:max 41600
 scalar SingleCell_Standalone.gnb.pppIf.queue outgoingDataRate:vector:starttime 0.10000000000000001
@@ -4581,24 +4579,24 @@ scalar SingleCell_Standalone.gnb.pppIf.queue flowOutgoingDataRate:vector:min inf
 scalar SingleCell_Standalone.gnb.pppIf.queue flowOutgoingDataRate:vector:max -inf
 scalar SingleCell_Standalone.gnb.pppIf.queue flowOutgoingDataRate:vector:starttime nan
 scalar SingleCell_Standalone.gnb.pppIf.queue flowOutgoingDataRate:vector:endtime nan
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:count 1395
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:sum 697
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:sumweights 1395
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:mean 0.49964157706093187
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:stddev 0.50017917936428946
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:count 1769
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:sum 884
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:sumweights 1769
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:mean 0.49971735443753534
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:stddev 0.50014130281474689
 scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:min 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:max 1
 scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:starttime 0
-scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:endtime 19.986000088800004
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):sum 77367
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.ppp transmissionState:vector:endtime 19.729000088800007
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):sum 98124
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):mean 111
 scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):min 111
 scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):max 111
 scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.pppIf.ppp txPk:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.pppIf.ppp rxPkOk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp rxPkOk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp rxPkOk:vector(packetBytes):sumweights 0
@@ -4626,15 +4624,15 @@ scalar SingleCell_Standalone.gnb.pppIf.ppp packetDropInterfaceDown:vector(packet
 scalar SingleCell_Standalone.gnb.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.pppIf.ppp packetDropInterfaceDown:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sum 72488
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sum 91936
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):mean 104
 scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):min 104
 scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):max 104
 scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.pppIf.ppp rcvdPkFromHl:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.pppIf.ppp passedUpPk:vector(packetBytes):count 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp passedUpPk:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.gnb.pppIf.ppp passedUpPk:vector(packetBytes):sumweights 0
@@ -4914,15 +4912,15 @@ scalar SingleCell_Standalone.gnb.ipv4.arp arpReplySent:vector(packetBytes):min i
 scalar SingleCell_Standalone.gnb.ipv4.arp arpReplySent:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.ipv4.arp arpReplySent:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.ipv4.arp arpReplySent:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):count 697
-scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):sum 58548
-scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):count 884
+scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):sum 74256
+scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):mean 84
 scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):min 84
 scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):max 84
 scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):starttime 0.018000000000000002
-scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):endtime 19.986000000000001
+scalar SingleCell_Standalone.gnb.udp packetSent:vector(packetBytes):endtime 19.728999999999999
 scalar SingleCell_Standalone.gnb.udp packetReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.gnb.udp packetReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.gnb.udp packetReceived:vector(packetBytes):sumweights 0
@@ -4995,15 +4993,15 @@ scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:vector(packetBytes)
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):sum 47464
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):sumweights 698
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):sum 60112
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):mean 68
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):min 68
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):max 68
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.997020195407003
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.720563399035004
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp receivedPacketFromLowerLayer:vector(packetBytes):sumweights 0
@@ -5022,15 +5020,15 @@ scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:vecto
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sum 48162
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sumweights 698
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sum 60996
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):mean 69
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):min 69
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):max 69
 scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):endtime 19.997020195407003
+scalar SingleCell_Standalone.ue[0].cellularNic.pdcp sentPacketToLowerLayer:vector(packetBytes):endtime 19.720563399035004
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossUl:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossUl:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.rlc.tm rlcPacketLossUl:vector:sumweights 0
@@ -5625,24 +5623,24 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:m
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sum 5.9391025307259682
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sumweights 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:mean 0.0085209505462352491
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:stddev 0.00020679026852371335
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:min 0.0080832128060000005
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:max 0.008979804592999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sum 7.6684155136561092
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:sumweights 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:mean 0.0086746781828689022
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:stddev 0.00018809254496041872
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:min 0.008436600964999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:max 0.0088649042960000004
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sum 2029179.6542027975
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sumweights 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:mean 2911.3050992866533
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:stddev 453.22327510556948
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:min 2221.4102310882877
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayUl:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sum 2935966.5234604296
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:sumweights 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:mean 3321.2290989371377
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:stddev 143.09133685200953
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:min 3057.0348546333871
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:max 3833.3333333333335
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:endtime 19.986000000000001
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcThroughputUl:vector:endtime 19.728999999999999
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayDl:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayDl:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayDl:vector:sumweights 0
@@ -5661,33 +5659,33 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vecto
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sum 2.788000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sum 3.5360000000000027
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:mean 0.0040000000000000027
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:min 0.0040000000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:max 0.0040000000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:count 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduDelayUl:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:count 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:sum 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:mean 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:min 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:max 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):count 698
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):sum 48162
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):sumweights 698
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcPduThroughputUl:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):sum 60996
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):mean 69
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):min 69
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):max 69
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.997020195407003
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.720563399035004
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromLowerLayer:vector(packetBytes):count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromLowerLayer:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um receivedPacketFromLowerLayer:vector(packetBytes):sumweights 0
@@ -5706,15 +5704,15 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:v
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):sum 49487
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):sum 62764
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):mean 71
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):min 71
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):starttime 0.014
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):endtime 19.981999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes):endtime 19.725000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayD2D:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayD2D:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc.um rlcDelayD2D:vector:sumweights 0
@@ -5769,24 +5767,24 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:vector:min inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:sum 2.788000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:sum 3.5360000000000027
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:mean 0.0040000000000000027
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:min 0.0040000000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:max 0.0040000000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:starttime 0.018000000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:endtime 19.986000000000001
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:count 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:vector:endtime 19.728999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:count 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sum 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:mean 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:min 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:max 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:starttime 0.019
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:endtime 19.987000000000002
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateUl:vector:endtime 19.73
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateDl:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateDl:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRateDl:vector:sumweights 0
@@ -5805,24 +5803,24 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:min
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sum 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sum 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:mean 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:min 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:max 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:starttime 0.019
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:endtime 19.987000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:count 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqTxAttemptsUl:vector:endtime 19.73
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:count 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sum 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:mean 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:min 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:max 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:starttime 0.019
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:endtime 19.987000000000002
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Ul:vector:endtime 19.73
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_Dl:vector:sumweights 0
@@ -5886,42 +5884,42 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_4th_Dl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):count 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sum 99045
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):mean 71
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):min 71
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):count 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sum 123760
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):mean 70
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):stddev 1.0002829254548051
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):min 69
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.997020195407003
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):count 2092
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sum 2092
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 2092
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.725000000000001
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):count 2652
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sum 2652
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):sumweights 2652
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):mean 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):max 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.012
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):endtime 20
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):sum 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.73
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):sum 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):mean 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):max 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):starttime 0.014
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):endtime 19.981999999999999
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):count 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sum 51579
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sumweights 1395
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):mean 36.974193548387099
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):stddev 36.012900914228844
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes):endtime 19.725000000000001
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):count 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sum 65416
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):sumweights 1768
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):mean 37
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):stddev 36.01018531637299
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):max 73
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):starttime 0.01
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):endtime 19.998000000000001
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes):endtime 19.725000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_D2D:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_D2D:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac harqErrorRate_1st_D2D:vector:sumweights 0
@@ -6012,15 +6010,15 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:vector:min inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:sum 10455
-scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:sumweights 697
+scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:sum 13260
+scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:sumweights 884
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:mean 15
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:stddev 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:min 15
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:max 15
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:starttime 0.014
-scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:endtime 19.981999999999999
+scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:vector:endtime 19.725000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiD2D:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiD2D:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiD2D:vector:sumweights 0
@@ -6039,15 +6037,15 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vect
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:max -inf
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:count 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sum 39655.356176612957
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sumweights 697
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:mean 56.894341716804817
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:count 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sum 48762.482290512497
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:sumweights 884
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:mean 55.16117906166572
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:min 56.89434171680508
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:max 56.89434171680508
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:min 55.161179061665131
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:max 55.161179061665131
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:starttime 0.014999999999999999
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:endtime 19.983000000000001
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:vector:endtime 19.725999999999999
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:sumweights 0
@@ -6058,21 +6056,21 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vec
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:endtime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:count 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sum 191881.24991956929
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sum 247230.88489815942
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sumweights 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:mean 57.552864402990188
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:mean 74.154434582531323
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:min 57.552864402987844
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:max 57.552864402987844
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:min 74.154434582526264
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:max 74.154434582526264
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:starttime 0.002
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:endtime 20
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:count 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sum 179261.79066757008
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sum 166925.03129561033
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sumweights 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:mean 53.767783643542316
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:mean 50.067495889505196
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:min 53.767783643543865
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:max 53.767783643543865
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:min 50.067495889505643
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:max 50.067495889505643
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:starttime 0.002
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:endtime 20
 scalar SingleCell_Standalone.ue[0].cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
@@ -6192,15 +6190,15 @@ scalar SingleCell_Standalone.ue[0].ipv4.arp arpReplySent:vector(packetBytes):min
 scalar SingleCell_Standalone.ue[0].ipv4.arp arpReplySent:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.ue[0].ipv4.arp arpReplySent:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.ue[0].ipv4.arp arpReplySent:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):count 698
-scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):sum 33504
-scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):sumweights 698
+scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):count 884
+scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):sum 42432
+scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):sumweights 884
 scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):mean 48
 scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):stddev 0
 scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):min 48
 scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):max 48
 scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):endtime 19.997020195407003
+scalar SingleCell_Standalone.ue[0].udp packetSent:vector(packetBytes):endtime 19.720563399035004
 scalar SingleCell_Standalone.ue[0].udp packetReceived:vector(packetBytes):count 0
 scalar SingleCell_Standalone.ue[0].udp packetReceived:vector(packetBytes):sum 0
 scalar SingleCell_Standalone.ue[0].udp packetReceived:vector(packetBytes):sumweights 0
@@ -6237,13 +6235,13 @@ scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):min 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):max 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):starttime 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):endtime 0
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:count 698
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:sum 1184971.4331771664
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:sumweights 698
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:mean 1697.6668097094075
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:stddev 288.26791603025134
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:min 1288.5229583224436
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:count 884
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:sum 1709764.1662310495
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:sumweights 884
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:mean 1934.1223599898749
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:stddev 120.53923608702405
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:min 1773.0256439968377
 scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:max 4200.9394844532499
 scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:starttime 0.0095216796500000016
-scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:endtime 19.997020195407003
+scalar SingleCell_Standalone.ue[0].app[0] voipGeneratedThroughput:vector:endtime 19.720563399035004
 

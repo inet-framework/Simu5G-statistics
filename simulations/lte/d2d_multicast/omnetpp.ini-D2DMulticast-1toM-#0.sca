@@ -1,8 +1,8 @@
 version 3
-run D2DMulticast-1toM-0-20260710-11:02:44-691579
+run D2DMulticast-1toM-0-20260710-11:28:20-707368
 attr configname D2DMulticast-1toM
-attr datetime 20260710-11:02:44
-attr datetimef 20260710-110244
+attr datetime 20260710-11:28:20
+attr datetimef 20260710-112820
 attr experiment D2DMulticast-1toM
 attr inifile omnetpp.ini
 attr iterationvars "$numUEs=50, $cqi=3"
@@ -10,7 +10,7 @@ attr iterationvarsd numUEs=50/cqi=3
 attr iterationvarsf numUEs=50,cqi=3-
 attr measurement "$numUEs=50, $cqi=3"
 attr network simu5g.simulations.lte.networks.SingleCell_D2DMulticast
-attr processid 691579
+attr processid 707368
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -32,8 +32,7 @@ config *.eNB.mobility.initialX 300m
 config *.eNB.mobility.initialY 300m
 config *.numUeCell 0
 config *.numUeD2D 50
-config *.ue*[*].macCellId 1
-config *.ue*[*].masterId 1
+config *.ue*[*].servingNodeId 1
 config *.ue*[*].mobility.initFromDisplayString false
 config *.ue*[*].mobility.initialX uniform(200m,400m)
 config *.ue*[*].mobility.initialY uniform(200m,400m)
@@ -603,7 +602,7 @@ scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac sentPacketToUpperLayer:s
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromLowerLayer:count 1998
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 1998
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:count 500
-scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 20500
+scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 20000
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell_D2DMulticast.ueD2D[0].cellularNic.mac macBufferOverFlowDl:mean -nan
