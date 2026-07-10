@@ -1,8 +1,8 @@
 version 3
-run Standalone-0-20260710-11:05:31-693302
+run Standalone-0-20260710-11:32:18-709122
 attr configname Standalone
-attr datetime 20260710-11:05:31
-attr datetimef 20260710-110531
+attr datetime 20260710-11:32:18
+attr datetimef 20260710-113218
 attr experiment Standalone
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 693302
+attr processid 709122
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -29,10 +29,8 @@ config sim-time-limit 20s
 config *.gnb.mobility.initialX 450m
 config *.gnb.mobility.initialY 300m
 config *.numUe 1
-config *.ue[0].macCellId 0
-config *.ue[0].masterId 0
-config *.ue[0].nrMacCellId 1
-config *.ue[0].nrMasterId 1
+config *.ue[0].servingNodeId 0
+config *.ue[0].nrServingNodeId 1
 config *.ue[0].mobility.initialX 450m
 config *.ue[0].mobility.initialY 350m
 config sim-time-limit 20s
@@ -827,8 +825,8 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiUl:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:count 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:mean 46.74469770438435
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:mean 64.61600570521054
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:mean 52.786886037317188
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:mean 65.49050391113488
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrDl:mean -nan
@@ -5817,21 +5815,21 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vec
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] rcvdSinrD2D:vector:endtime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:count 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sum 215429.76302117194
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sum 218345.34003972367
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:sumweights 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:mean 64.61600570521054
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:mean 65.49050391113488
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:min 64.616005705212032
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:max 64.616005705212032
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:min 65.490503911139911
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:max 65.490503911139911
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:starttime 0.002
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrDl:vector:endtime 20
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:count 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sum 155846.82214641743
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sum 175991.47804841551
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:sumweights 3334
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:mean 46.74469770438435
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:mean 52.786886037317188
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:min 46.744697704380798
-scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:max 46.744697704380798
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:min 52.7868860373164
+scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:max 52.7868860373164
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:starttime 0.002
 scalar SingleCell_Standalone.ue[0].cellularNic.nrChannelModel[0] measuredSinrUl:vector:endtime 20
 scalar SingleCell_Standalone.ue[0].cellularNic packetDropInterfaceDown:vector(packetBytes):count 0

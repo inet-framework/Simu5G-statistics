@@ -1,8 +1,8 @@
 version 3
-run FileTransfer-DL_UL-0-20260710-11:03:02-691796
+run FileTransfer-DL_UL-0-20260710-11:28:47-707600
 attr configname FileTransfer-DL_UL
-attr datetime 20260710-11:03:02
-attr datetimef 20260710-110302
+attr datetime 20260710-11:28:47
+attr datetimef 20260710-112847
 attr experiment FileTransfer-DL_UL
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 691796
+attr processid 707600
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -35,10 +35,8 @@ config *.ue11.app[0].tSend uniform(0.15s,0.5s)
 config *.ue11.app[0].connectAddress "\"ue21\""
 config *.ue11.app[0].localAddress "\"ue11\""
 config *.ue21.app[*].typename TcpSinkApp
-config **.ue1*.macCellId 1
-config **.ue1*.masterId 1
-config **.ue2*.macCellId 2
-config **.ue2*.masterId 2
+config **.ue1*.servingNodeId 1
+config **.ue2*.servingNodeId 2
 config **.cellularNic.phy.enableHandover true
 config *.eNodeB*.numX2Apps 1
 config *.eNodeB*.x2App[*].server.localPort "5000 + ancestorIndex(1)"
@@ -443,7 +441,7 @@ scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes)
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:count 1821
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 294252
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:count 682
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 41880
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 40892
 scalar MultiCell.eNodeB1.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar MultiCell.eNodeB1.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar MultiCell.eNodeB1.cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -796,7 +794,7 @@ scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes)
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:count 25939
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 3921137
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:count 17506
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 8331332
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 8305338
 scalar MultiCell.eNodeB2.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar MultiCell.eNodeB2.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar MultiCell.eNodeB2.cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -1155,7 +1153,7 @@ scalar MultiCell.ue11.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 28
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:count 12255
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 295083
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:count 10974
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 7811722
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 7798208
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -1445,7 +1443,7 @@ scalar MultiCell.ue21.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 38
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:count 8524
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 3908164
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:count 8883
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 570782
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 557294
 scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowDl:mean -nan
@@ -5955,11 +5953,11 @@ scalar MultiCell.eNodeB1.cellularNic.mac harqErrorRate_4th_Dl:vector:max -inf
 scalar MultiCell.eNodeB1.cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell.eNodeB1.cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 682
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 41880
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 40892
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 682
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 61.407624633431084
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 43.555771804570121
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 43
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 59.958944281524928
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 44.17344752379941
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 41
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 248
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.075000239200000027
 scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):endtime 2.0009999999999999
@@ -7080,11 +7078,11 @@ scalar MultiCell.eNodeB2.cellularNic.mac harqErrorRate_4th_Dl:vector:max -inf
 scalar MultiCell.eNodeB2.cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell.eNodeB2.cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 17506
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 8331332
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 8305338
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 17506
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 475.91294413343996
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 525.21013475688824
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 43
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 474.42808180052555
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 525.64820227938912
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 41
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 2223
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.061000239200000021
 scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):endtime 20
@@ -8241,10 +8239,10 @@ scalar MultiCell.ue11.cellularNic.mac harqErrorRate_4th_Dl:vector:max -inf
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 10974
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 7811722
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 7798208
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 10974
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 711.8390741753235
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 528.47090676661912
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 710.6076180061965
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 528.78165242664602
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 4
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 2223
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.05284755842500001
@@ -9546,11 +9544,11 @@ scalar MultiCell.ue21.cellularNic.mac harqErrorRate_4th_Dl:vector:max -inf
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 8883
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 570782
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 557294
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 8883
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 64.25554429809749
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 59.879579595347636
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 43
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 62.737138354159633
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 60.422263659510115
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 41
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 491
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 0.066000000000000003
 scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):endtime 19.995999999999999
