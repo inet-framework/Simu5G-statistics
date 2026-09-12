@@ -1,8 +1,8 @@
 version 3
-run VoIP-AM-0-20260912-11:13:39-962639
+run VoIP-AM-0-20260912-14:59:10-1186209
 attr configname VoIP-AM
-attr datetime 20260912-11:13:39
-attr datetimef 20260912-111339
+attr datetime 20260912-14:59:10
+attr datetimef 20260912-145910
 attr experiment VoIP-AM
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 962639
+attr processid 1186209
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -25,7 +25,7 @@ config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 20s
 config extends VoIP
-config **.cellularNic.ip2nic.conversationalRlc "\"AM\""
+config *.bearerConfigurator.onDemandDrbs "[{coreNetwork: \"epc\", isDefault: true, lcg: 0, rlcMode: \"AM\"}]"
 config network simu5g.simulations.lte.networks.SingleCell
 config **.mac.schedulingDisciplineDl "\"MAXCI\""
 config **.mac.schedulingDisciplineUl "\"MAXCI\""
@@ -305,8 +305,6 @@ scalar SingleCell.pgw.dnPpp packetDropInterfaceDown:count 0
 scalar SingleCell.pgw.dnPpp packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.pgw.dnPpp packetDropNoCarrier:count 0
 scalar SingleCell.pgw.dnPpp packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell.eNB.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell.eNB.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -477,8 +475,6 @@ scalar SingleCell.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell.ue[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell.ue[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan

@@ -1,8 +1,8 @@
 version 3
-run SingleCell-CBR-UL-0-20260912-12:06:38-1008809
+run SingleCell-CBR-UL-0-20260912-15:02:34-1189257
 attr configname SingleCell-CBR-UL
-attr datetime 20260912-12:06:38
-attr datetimef 20260912-120638
+attr datetime 20260912-15:02:34
+attr datetimef 20260912-150234
 attr experiment SingleCell-CBR-UL
 attr inifile omnetpp.ini
 attr iterationvars "$u=0, $numUe=10, $numUeApps=2"
@@ -10,7 +10,7 @@ attr iterationvarsd u=0/numUe=10/numUeApps=2
 attr iterationvarsf u=0,numUe=10,numUeApps=2-
 attr measurement "$u=0, $numUe=10, $numUeApps=2"
 attr network simu5g.simulations.nr.networks.SingleCell_withSecondaryGnb
-attr processid 1008809
+attr processid 1189257
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -71,7 +71,7 @@ config *.ue[*].mobility.initialY uniform(200m,400m)
 config *.ue[*].mobility.speed uniform(5mps,15mps)
 config *.ue[*].numApps 2
 config *.server.numApps 10*2
-config *.bearerConfigurator.onDemandDrbs "[\n    {coreNetwork: \"epc\", filters: [\"expr(ipv4.typeOfService == 10)\"], lcg: 3, rlcMode: \"UM\"},\n    {coreNetwork: \"epc\", isDefault: true, lcg: 3, rlcMode: \"UM\"}\n    ]"
+config *.bearerConfigurator.onDemandDrbs "[\n    {coreNetwork: \"epc\", filters: [\"expr(ipv4.typeOfService == 10)\"], lcg: 3, rlcMode: \"UM\", legs: [\"MCG\", \"SCG\"], primaryPath: \"SCG\"},\n    {coreNetwork: \"epc\", isDefault: true, lcg: 3, rlcMode: \"UM\"}\n    ]"
 config *.server.app[*].typename CbrReceiver
 config *.server.app[0..9].localPort 1000+ancestorIndex(0)
 config *.server.app[10..19].localPort 10000+ancestorIndex(0)-10
@@ -471,8 +471,6 @@ scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughput
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -889,8 +887,6 @@ scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].client echoedPk:count 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].client echoedPk:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].server "bytes rcvd" 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].server throughput -nan
-scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -1412,8 +1408,6 @@ scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -1465,8 +1459,6 @@ scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] measuredSinrDl:mean 45.769275205026474
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] rcvdSinrUl:mean 37.576130753963064
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -1618,8 +1610,6 @@ scalar SingleCell_withSecondaryGnb.ue[1].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[1].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[1].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[1].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -1671,8 +1661,6 @@ scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.channelModel[0] measuredSinrDl:mean 33.212521736355072
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.channelModel[0] rcvdSinrUl:mean 17.835605294764452
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[1].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -1824,8 +1812,6 @@ scalar SingleCell_withSecondaryGnb.ue[2].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[2].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[2].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[2].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -1877,8 +1863,6 @@ scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.channelModel[0] measuredSinrDl:mean 50.587340269433717
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.channelModel[0] rcvdSinrUl:mean 35.898815267492601
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[2].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -2030,8 +2014,6 @@ scalar SingleCell_withSecondaryGnb.ue[3].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[3].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[3].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[3].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -2083,8 +2065,6 @@ scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.channelModel[0] measuredSinrDl:mean 60.40027365489388
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.channelModel[0] rcvdSinrUl:mean 44.269660081601998
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[3].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -2236,8 +2216,6 @@ scalar SingleCell_withSecondaryGnb.ue[4].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[4].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[4].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[4].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -2289,8 +2267,6 @@ scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.channelModel[0] measuredSinrDl:mean 75.767539209914858
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.channelModel[0] rcvdSinrUl:mean 63.025613374090497
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[4].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -2442,8 +2418,6 @@ scalar SingleCell_withSecondaryGnb.ue[5].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[5].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[5].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[5].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -2495,8 +2469,6 @@ scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.channelModel[0] measuredSinrDl:mean 44.347470249509136
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.channelModel[0] rcvdSinrUl:mean 40.096830475588604
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[5].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -2648,8 +2620,6 @@ scalar SingleCell_withSecondaryGnb.ue[6].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[6].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[6].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[6].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -2701,8 +2671,6 @@ scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.channelModel[0] measuredSinrDl:mean 52.612523038842291
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.channelModel[0] rcvdSinrUl:mean 30.18709064435928
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[6].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -2854,8 +2822,6 @@ scalar SingleCell_withSecondaryGnb.ue[7].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[7].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[7].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[7].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -2907,8 +2873,6 @@ scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.channelModel[0] measuredSinrDl:mean 42.691364881836947
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.channelModel[0] rcvdSinrUl:mean 25.108911929291271
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[7].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -3060,8 +3024,6 @@ scalar SingleCell_withSecondaryGnb.ue[8].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[8].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[8].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[8].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -3113,8 +3075,6 @@ scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.channelModel[0] measuredSinrDl:mean 63.798374726610902
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.channelModel[0] rcvdSinrUl:mean 52.066065856129086
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[8].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -3266,8 +3226,6 @@ scalar SingleCell_withSecondaryGnb.ue[9].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[9].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[9].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[9].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -3319,8 +3277,6 @@ scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.channelModel[0] measuredSinrDl:mean 57.503790395484828
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.channelModel[0] rcvdSinrUl:mean 38.797279891239064
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[9].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan

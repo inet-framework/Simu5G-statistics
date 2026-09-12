@@ -1,8 +1,8 @@
 version 3
-run DualConn-SecondaryOnly-DL-0-20260912-11:15:34-963574
+run DualConn-SecondaryOnly-DL-0-20260912-15:00:55-1187779
 attr configname DualConn-SecondaryOnly-DL
-attr datetime 20260912-11:15:34
-attr datetimef 20260912-111534
+attr datetime 20260912-15:00:55
+attr datetimef 20260912-150055
 attr experiment DualConn-SecondaryOnly-DL
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_withSecondaryGnb
-attr processid 963574
+attr processid 1187779
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -27,6 +27,7 @@ config sim-time-limit 20s
 config extends DualConnectivity-VoIP-DL
 config description "dual connectivity, secondary only, Voice-over-IP (downlink)"
 config *.server.app[*].tos 10
+config *.bearerConfigurator.onDemandDrbs "[{coreNetwork: \"epc\", isDefault: true, lcg: 0, rlcMode: \"UM\", legs: [\"MCG\", \"SCG\"], primaryPath: \"SCG\"}]"
 config extends DualConnectivity
 config description "Base configuration, do not run this config!"
 config *.ue[*].numApps 1
@@ -331,8 +332,6 @@ scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughput
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.masterEnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -521,8 +520,6 @@ scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].client echoedPk:count 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].client echoedPk:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].server "bytes rcvd" 0
 scalar SingleCell_withSecondaryGnb.masterEnb.x2App[0].server throughput -nan
-scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.secondaryGnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -721,8 +718,6 @@ scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_withSecondaryGnb.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -774,8 +769,6 @@ scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] measuredSin
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] measuredSinrDl:mean 45.989882008621535
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_withSecondaryGnb.ue[0].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
