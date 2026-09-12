@@ -1,8 +1,8 @@
 version 3
-run AM-RLF-Reestablish-0-20260912-11:16:10-963927
+run AM-RLF-Reestablish-0-20260912-15:01:34-1188361
 attr configname AM-RLF-Reestablish
-attr datetime 20260912-11:16:10
-attr datetimef 20260912-111610
+attr datetime 20260912-15:01:34
+attr datetimef 20260912-150134
 attr experiment AM-RLF-Reestablish
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 963927
+attr processid 1188361
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -33,10 +33,7 @@ config **.AM_Window_Size 128
 config **.maxRtxThreshold 4
 config **.perDl "simTime() < 5s ? 0 : 1"
 config extends Base
-config **.cellularNic.ip2nic.conversationalRlc "\"AM\""
-config **.cellularNic.ip2nic.streamingRlc "\"AM\""
-config **.cellularNic.ip2nic.interactiveRlc "\"AM\""
-config **.cellularNic.ip2nic.backgroundRlc "\"AM\""
+config *.bearerConfigurator.onDemandDrbs "[{coreNetwork: \"5gc\", isDefault: true, suppressSdapHeader: true, lcg: 3, rlcMode: \"AM\"}]"
 config *.gnb.mobility.initialX 450m
 config *.gnb.mobility.initialY 300m
 config *.numUe 1
@@ -44,8 +41,8 @@ config *.ue[0].servingNodeId 0
 config *.ue[0].nrServingNodeId 1
 config *.ue[0].mobility.initialX 450m
 config *.ue[0].mobility.initialY 350m
-config *.gnb.cellularNic.lteChannelModelType "\"LteDummyChannelModel\""
-config *.ue[*].cellularNic.nrChannelModelType "\"LteDummyChannelModel\""
+config *.gnb.cellularNic.channelModelType "\"IdealChannelModel\""
+config *.ue[*].cellularNic.nrChannelModelType "\"IdealChannelModel\""
 config **.harqReduction 1
 config **.perUl 0
 config **.perD2D 0
@@ -447,8 +444,6 @@ scalar SingleCell_Standalone.iUpf.dnPpp packetDropInterfaceDown:count 0
 scalar SingleCell_Standalone.iUpf.dnPpp packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_Standalone.iUpf.dnPpp packetDropNoCarrier:count 0
 scalar SingleCell_Standalone.iUpf.dnPpp packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -612,8 +607,6 @@ scalar SingleCell_Standalone.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_Standalone.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell_Standalone.ue[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -665,8 +658,6 @@ scalar SingleCell_Standalone.ue[0].cellularNic.channelModel[0] measuredSinrUl:me
 scalar SingleCell_Standalone.ue[0].cellularNic.channelModel[0] measuredSinrDl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.channelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan

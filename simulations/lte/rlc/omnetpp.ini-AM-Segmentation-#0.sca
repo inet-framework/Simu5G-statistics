@@ -1,8 +1,8 @@
 version 3
-run AM-Segmentation-0-20260912-11:13:58-962797
+run AM-Segmentation-0-20260912-14:59:26-1186465
 attr configname AM-Segmentation
-attr datetime 20260912-11:13:58
-attr datetimef 20260912-111358
+attr datetime 20260912-14:59:26
+attr datetimef 20260912-145926
 attr experiment AM-Segmentation
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 962797
+attr processid 1186465
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -30,10 +30,7 @@ config **.server.app[0].samplingTime 0.02s
 config **.perDl 0.4
 config **.maxRtxThreshold 32
 config extends Base
-config **.cellularNic.ip2nic.conversationalRlc "\"AM\""
-config **.cellularNic.ip2nic.streamingRlc "\"AM\""
-config **.cellularNic.ip2nic.interactiveRlc "\"AM\""
-config **.cellularNic.ip2nic.backgroundRlc "\"AM\""
+config *.bearerConfigurator.onDemandDrbs "[{coreNetwork: \"epc\", isDefault: true, lcg: 3, rlcMode: \"AM\"}]"
 config **.numUe 1
 config **.ue[*].servingNodeId 1
 config **.ue[*].mobility.initFromDisplayString false
@@ -44,7 +41,7 @@ config **.mobility.constraintAreaMaxX 800m
 config **.mobility.constraintAreaMaxY 400m
 config **.ue[*].mobility.initialX 400m
 config **.ue[*].mobility.initialY 300m
-config **.lteChannelModelType "\"LteDummyChannelModel\""
+config **.channelModelType "\"IdealChannelModel\""
 config **.harqReduction 1
 config **.perUl 0
 config **.perD2D 0
@@ -320,8 +317,6 @@ scalar SingleCell.pgw.dnPpp packetDropInterfaceDown:count 0
 scalar SingleCell.pgw.dnPpp packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.pgw.dnPpp packetDropNoCarrier:count 0
 scalar SingleCell.pgw.dnPpp packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell.eNB.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell.eNB.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -488,8 +483,6 @@ scalar SingleCell.ue[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell.ue[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.ue[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell.ue[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
-scalar SingleCell.ue[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell.ue[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan

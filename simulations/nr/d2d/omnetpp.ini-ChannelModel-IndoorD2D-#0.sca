@@ -1,8 +1,8 @@
 version 3
-run ChannelModel-IndoorD2D-0-20260912-11:14:34-963121
+run ChannelModel-IndoorD2D-0-20260912-14:59:54-1186950
 attr configname ChannelModel-IndoorD2D
-attr datetime 20260912-11:14:34
-attr datetimef 20260912-111434
+attr datetime 20260912-14:59:54
+attr datetimef 20260912-145954
 attr experiment ChannelModel-IndoorD2D
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone_D2D
-attr processid 963121
+attr processid 1186950
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -25,8 +25,10 @@ config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 20s
 config extends SinglePair-UDP-D2D
-config *.ue*[*].cellularNic.nrChannelModelType "\"D2dNrChannelModel\""
-config *.gnb.cellularNic.lteChannelModelType "\"D2dNrChannelModel\""
+config *.ue*[*].cellularNic.nrChannelModelType "\"D2dChannelModel\""
+config *.ue*[*].cellularNic.nrChannelModel[*].pathLossType "\"Tr36873\""
+config *.gnb.cellularNic.channelModelType "\"D2dChannelModel\""
+config *.gnb.cellularNic.channelModel[*].pathLossType "\"Tr36873\""
 config **.nrChannelModel[*].scenario "\"INDOOR_HOTSPOT\""
 config **.channelModel[*].scenario "\"INDOOR_HOTSPOT\""
 config extends SinglePair-UDP-Infra
@@ -447,8 +449,6 @@ scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcPduThroughputD2D:simu
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -463,7 +463,6 @@ scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux receivedPacketFromLowerL
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac macCellPacketLossD2D:mean 0
-scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac macCellThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac avgServedBlocksUl:mean 0.75985000000000003
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac avgServedBlocksDl:mean 0
 scalar SingleCell_Standalone_D2D.gnb.cellularNic.mac harqTxAttemptsUl:mean -nan
@@ -601,8 +600,6 @@ scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputD
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -670,8 +667,6 @@ scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcPduThroughpu
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DTx[0].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
@@ -807,8 +802,6 @@ scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputD
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
@@ -876,8 +869,6 @@ scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcPduThroughpu
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcPduDelayD2D:mean -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcThroughputD2D:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcDelayD2D:mean -nan
-scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcCellThroughputDl:simu5g_rateavg -nan
-scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcCellThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_Standalone_D2D.ueD2DRx[0].cellularNic.nrRlcMux rlcPduDelayUl:mean -nan
