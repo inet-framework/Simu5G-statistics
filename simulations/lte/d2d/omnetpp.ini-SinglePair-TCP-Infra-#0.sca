@@ -1,8 +1,8 @@
 version 3
-run SinglePair-TCP-Infra-0-20260729-09:57:31-2268832
+run SinglePair-TCP-Infra-0-20260912-11:13:19-962440
 attr configname SinglePair-TCP-Infra
-attr datetime 20260729-09:57:31
-attr datetimef 20260729-095731
+attr datetime 20260912-11:13:19
+attr datetimef 20260912-111319
 attr experiment SinglePair-TCP-Infra
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.SingleCell_D2D
-attr processid 2268832
+attr processid 962440
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -38,8 +38,8 @@ config *.ueD2DTx[0].app[0].localAddress "\"ueD2DTx[0]\""
 config *.ueD2DRx[0].app[*].typename TcpSinkApp
 config *.ueD2DRx[0].app[*].localPort 1000
 config **.app[*].tClose -1s
-config *.eNB*.cellularNic.typename LteNicEnb
-config *.ueD2D*[*].cellularNic.typename LteNicUe
+config *.eNB*.hasD2D false
+config *.ueD2D*[*].hasD2D false
 config **.amcMode "\"AUTO\""
 config network simu5g.simulations.lte.networks.SingleCell_D2D
 config *.eNB.mobility.initFromDisplayString false
@@ -307,6 +307,16 @@ scalar SingleCell_D2D.pgw.dnPpp packetDropInterfaceDown:count 0
 scalar SingleCell_D2D.pgw.dnPpp packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_D2D.pgw.dnPpp packetDropNoCarrier:count 0
 scalar SingleCell_D2D.pgw.dnPpp packetDropNoCarrier:sum(packetBytes) 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:count 4225
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 1943858
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1478
@@ -341,18 +351,12 @@ scalar SingleCell_D2D.eNB.cellularNic.mac receivedPacketFromLowerLayer:count 502
 scalar SingleCell_D2D.eNB.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 984917
 scalar SingleCell_D2D.eNB.cellularNic.mac receivedPacketFromUpperLayer:count 4225
 scalar SingleCell_D2D.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 1943858
-scalar SingleCell_D2D.eNB.cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.mac macBufferOverFlowDl:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] measuredSinrUl:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] measuredSinrDl:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrUl:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrDl:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcPduThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcPduDelayD2D:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcDelayD2D:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcPduThroughputUl:simu5g_rateavg 0
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcPduDelayUl:mean 0.0040000000000000027
@@ -361,10 +365,6 @@ scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcThroughputUl:simu5g_ra
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcDelayUl:mean 0.017410876315887426
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1025-1.rx rlcDelayDl:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcPduThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcPduDelayD2D:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcDelayD2D:mean -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcPduThroughputUl:simu5g_rateavg 0
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcPduThroughputDl:simu5g_rateavg -nan
 scalar SingleCell_D2D.eNB.cellularNic.rlc-um-1026-1.rx rlcPduDelayUl:mean 0.0040000000000000027
@@ -469,6 +469,16 @@ scalar SingleCell_D2D.ueD2DTx[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_D2D.ueD2DTx[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_D2D.ueD2DTx[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_D2D.ueD2DTx[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:count 2472
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 1825270
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux receivedPacketFromLowerLayer:count 591
@@ -501,7 +511,6 @@ scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac receivedPacketFromLowerLayer:co
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 68829
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac receivedPacketFromUpperLayer:count 2472
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 1825270
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macBufferOverFlowDl:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.phy distance:mean -nan
@@ -511,13 +520,8 @@ scalar SingleCell_D2D.ueD2DTx[0].cellularNic.phy averageCqiDl:mean 15
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.phy averageCqiDl:count 591
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] measuredSinrUl:mean 63.846486541398491
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] measuredSinrDl:mean 79.806002113562116
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrUl:mean 67.693801317122279
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrDl:mean 85.586141555956573
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcPduDelayD2D:mean -nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcDelayD2D:mean -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean -nan
@@ -576,6 +580,16 @@ scalar SingleCell_D2D.ueD2DRx[0].lo[0] packetDropInterfaceDown:count 0
 scalar SingleCell_D2D.ueD2DRx[0].lo[0] packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell_D2D.ueD2DRx[0].lo[0] packetDropNoCarrier:count 0
 scalar SingleCell_D2D.ueD2DRx[0].lo[0] packetDropNoCarrier:sum(packetBytes) 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcCellThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcCellThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:count 2163
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 129930
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux receivedPacketFromLowerLayer:count 493
@@ -608,7 +622,6 @@ scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac receivedPacketFromLowerLayer:co
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 910101
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac receivedPacketFromUpperLayer:count 2163
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 129930
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macBufferOverFlowD2D:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macBufferOverFlowUl:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macBufferOverFlowDl:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.phy distance:mean -nan
@@ -618,13 +631,8 @@ scalar SingleCell_D2D.ueD2DRx[0].cellularNic.phy averageCqiDl:mean 15
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.phy averageCqiDl:count 493
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] measuredSinrUl:mean 54.51987498791744
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] measuredSinrDl:mean 76.418932673572627
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrUl:mean 59.657501725159989
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrDl:mean 75.963236935481859
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcPduDelayD2D:mean -nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcThroughputD2D:simu5g_rateavg -nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcDelayD2D:mean -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg -nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean -nan
@@ -2940,6 +2948,78 @@ scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:vector(packe
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):max 4448
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):starttime 0.060999999999999999
 scalar SingleCell_D2D.eNB.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):endtime 4.9960000000000004
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayDl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcDelayUl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcThroughputUl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayDl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduDelayUl:vector:endtime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:count 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:sum 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:min inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:max -inf
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.eNB.cellularNic.rlcMux rlcPduThroughputUl:vector:endtime nan
 scalar SingleCell_D2D.eNB.cellularNic.mac macDelayDl:vector:count 0
 scalar SingleCell_D2D.eNB.cellularNic.mac macDelayDl:vector:sum 0
 scalar SingleCell_D2D.eNB.cellularNic.mac macDelayDl:vector:sumweights 0
@@ -3138,15 +3218,6 @@ scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrUl:vector:min inf
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrUl:vector:max -inf
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrUl:vector:starttime nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrUl:vector:endtime nan
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:count 0
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:sum 0
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:sumweights 0
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:mean -nan
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:stddev nan
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:min inf
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:max -inf
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:starttime nan
-scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] rcvdSinrD2D:vector:endtime nan
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] measuredSinrDl:vector:count 0
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] measuredSinrDl:vector:sum 0
 scalar SingleCell_D2D.eNB.cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 0
@@ -3723,6 +3794,78 @@ scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:vecto
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):max 4448
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):starttime 0.05284755842500001
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):endtime 5
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcDelayUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcThroughputUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduDelayUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:count 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:min inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DTx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:endtime nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macDelayDl:vector:count 591
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macDelayDl:vector:sum 2.3640000000000017
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.mac macDelayDl:vector:sumweights 591
@@ -3930,15 +4073,6 @@ scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:m
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:max 71.196476938043418
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:starttime 0.058000000000000003
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:endtime 5
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:count 0
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:sum 0
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:sumweights 0
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:mean -nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:stddev nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:min inf
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:max -inf
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:starttime nan
-scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:endtime nan
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] measuredSinrDl:vector:count 834
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] measuredSinrDl:vector:sum 66558.205762710801
 scalar SingleCell_D2D.ueD2DTx[0].cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 834
@@ -4209,6 +4343,78 @@ scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:vecto
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):max 245
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):starttime 0.066000000000000003
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):endtime 4.9969999999999999
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcDelayUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcThroughputUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputDl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduDelayUl:vector:endtime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:count 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:sum 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:sumweights 0
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:mean -nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:stddev nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:min inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:max -inf
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:starttime nan
+scalar SingleCell_D2D.ueD2DRx[0].cellularNic.rlcMux rlcPduThroughputUl:vector:endtime nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macDelayDl:vector:count 493
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macDelayDl:vector:sum 1.9720000000000015
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.mac macDelayDl:vector:sumweights 493
@@ -4416,15 +4622,6 @@ scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:m
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:max 60.025947204958001
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:starttime 0.072000000000000008
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrUl:vector:endtime 4.992
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:count 0
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:sum 0
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:sumweights 0
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:mean -nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:stddev nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:min inf
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:max -inf
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:starttime nan
-scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] rcvdSinrD2D:vector:endtime nan
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] measuredSinrDl:vector:count 834
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] measuredSinrDl:vector:sum 63733.389849759573
 scalar SingleCell_D2D.ueD2DRx[0].cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 834
