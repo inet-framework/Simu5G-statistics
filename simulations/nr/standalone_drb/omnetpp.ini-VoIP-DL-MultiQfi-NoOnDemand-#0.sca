@@ -1,16 +1,16 @@
 version 3
-run VoIP-DL-MultiQfi-0-20260912-11:53:55-997900
-attr configname VoIP-DL-MultiQfi
-attr datetime 20260912-11:53:55
-attr datetimef 20260912-115355
-attr experiment VoIP-DL-MultiQfi
+run VoIP-DL-MultiQfi-NoOnDemand-0-20260912-11:53:58-997938
+attr configname VoIP-DL-MultiQfi-NoOnDemand
+attr datetime 20260912-11:53:58
+attr datetimef 20260912-115358
+attr experiment VoIP-DL-MultiQfi-NoOnDemand
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 997900
+attr processid 997938
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -18,12 +18,15 @@ attr runnumber 0
 attr seedset 0
 config **.param-recording false
 config image-path /home/andras/projects/Simu5G-fork/simu5g-fork/images
-config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.sca
+config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-NoOnDemand-#0.sca
 config output-scalar-precision 17
-config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.vec
+config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-NoOnDemand-#0.vec
 config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 20s
+config extends VoIP-DL-MultiQfi
+config *.gnb.cellularNic.sdap.establishBearersOnDemand false
+config *.ue[*].cellularNic.sdap.establishBearersOnDemand false
 config extends VoIP-DL
 config *.server.app[0].dscp 1
 config *.server.app[1].dscp 2
@@ -83,8 +86,8 @@ config *.ue[1].mobility.initialX 550m
 config *.ue[1].mobility.initialY 400m
 config sim-time-limit 20s
 config **.routingRecorder.enabled false
-config output-scalar-file results/VoIP-DL-MultiQfi/0.sca
-config output-vector-file results/VoIP-DL-MultiQfi/0.vec
+config output-scalar-file results/VoIP-DL-MultiQfi-NoOnDemand/0.sca
+config output-vector-file results/VoIP-DL-MultiQfi-NoOnDemand/0.vec
 config seed-set 0
 config **.vector-recording true
 config **.mobility.constraintAreaMaxX 1000m

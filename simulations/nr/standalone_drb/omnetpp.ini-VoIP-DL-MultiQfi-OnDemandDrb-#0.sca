@@ -1,16 +1,16 @@
 version 3
-run VoIP-DL-MultiQfi-0-20260912-11:53:55-997900
-attr configname VoIP-DL-MultiQfi
-attr datetime 20260912-11:53:55
-attr datetimef 20260912-115355
-attr experiment VoIP-DL-MultiQfi
+run VoIP-DL-MultiQfi-OnDemandDrb-0-20260912-11:53:59-997941
+attr configname VoIP-DL-MultiQfi-OnDemandDrb
+attr datetime 20260912-11:53:59
+attr datetimef 20260912-115359
+attr experiment VoIP-DL-MultiQfi-OnDemandDrb
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 997900
+attr processid 997941
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -18,12 +18,15 @@ attr runnumber 0
 attr seedset 0
 config **.param-recording false
 config image-path /home/andras/projects/Simu5G-fork/simu5g-fork/images
-config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.sca
+config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-OnDemandDrb-#0.sca
 config output-scalar-precision 17
-config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.vec
+config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-OnDemandDrb-#0.vec
 config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 20s
+config extends VoIP-DL-MultiQfi
+config *.bearerConfigurator.staticDrbs "[\n    {coreNetwork: \"5gc\", ue: \"ue[*]\", drbId: 1, mappedQfis: [1, 2], profile: \"voice\", isDefault: true}\n    ]"
+config *.bearerConfigurator.onDemandDrbs "[\n    {coreNetwork: \"5gc\", ue: \"ue[*]\", mappedQfis: [3, 4], profile: \"gaming\"}\n    ]"
 config extends VoIP-DL
 config *.server.app[0].dscp 1
 config *.server.app[1].dscp 2
@@ -83,8 +86,8 @@ config *.ue[1].mobility.initialX 550m
 config *.ue[1].mobility.initialY 400m
 config sim-time-limit 20s
 config **.routingRecorder.enabled false
-config output-scalar-file results/VoIP-DL-MultiQfi/0.sca
-config output-vector-file results/VoIP-DL-MultiQfi/0.vec
+config output-scalar-file results/VoIP-DL-MultiQfi-OnDemandDrb/0.sca
+config output-vector-file results/VoIP-DL-MultiQfi-OnDemandDrb/0.vec
 config seed-set 0
 config **.vector-recording true
 config **.mobility.constraintAreaMaxX 1000m
@@ -7052,42 +7055,6 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-1.rx sentPacketToUpperL
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-1.rx sentPacketToUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-1.rx sentPacketToUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-1.rx sentPacketToUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:count 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sum 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sumweights 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:stddev nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:min inf
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:max -inf
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:starttime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:count 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sum 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sumweights 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:stddev nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:min inf
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:max -inf
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:starttime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:endtime nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):count 1586
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sum 112606
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sumweights 1586
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):mean 71
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):min 71
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):max 71
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.014
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.990000000000002
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):count 1586
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sum 111020
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sumweights 1586
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):mean 70
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):min 70
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):max 70
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime 0.014
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime 19.990000000000002
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.tx requestedPduSize:vector:count 1586
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.tx requestedPduSize:vector:sum 112606
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.tx requestedPduSize:vector:sumweights 1586
@@ -7124,42 +7091,42 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.rx sentPacketToUpperL
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.rx sentPacketToUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2049-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:count 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sum 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sumweights 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:mean -nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:stddev nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:min inf
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:max -inf
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:starttime nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:endtime nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:count 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sum 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sumweights 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:mean -nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:stddev nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:min inf
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:max -inf
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:starttime nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:endtime nan
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):count 1232
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sum 87472
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sumweights 1232
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):mean 71
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):min 71
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):max 71
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.040000000000000001
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):endtime 20
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):count 1232
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sum 86240
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sumweights 1232
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):mean 70
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):min 70
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):max 70
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime 0.040000000000000001
-scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime 20
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:count 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sum 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sumweights 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:mean -nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:stddev nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:min inf
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:max -inf
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:starttime nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:endtime nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:count 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sum 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sumweights 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:mean -nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:stddev nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:min inf
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:max -inf
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:starttime nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:endtime nan
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):count 1586
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sum 112606
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sumweights 1586
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):mean 71
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):min 71
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):max 71
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.014
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):endtime 19.990000000000002
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):count 1586
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sum 111020
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sumweights 1586
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):mean 70
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):stddev 0
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):min 70
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):max 70
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime 0.014
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime 19.990000000000002
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.tx requestedPduSize:vector:count 1233
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.tx requestedPduSize:vector:sum 87543
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.tx requestedPduSize:vector:sumweights 1233
@@ -7196,4 +7163,40 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.rx sentPacketToUpperL
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.rx sentPacketToUpperLayer:vector(packetBytes):max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-um-2050-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:count 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sum 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:sumweights 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:mean -nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:stddev nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:min inf
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:max -inf
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:starttime nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx requestedPduSize:vector:endtime nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:count 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sum 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:sumweights 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:mean -nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:stddev nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:min inf
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:max -inf
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:starttime nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.tx sentPduSize:vector:endtime nan
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):count 1232
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sum 87472
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):sumweights 1232
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):mean 71
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):stddev 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):min 71
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):max 71
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):starttime 0.040000000000000001
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:vector(packetBytes):endtime 20
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):count 1232
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sum 86240
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):sumweights 1232
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):mean 70
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):stddev 0
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):min 70
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):max 70
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):starttime 0.040000000000000001
+scalar SingleCell_Standalone.ue[1].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:vector(packetBytes):endtime 20
 

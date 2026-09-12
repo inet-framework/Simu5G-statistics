@@ -1,16 +1,16 @@
 version 3
-run VoIP-DL-MultiQfi-0-20260912-11:53:55-997900
-attr configname VoIP-DL-MultiQfi
+run VoIP-DL-MultiQfi-5qiProfiles-0-20260912-11:53:55-997916
+attr configname VoIP-DL-MultiQfi-5qiProfiles
 attr datetime 20260912-11:53:55
 attr datetimef 20260912-115355
-attr experiment VoIP-DL-MultiQfi
+attr experiment VoIP-DL-MultiQfi-5qiProfiles
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 997900
+attr processid 997916
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -18,12 +18,14 @@ attr runnumber 0
 attr seedset 0
 config **.param-recording false
 config image-path /home/andras/projects/Simu5G-fork/simu5g-fork/images
-config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.sca
+config output-scalar-file results/omnetpp.ini-VoIP-DL-MultiQfi-5qiProfiles-#0.sca
 config output-scalar-precision 17
-config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-#0.vec
+config output-vector-file results/omnetpp.ini-VoIP-DL-MultiQfi-5qiProfiles-#0.vec
 config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 20s
+config extends VoIP-DL-MultiQfi
+config *.bearerConfigurator.staticDrbs "[\n    {coreNetwork: \"5gc\", ue: \"ue[*]\", drbId: 1, mappedQfis: [1, 2], profile: \"5qi-1\", isDefault: true},\n    {coreNetwork: \"5gc\", ue: \"ue[*]\", drbId: 2, mappedQfis: [3, 4], profile: \"5qi-3\"}\n    ]"
 config extends VoIP-DL
 config *.server.app[0].dscp 1
 config *.server.app[1].dscp 2
@@ -83,8 +85,8 @@ config *.ue[1].mobility.initialX 550m
 config *.ue[1].mobility.initialY 400m
 config sim-time-limit 20s
 config **.routingRecorder.enabled false
-config output-scalar-file results/VoIP-DL-MultiQfi/0.sca
-config output-vector-file results/VoIP-DL-MultiQfi/0.vec
+config output-scalar-file results/VoIP-DL-MultiQfi-5qiProfiles/0.sca
+config output-vector-file results/VoIP-DL-MultiQfi-5qiProfiles/0.vec
 config seed-set 0
 config **.vector-recording true
 config **.mobility.constraintAreaMaxX 1000m
@@ -768,7 +770,7 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macCellPacketLossDl:mean -n
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macPacketLossUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macPacketLossDl:mean 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputUl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputDl:simu5g_rateavg 8634.7167150566747
+scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macThroughputDl:simu5g_rateavg 8632.8698999487005
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac macDelayDl:mean 0.0039999999999997451
 scalar SingleCell_Standalone.ue[0].cellularNic.nrMac sentPacketToLowerLayer:count 2394
@@ -796,13 +798,13 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.tx sentPacketToLower
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.tx receivedPacketFromUpperLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.tx receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 2567.0752270812886
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 2567.1974582251182
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcPduDelayUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcPduDelayDl:mean 0.0039999999999999819
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2530.9192379674669
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2531.0397475458894
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcDelayUl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcDelayDl:mean 0.0044566597196561576
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx rlcDelayDl:mean 0.0043328501958466367
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx sentPacketToUpperLayer:count 1050
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx sentPacketToUpperLayer:sum(packetBytes) 73500
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.rx receivedPacketFromLowerLayer:count 1050
@@ -813,13 +815,13 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx sentPacketToLower
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx receivedPacketFromUpperLayer:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.tx receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcPduThroughputUl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcPduThroughputDl:simu5g_rateavg 5823.9246313773037
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcPduThroughputDl:simu5g_rateavg 5823.6588904481405
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcPduDelayUl:mean -nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcPduDelayDl:mean 0.0039999999999998388
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcThroughputUl:simu5g_rateavg -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcThroughputDl:simu5g_rateavg 5741.8975238931189
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcThroughputDl:simu5g_rateavg 5741.635525793944
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcDelayUl:mean -nan
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcDelayDl:mean 0.0044860955115932728
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx rlcDelayDl:mean 0.0046500299378227821
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:count 1586
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx sentPacketToUpperLayer:sum(packetBytes) 111020
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-2.rx receivedPacketFromLowerLayer:count 1586
@@ -860,12 +862,12 @@ scalar SingleCell_Standalone.ue[0].udp packetSent:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[0].udp passedUpPk:count 2636
 scalar SingleCell_Standalone.ue[0].udp droppedPkWrongPort:count 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:count 0
-scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:simu5g_rateavg 759.69206683946197
+scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:simu5g_rateavg 759.76392391895183
 scalar SingleCell_Standalone.ue[0].app[0] voipPlayoutLoss:mean 0
 scalar SingleCell_Standalone.ue[0].app[0] voipJitter:mean -nan
 scalar SingleCell_Standalone.ue[0].app[0] voipTaildropLoss:mean 0
 scalar SingleCell_Standalone.ue[0].app[0] voipMos:mean 4.4092858240000004
-scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:mean 0.0045634879178677382
+scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:mean 0.0042720080972399295
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameLoss:mean 0
 scalar SingleCell_Standalone.ue[0].app[0] voipPlayoutDelay:mean 0
 scalar SingleCell_Standalone.ue[0].app[1] voipReceivedThroughput:simu5g_rateavg 661.29822975020238
@@ -876,22 +878,22 @@ scalar SingleCell_Standalone.ue[0].app[1] voipMos:mean 4.4092858240000004
 scalar SingleCell_Standalone.ue[0].app[1] voipFrameDelay:mean 0.0043786416792549829
 scalar SingleCell_Standalone.ue[0].app[1] voipFrameLoss:mean 0
 scalar SingleCell_Standalone.ue[0].app[1] voipPlayoutDelay:mean 0
-scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:simu5g_rateavg 1437.1193854259702
-scalar SingleCell_Standalone.ue[0].app[2] voipPlayoutLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[2] voipJitter:mean -nan
+scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:simu5g_rateavg 1437.0445977696686
+scalar SingleCell_Standalone.ue[0].app[2] voipPlayoutLoss:mean 0.076741440377804018
+scalar SingleCell_Standalone.ue[0].app[2] voipJitter:mean 0.0010000000000000007
 scalar SingleCell_Standalone.ue[0].app[2] voipTaildropLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[2] voipMos:mean 4.4092858240000004
-scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:mean 0.0046276957257412174
+scalar SingleCell_Standalone.ue[0].app[2] voipMos:mean 3.9476764880801936
+scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:mean 0.0047958716636454825
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[2] voipPlayoutDelay:mean 0
-scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:simu5g_rateavg 1820.313621021548
-scalar SingleCell_Standalone.ue[0].app[3] voipPlayoutLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[3] voipJitter:mean -nan
+scalar SingleCell_Standalone.ue[0].app[2] voipPlayoutDelay:mean 0.00014285714285714287
+scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:simu5g_rateavg 1820.238684938774
+scalar SingleCell_Standalone.ue[0].app[3] voipPlayoutLoss:mean 0.050623052959501556
+scalar SingleCell_Standalone.ue[0].app[3] voipJitter:mean 0.0010000000000000007
 scalar SingleCell_Standalone.ue[0].app[3] voipTaildropLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[3] voipMos:mean 4.4092858240000004
-scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:mean 0.004352432815484631
+scalar SingleCell_Standalone.ue[0].app[3] voipMos:mean 4.0184145513425236
+scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:mean 0.0045123344145006263
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameLoss:mean 0
-scalar SingleCell_Standalone.ue[0].app[3] voipPlayoutDelay:mean 0
+scalar SingleCell_Standalone.ue[0].app[3] voipPlayoutDelay:mean 0.000125
 scalar SingleCell_Standalone.ue[1].lo[0].lo rcvdPkFromHl:count 0
 scalar SingleCell_Standalone.ue[1].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
 scalar SingleCell_Standalone.ue[1].lo[0].lo passedUpPk:count 0
@@ -5919,20 +5921,20 @@ scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):max 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):starttime 0
 scalar SingleCell_Standalone.ue[0].udp droppedPkBadChecksum:vector(count):endtime 0
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:count 446
-scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:sum 2.0353156113690112
+scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:sum 1.9053156113690086
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:sumweights 446
-scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:mean 0.0045634879178677382
-scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:stddev 0.00052683089201048094
-scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:min 0.0040173348420000001
+scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:mean 0.0042720080972399295
+scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:stddev 0.00047110416694343105
+scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:min 0.0040129294899999999
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:max 0.0058859349259999996
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:starttime 0.021000000000000001
 scalar SingleCell_Standalone.ue[0].app[0] voipFrameDelay:vector:endtime 19.998000000000001
 scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:count 446
-scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:sum 378433.1366088767
+scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:sum 378456.4331488001
 scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:sumweights 446
-scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:mean 848.5047906028625
-scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:stddev 212.46949350048527
-scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:min 51.194539249146757
+scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:mean 848.55702499730967
+scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:stddev 212.44853176920768
+scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:min 51.216389244558258
 scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:max 1951.219512195122
 scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:starttime 0.021000000000000001
 scalar SingleCell_Standalone.ue[0].app[0] voipReceivedThroughput:vector:endtime 19.998000000000001
@@ -5955,37 +5957,37 @@ scalar SingleCell_Standalone.ue[0].app[1] voipReceivedThroughput:vector:max 3333
 scalar SingleCell_Standalone.ue[0].app[1] voipReceivedThroughput:vector:starttime 0.012
 scalar SingleCell_Standalone.ue[0].app[1] voipReceivedThroughput:vector:endtime 19.984999999999999
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:count 773
-scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:sum 3.577208795997961
+scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:sum 3.7072087959979583
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:sumweights 773
-scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:mean 0.0046276957257412174
-scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:stddev 0.00013613247756502498
+scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:mean 0.0047958716636454825
+scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:stddev 0.00032451685003338353
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:min 0.0042098558209999999
-scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:max 0.0047411373250000003
+scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:max 0.0054694509709999999
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:starttime 0.014
 scalar SingleCell_Standalone.ue[0].app[2] voipFrameDelay:vector:endtime 19.988
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:count 773
-scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:sum 1149009.2913786687
+scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:sum 1148957.5386681433
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:sumweights 773
-scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:mean 1486.4285787563631
-scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:stddev 205.1411673274678
+scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:mean 1486.3616282899654
+scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:stddev 205.17094245115763
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:min 723.64316905801627
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:max 2857.1428571428569
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:starttime 0.014
 scalar SingleCell_Standalone.ue[0].app[2] voipReceivedThroughput:vector:endtime 19.988
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:count 813
-scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:sum 3.5385278789890053
+scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:sum 3.6685278789890092
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:sumweights 813
-scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:mean 0.004352432815484631
-scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:stddev 0.00017053200710920798
+scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:mean 0.0045123344145006263
+scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:stddev 0.00039270787825447366
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:min 0.0040778533899999995
-scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:max 0.0047821606350000002
+scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:max 0.0053232001900000003
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:starttime 0.023
 scalar SingleCell_Standalone.ue[0].app[3] voipFrameDelay:vector:endtime 19.990000000000002
 scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:count 813
-scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:sum 1501021.3964186243
+scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:sum 1500946.607760469
 scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:sumweights 813
-scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:mean 1846.2747803427114
-scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:stddev 127.64119219176609
+scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:mean 1846.1827893732705
+scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:stddev 127.53170947448099
 scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:min 1624.5596376446904
 scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:max 1999.0658570761327
 scalar SingleCell_Standalone.ue[0].app[3] voipReceivedThroughput:vector:starttime 0.023
