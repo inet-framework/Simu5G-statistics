@@ -1,8 +1,8 @@
 version 3
-run InterferenceTest-0-20261105-14:56:28-985551
+run InterferenceTest-0-20261105-16:37:16-1182241
 attr configname InterferenceTest
-attr datetime 20261105-14:56:28
-attr datetimef 20261105-145628
+attr datetime 20261105-16:37:16
+attr datetimef 20261105-163716
 attr experiment InterferenceTest
 attr inifile omnetpp.ini
 attr iterationvars "$extAllocType=\"FULL_ALLOC\""
@@ -10,7 +10,7 @@ attr iterationvarsd extAllocType=FULL#_ALLOC
 attr iterationvarsf extAllocType=FULL#_ALLOC-
 attr measurement "$extAllocType=\"FULL_ALLOC\""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 985551
+attr processid 1182241
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -25,7 +25,8 @@ config output-vector-file results/omnetpp.ini-InterferenceTest-#0.vec
 config output-vector-precision 17
 config record-eventlog false
 config sim-time-limit 10s
-config extends VoIP
+config extends InterferenceGeometry
+config *.extCell[*].bandAllocationType "\"FULL_ALLOC\""
 config repeat 1
 config *.eNodeB*.mobility.initFromDisplayString false
 config *.eNodeB1.mobility.initialX 100m
@@ -38,7 +39,6 @@ config *.eNodeB2.cellularNic.phy.txAngle 135deg
 config *.numExtCells 2
 config *.extCell[*].txPower 20dBm
 config *.extCell[*].txDirection "\"ANISOTROPIC\""
-config *.extCell[*].bandAllocationType "\"FULL_ALLOC\""
 config *.extCell[*].bandUtilization 0.5
 config *.extCell[0].positionX 100m
 config *.extCell[0].positionY 600m
@@ -387,7 +387,7 @@ scalar MultiCell.eNodeB1.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetByt
 scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:count 0
 scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 0
 scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksUl:mean 0
-scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksDl:mean 0.0553
+scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksDl:mean 0.0841
 scalar MultiCell.eNodeB1.cellularNic.mac harqTxAttemptsUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac harqTxAttemptsDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -574,7 +574,7 @@ scalar MultiCell.eNodeB2.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetByt
 scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:count 0
 scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 0
 scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksUl:mean 0
-scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksDl:mean 0.064
+scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksDl:mean 0.1048
 scalar MultiCell.eNodeB2.cellularNic.mac harqTxAttemptsUl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac harqTxAttemptsDl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -840,9 +840,9 @@ scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 0
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean 15
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 265
 scalar MultiCell.ue11.cellularNic.channelModel[0] measuredSinrUl:mean 40.384720669883286
-scalar MultiCell.ue11.cellularNic.channelModel[0] measuredSinrDl:mean 59.70276337972266
+scalar MultiCell.ue11.cellularNic.channelModel[0] measuredSinrDl:mean 50.55977207950151
 scalar MultiCell.ue11.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell.ue11.cellularNic.channelModel[0] rcvdSinrDl:mean 59.85626818827375
+scalar MultiCell.ue11.cellularNic.channelModel[0] rcvdSinrDl:mean 50.74321343845485
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
@@ -944,12 +944,12 @@ scalar MultiCell.ue12.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue12.cellularNic.phy distance:mean nan
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 0
-scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean 15
+scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean 12
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 288
 scalar MultiCell.ue12.cellularNic.channelModel[0] measuredSinrUl:mean 37.43605999079282
-scalar MultiCell.ue12.cellularNic.channelModel[0] measuredSinrDl:mean 40.166587322428356
+scalar MultiCell.ue12.cellularNic.channelModel[0] measuredSinrDl:mean 26.422261685071806
 scalar MultiCell.ue12.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell.ue12.cellularNic.channelModel[0] rcvdSinrDl:mean 39.40342957441803
+scalar MultiCell.ue12.cellularNic.channelModel[0] rcvdSinrDl:mean 25.114725323444265
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
@@ -1051,12 +1051,12 @@ scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue21.cellularNic.phy distance:mean nan
 scalar MultiCell.ue21.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue21.cellularNic.phy averageCqiUl:count 0
-scalar MultiCell.ue21.cellularNic.phy averageCqiDl:mean 15
+scalar MultiCell.ue21.cellularNic.phy averageCqiDl:mean 14.844827586206897
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:count 232
 scalar MultiCell.ue21.cellularNic.channelModel[0] measuredSinrUl:mean 39.95748887059795
-scalar MultiCell.ue21.cellularNic.channelModel[0] measuredSinrDl:mean 56.469406325586625
+scalar MultiCell.ue21.cellularNic.channelModel[0] measuredSinrDl:mean 47.36147890395087
 scalar MultiCell.ue21.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell.ue21.cellularNic.channelModel[0] rcvdSinrDl:mean 61.010846992560815
+scalar MultiCell.ue21.cellularNic.channelModel[0] rcvdSinrDl:mean 51.897792242741914
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan
@@ -1158,12 +1158,12 @@ scalar MultiCell.ue22.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue22.cellularNic.phy distance:mean nan
 scalar MultiCell.ue22.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue22.cellularNic.phy averageCqiUl:count 0
-scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean 14.970588235294118
+scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean 11.985294117647058
 scalar MultiCell.ue22.cellularNic.phy averageCqiDl:count 408
 scalar MultiCell.ue22.cellularNic.channelModel[0] measuredSinrUl:mean 31.260881908243007
-scalar MultiCell.ue22.cellularNic.channelModel[0] measuredSinrDl:mean 41.86999429516936
+scalar MultiCell.ue22.cellularNic.channelModel[0] measuredSinrDl:mean 28.137005444772026
 scalar MultiCell.ue22.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell.ue22.cellularNic.channelModel[0] rcvdSinrDl:mean 44.10102170469296
+scalar MultiCell.ue22.cellularNic.channelModel[0] rcvdSinrDl:mean 29.504020827870367
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan

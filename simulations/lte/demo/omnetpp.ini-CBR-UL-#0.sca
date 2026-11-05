@@ -1,8 +1,8 @@
 version 3
-run CBR-UL-0-20261105-14:56:07-984927
+run CBR-UL-0-20261105-16:36:50-1181817
 attr configname CBR-UL
-attr datetime 20261105-14:56:07
-attr datetimef 20261105-145607
+attr datetime 20261105-16:36:50
+attr datetimef 20261105-163650
 attr experiment CBR-UL
 attr inifile omnetpp.ini
 attr iterationvars "$cbrEnd=20s, $numUEs=1"
@@ -10,7 +10,7 @@ attr iterationvarsd cbrEnd=20s/numUEs=1
 attr iterationvarsf cbrEnd=20s,numUEs=1-
 attr measurement "$cbrEnd=20s, $numUEs=1"
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 984927
+attr processid 1181817
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -496,7 +496,7 @@ scalar SingleCell.ue[0].udp passedUpPk:count 0
 scalar SingleCell.ue[0].udp droppedPkWrongPort:count 0
 scalar SingleCell.ue[0].udp droppedPkBadChecksum:count 0
 scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:mean 100
-scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:last(sumPerDuration) 5000
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:sum 1e+05
 scalar SingleCell.ue[0].app[0] cbrGeneratedThroughput:simu5g_rateavg 5000
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg nan
@@ -3724,6 +3724,15 @@ scalar SingleCell.ue[0].app[0] cbrGeneratedThroughput:vector:min inf
 scalar SingleCell.ue[0].app[0] cbrGeneratedThroughput:vector:max -inf
 scalar SingleCell.ue[0].app[0] cbrGeneratedThroughput:vector:starttime nan
 scalar SingleCell.ue[0].app[0] cbrGeneratedThroughput:vector:endtime nan
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:count 0
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:sum 0
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:sumweights 0
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:mean nan
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:stddev nan
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:min inf
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:max -inf
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:starttime nan
+scalar SingleCell.ue[0].app[0] cbrGeneratedBytes:vector:endtime nan
 scalar SingleCell.ue[0].app[0] cbrSentPkt:vector:count 0
 scalar SingleCell.ue[0].app[0] cbrSentPkt:vector:sum 0
 scalar SingleCell.ue[0].app[0] cbrSentPkt:vector:sumweights 0

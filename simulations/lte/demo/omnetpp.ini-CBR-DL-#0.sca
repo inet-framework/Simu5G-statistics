@@ -1,8 +1,8 @@
 version 3
-run CBR-DL-0-20261105-14:56:05-984875
+run CBR-DL-0-20261105-16:36:47-1181762
 attr configname CBR-DL
-attr datetime 20261105-14:56:05
-attr datetimef 20261105-145605
+attr datetime 20261105-16:36:47
+attr datetimef 20261105-163647
 attr experiment CBR-DL
 attr inifile omnetpp.ini
 attr iterationvars "$cbrEnd=20s, $numUEs=1"
@@ -10,7 +10,7 @@ attr iterationvarsd cbrEnd=20s/numUEs=1
 attr iterationvarsf cbrEnd=20s,numUEs=1-
 attr measurement "$cbrEnd=20s, $numUEs=1"
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 984875
+attr processid 1181762
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -123,7 +123,7 @@ scalar SingleCell.server.udp passedUpPk:count 0
 scalar SingleCell.server.udp droppedPkWrongPort:count 0
 scalar SingleCell.server.udp droppedPkBadChecksum:count 0
 scalar SingleCell.server.app[0] cbrGeneratedBytes:mean 100
-scalar SingleCell.server.app[0] cbrGeneratedBytes:last(sumPerDuration) 5000
+scalar SingleCell.server.app[0] cbrGeneratedBytes:sum 1e+05
 scalar SingleCell.server.app[0] cbrGeneratedThroughput:simu5g_rateavg 5000
 scalar SingleCell.router.lo[0].lo rcvdPkFromHl:count 0
 scalar SingleCell.router.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
@@ -1690,6 +1690,15 @@ scalar SingleCell.server.app[0] cbrGeneratedThroughput:vector:min inf
 scalar SingleCell.server.app[0] cbrGeneratedThroughput:vector:max -inf
 scalar SingleCell.server.app[0] cbrGeneratedThroughput:vector:starttime nan
 scalar SingleCell.server.app[0] cbrGeneratedThroughput:vector:endtime nan
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:count 0
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:sum 0
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:sumweights 0
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:mean nan
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:stddev nan
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:min inf
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:max -inf
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:starttime nan
+scalar SingleCell.server.app[0] cbrGeneratedBytes:vector:endtime nan
 scalar SingleCell.server.app[0] cbrSentPkt:vector:count 0
 scalar SingleCell.server.app[0] cbrSentPkt:vector:sum 0
 scalar SingleCell.server.app[0] cbrSentPkt:vector:sumweights 0
