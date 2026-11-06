@@ -1,8 +1,8 @@
 version 3
-run AM-Lossy-UL-0-20261105-16:37:42-1182803
+run AM-Lossy-UL-0-20261106-11:02:54-2169200
 attr configname AM-Lossy-UL
-attr datetime 20261105-16:37:42
-attr datetimef 20261105-163742
+attr datetime 20261106-11:02:54
+attr datetimef 20261106-110254
 attr experiment AM-Lossy-UL
 attr inifile omnetpp.ini
 attr iterationvars $perUl=0.5
@@ -10,7 +10,7 @@ attr iterationvarsd perUl=0.5
 attr iterationvarsf perUl=0.5-
 attr measurement $perUl=0.5
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 1182803
+attr processid 2169200
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -55,6 +55,8 @@ config **.harqReduction 1
 config **.perD2D 0
 config num-rngs 2
 config **.channelModel[*].rng-0 1
+config *.radioMedium.rng-0 1
+config **.cellularNic.radio.receiver.rng-0 1
 config **.ue[*].numApps 1
 config **.server.numApps 1
 config **.server.app[0].destAddress "\"ue[0]\""
@@ -371,6 +373,10 @@ scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:count 326
 scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 648
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowDl:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar SingleCell.eNB.cellularNic.rlc-am-1025-1.tx retransmissionPdu:count 0
 scalar SingleCell.eNB.cellularNic.rlc-am-1025-1.tx txWindowFull:count 0
 scalar SingleCell.eNB.cellularNic.rlc-am-1025-1.tx txWindowOccupation:mean nan
@@ -577,6 +583,10 @@ scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:mean 15
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:count 2222
 scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:mean 15
 scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:count 163
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar SingleCell.ue[0].cellularNic.rlc-am-1-1.tx retransmissionPdu:count 173
 scalar SingleCell.ue[0].cellularNic.rlc-am-1-1.tx txWindowFull:count 0
 scalar SingleCell.ue[0].cellularNic.rlc-am-1-1.tx txWindowOccupation:mean 10.635394456289978
@@ -3040,6 +3050,42 @@ scalar SingleCell.eNB.cellularNic.mac avgServedBlocksUl:vector:min 0
 scalar SingleCell.eNB.cellularNic.mac avgServedBlocksUl:vector:max 6
 scalar SingleCell.eNB.cellularNic.mac avgServedBlocksUl:vector:starttime 0.001
 scalar SingleCell.eNB.cellularNic.mac avgServedBlocksUl:vector:endtime 20
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:count 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:sum 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:sumweights 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:stddev nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:min inf
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:count 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:sum 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 0
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:stddev nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:min inf
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:count 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:sum 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:stddev nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:min inf
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:max -inf
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:starttime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrDl:vector:endtime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:count 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:sum 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 0
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:mean nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:stddev nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:min inf
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:max -inf
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:starttime nan
+scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:vector:endtime nan
 scalar SingleCell.eNB.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell.eNB.cellularNic packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell.eNB.cellularNic packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -4039,6 +4085,42 @@ scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:vector:min 15
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:vector:max 15
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:vector:starttime 1.004
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:vector:endtime 18.37
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:count 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:sum 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:sumweights 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:stddev nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:min inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:count 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:sum 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:stddev nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:min inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:count 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:sum 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:sumweights 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:stddev nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:min inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:max -inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:starttime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:vector:endtime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:count 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:sum 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:sumweights 0
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:mean nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:stddev nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:min inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:max -inf
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:starttime nan
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:vector:endtime nan
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:vector(packetBytes):sumweights 0
