@@ -1,8 +1,8 @@
 version 3
-run VideoStreaming-0-20261106-11:02:16-2168547
+run VideoStreaming-0-20261106-15:17:58-2700322
 attr configname VideoStreaming
-attr datetime 20261106-11:02:16
-attr datetimef 20261106-110216
+attr datetime 20261106-15:17:58
+attr datetimef 20261106-151758
 attr experiment VideoStreaming
 attr inifile omnetpp.ini
 attr iterationvars "$numUEs=1, $packetLen=1000B"
@@ -10,7 +10,7 @@ attr iterationvarsd numUEs=1/packetLen=1000B
 attr iterationvarsf numUEs=1,packetLen=1000B-
 attr measurement "$numUEs=1, $packetLen=1000B"
 attr network simu5g.simulations.lte.networks.SingleCell
-attr processid 2168547
+attr processid 2700322
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -317,12 +317,12 @@ scalar SingleCell.eNB.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar SingleCell.eNB.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar SingleCell.eNB.cellularNic.rlcMux sentPacketToLowerLayer:count 4000
-scalar SingleCell.eNB.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 2064000
+scalar SingleCell.eNB.cellularNic.rlcMux sentPacketToLowerLayer:count 6000
+scalar SingleCell.eNB.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 2068000
 scalar SingleCell.eNB.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1
 scalar SingleCell.eNB.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 32
 scalar SingleCell.eNB.cellularNic.mac avgServedBlocksUl:mean 2e-04
-scalar SingleCell.eNB.cellularNic.mac avgServedBlocksDl:mean 0.7
+scalar SingleCell.eNB.cellularNic.mac avgServedBlocksDl:mean 0.9
 scalar SingleCell.eNB.cellularNic.mac harqTxAttemptsUl:mean nan
 scalar SingleCell.eNB.cellularNic.mac harqTxAttemptsDl:mean nan
 scalar SingleCell.eNB.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -343,14 +343,14 @@ scalar SingleCell.eNB.cellularNic.mac macThroughputUl:simu5g_rateavg nan
 scalar SingleCell.eNB.cellularNic.mac macThroughputDl:simu5g_rateavg nan
 scalar SingleCell.eNB.cellularNic.mac macDelayUl:mean nan
 scalar SingleCell.eNB.cellularNic.mac macDelayDl:mean nan
-scalar SingleCell.eNB.cellularNic.mac sentPacketToLowerLayer:count 3003
-scalar SingleCell.eNB.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 1041003
-scalar SingleCell.eNB.cellularNic.mac sentPacketToUpperLayer:count 3001
-scalar SingleCell.eNB.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 3032
-scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:count 6334
-scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 6367
-scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:count 4000
-scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 2064000
+scalar SingleCell.eNB.cellularNic.mac sentPacketToLowerLayer:count 5003
+scalar SingleCell.eNB.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 1049003
+scalar SingleCell.eNB.cellularNic.mac sentPacketToUpperLayer:count 5001
+scalar SingleCell.eNB.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 5032
+scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:count 8332
+scalar SingleCell.eNB.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 8365
+scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:count 6000
+scalar SingleCell.eNB.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 2068000
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar SingleCell.eNB.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar SingleCell.eNB.cellularNic.radio.receiver measuredSinrUl:mean nan
@@ -507,8 +507,8 @@ scalar SingleCell.ue[0].cellularNic.rlcMux rlcDelayUl:mean nan
 scalar SingleCell.ue[0].cellularNic.rlcMux rlcDelayDl:mean nan
 scalar SingleCell.ue[0].cellularNic.rlcMux sentPacketToLowerLayer:count 2
 scalar SingleCell.ue[0].cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 62
-scalar SingleCell.ue[0].cellularNic.rlcMux receivedPacketFromLowerLayer:count 2999
-scalar SingleCell.ue[0].cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 1034885
+scalar SingleCell.ue[0].cellularNic.rlcMux receivedPacketFromLowerLayer:count 4997
+scalar SingleCell.ue[0].cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 1038445
 scalar SingleCell.ue[0].cellularNic.mac harqTxAttemptsUl:mean 1
 scalar SingleCell.ue[0].cellularNic.mac harqTxAttemptsDl:mean 1
 scalar SingleCell.ue[0].cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -526,15 +526,15 @@ scalar SingleCell.ue[0].cellularNic.mac macCellPacketLossDl:mean nan
 scalar SingleCell.ue[0].cellularNic.mac macPacketLossUl:mean 0
 scalar SingleCell.ue[0].cellularNic.mac macPacketLossDl:mean 0
 scalar SingleCell.ue[0].cellularNic.mac macThroughputUl:simu5g_rateavg 2428.5714285714284
-scalar SingleCell.ue[0].cellularNic.mac macThroughputDl:simu5g_rateavg 51865.93535458297
+scalar SingleCell.ue[0].cellularNic.mac macThroughputDl:simu5g_rateavg 52192.70709780931
 scalar SingleCell.ue[0].cellularNic.mac macDelayUl:mean 0.004
 scalar SingleCell.ue[0].cellularNic.mac macDelayDl:mean 0.004
-scalar SingleCell.ue[0].cellularNic.mac sentPacketToLowerLayer:count 3001
-scalar SingleCell.ue[0].cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 3034
-scalar SingleCell.ue[0].cellularNic.mac sentPacketToUpperLayer:count 3000
-scalar SingleCell.ue[0].cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 1034886
-scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:count 3003
-scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 1041003
+scalar SingleCell.ue[0].cellularNic.mac sentPacketToLowerLayer:count 4999
+scalar SingleCell.ue[0].cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 5032
+scalar SingleCell.ue[0].cellularNic.mac sentPacketToUpperLayer:count 4998
+scalar SingleCell.ue[0].cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 1038446
+scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:count 5003
+scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 1049003
 scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromUpperLayer:count 2
 scalar SingleCell.ue[0].cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 62
 scalar SingleCell.ue[0].cellularNic.mac macBufferOverFlowUl:mean nan
@@ -542,20 +542,20 @@ scalar SingleCell.ue[0].cellularNic.mac macBufferOverFlowDl:mean nan
 scalar SingleCell.ue[0].cellularNic.phy distance:mean nan
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:mean 6
 scalar SingleCell.ue[0].cellularNic.phy averageCqiUl:count 1
-scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:mean 13
-scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:count 3000
+scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:mean 11
+scalar SingleCell.ue[0].cellularNic.phy averageCqiDl:count 5000
 scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrUl:mean 11.904429745181105
-scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:mean 31.47587180910203
+scalar SingleCell.ue[0].cellularNic.radio.receiver measuredSinrDl:mean 23.9044297451811
 scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrUl:mean 14.905863930875697
-scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:mean 31.256240973137945
+scalar SingleCell.ue[0].cellularNic.radio.receiver rcvdSinrDl:mean 26.7459187304486
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcPduDelayDl:mean 0.004
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
-scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 51430.809520127084
+scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 51392.90242039572
 scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.006997072
+scalar SingleCell.ue[0].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.008997072
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:count 0
 scalar SingleCell.ue[0].cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar SingleCell.ue[0].cellularNic packetDropNoCarrier:count 0
@@ -870,10 +870,10 @@ scalar SingleCell.eNB.pppMEHostIf.queue incomingPacketLengths:histogram:underflo
 scalar SingleCell.eNB.pppMEHostIf.queue incomingPacketLengths:histogram:overflows 0
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:count 999
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:sumweights 999
-scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:mean 0.0069997348
+scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:mean 0.008999734799999999
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:stddev 0
-scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:min 0.0069997348
-scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:max 0.0069997348
+scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:min 0.008999734799999999
+scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:max 0.008999734799999999
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:numbins 51
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:rangemin 0
 scalar SingleCell.ue[0].app[0] endToEndDelay:histogram:rangemax 0.51
@@ -1495,12 +1495,12 @@ bin	0	0
 bin	1	0
 statistic SingleCell.ue[0].app[0] endToEndDelay:histogram
 field count 999
-field mean 0.0069997348
+field mean 0.008999734799999999
 field stddev 0
-field min 0.0069997348
-field max 0.0069997348
-field sum 6.9927350652
-field sqrsum 0.04894729098306071
+field min 0.008999734799999999
+field max 0.008999734799999999
+field sum 8.990735065199999
+field sqrsum 0.08091423124386068
 bin	-inf	0
 bin	0	999
 bin	0.01	0
