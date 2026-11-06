@@ -1,8 +1,8 @@
 version 3
-run X2-MeshTopology-0-20261105-13:57:50-878808
+run X2-MeshTopology-0-20261106-11:04:03-2170449
 attr configname X2-MeshTopology
-attr datetime 20261105-13:57:50
-attr datetimef 20261105-135750
+attr datetime 20261106-11:04:03
+attr datetimef 20261106-110403
 attr experiment X2-MeshTopology
 attr inifile omnetpp.ini
 attr iterationvars "$sched=\"MAXCI\", $comp=false"
@@ -10,7 +10,7 @@ attr iterationvarsd sched=MAXCI/comp=false
 attr iterationvarsf sched=MAXCI,comp=false-
 attr measurement "$sched=\"MAXCI\", $comp=false"
 attr network simu5g.simulations.lte.networks.MultiCell_X2Mesh
-attr processid 878808
+attr processid 2170449
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -56,10 +56,10 @@ config *.eNodeB2.mobility.initialX 856m
 config *.eNodeB2.mobility.initialY 1250m
 config *.eNodeB3.mobility.initialX 1289m
 config *.eNodeB3.mobility.initialY 1000m
-config *.eNodeB*.cellularNic.phy.txDirection "\"ANISOTROPIC\""
-config *.eNodeB1.cellularNic.phy.txAngle 60deg
-config *.eNodeB2.cellularNic.phy.txAngle 300deg
-config *.eNodeB3.cellularNic.phy.txAngle 180deg
+config *.eNodeB*.cellularNic.radio.antenna.txDirection "\"ANISOTROPIC\""
+config *.eNodeB1.cellularNic.radio.antenna.txAngle 60deg
+config *.eNodeB2.cellularNic.radio.antenna.txAngle 300deg
+config *.eNodeB3.cellularNic.radio.antenna.txAngle 180deg
 config *.ue*[*].numApps 1
 config *.ue*[*].app[*].typename VoipReceiver
 config *.server.app[*].typename VoipSender
@@ -605,10 +605,10 @@ scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:cou
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac macBufferOverFlowDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropNoCarrier:count 0
@@ -817,10 +817,10 @@ scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:cou
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac macBufferOverFlowDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropNoCarrier:count 0
@@ -1029,10 +1029,10 @@ scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac receivedPacketFromUpperLayer:cou
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac macBufferOverFlowDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropNoCarrier:count 0
@@ -7490,42 +7490,42 @@ scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac avgServedBlocksUl:vector:min inf
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac avgServedBlocksUl:vector:max -inf
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac avgServedBlocksUl:vector:starttime nan
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic.mac avgServedBlocksUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] rcvdSinrUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB1.cellularNic.channelModel[0] measuredSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB1.cellularNic.radio.receiver measuredSinrUl:vector:endtime nan
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar MultiCell_X2Mesh.eNodeB1.cellularNic packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -8723,42 +8723,42 @@ scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac avgServedBlocksUl:vector:min inf
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac avgServedBlocksUl:vector:max -inf
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac avgServedBlocksUl:vector:starttime nan
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic.mac avgServedBlocksUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] rcvdSinrUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB2.cellularNic.channelModel[0] measuredSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB2.cellularNic.radio.receiver measuredSinrUl:vector:endtime nan
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar MultiCell_X2Mesh.eNodeB2.cellularNic packetDropInterfaceDown:vector(packetBytes):sumweights 0
@@ -9956,42 +9956,42 @@ scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac avgServedBlocksUl:vector:min inf
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac avgServedBlocksUl:vector:max -inf
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac avgServedBlocksUl:vector:starttime nan
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic.mac avgServedBlocksUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] rcvdSinrUl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrDl:vector:endtime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:count 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:sum 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:sumweights 0
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:mean nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:stddev nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:min inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:max -inf
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:starttime nan
-scalar MultiCell_X2Mesh.eNodeB3.cellularNic.channelModel[0] measuredSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrDl:vector:endtime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:count 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:sum 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 0
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:mean nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:stddev nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:min inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:max -inf
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:starttime nan
+scalar MultiCell_X2Mesh.eNodeB3.cellularNic.radio.receiver measuredSinrUl:vector:endtime nan
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropInterfaceDown:vector(packetBytes):sum 0
 scalar MultiCell_X2Mesh.eNodeB3.cellularNic packetDropInterfaceDown:vector(packetBytes):sumweights 0
