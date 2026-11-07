@@ -1,8 +1,8 @@
 version 3
-run VoIP-DL_UL-0-20261106-11:03:38-2170000
+run VoIP-DL_UL-0-20261107-16:40:35-3811464
 attr configname VoIP-DL_UL
-attr datetime 20261106-11:03:38
-attr datetimef 20261106-110338
+attr datetime 20261107-16:40:35
+attr datetimef 20261107-164035
 attr experiment VoIP-DL_UL
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 2170000
+attr processid 3811464
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -70,8 +70,8 @@ config **.eNodeB*.cellularNic.phy.targetBler 0.004
 config network simu5g.simulations.lte.networks.MultiCell
 config **.routingRecorder.enabled false
 config **.vector-recording true
-config **.cellularNic.channelModel[0].shadowing false
-config **.cellularNic.channelModel[0].fading false
+config *.radioMedium.channelModel[0].shadowing false
+config *.radioMedium.channelModel[0].fading false
 config **.mobility.constraintAreaMinZ 0m
 config **.mobility.constraintAreaMaxZ 0m
 config **.numBands 25
@@ -1104,14 +1104,14 @@ scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:count 1325
 scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 92818
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowDl:mean nan
-scalar MultiCell.ue11.cellularNic.phy distance:mean 42.495705005928066
+scalar MultiCell.ue11.cellularNic.phy distance:mean 42.68484285898518
 scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 14.977409638554217
 scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 664
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean nan
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 0
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 58.89919891458676
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 70.89919891458676
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 58.572739959302815
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 58.87444296975999
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 70.87444296975998
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 58.52607007784363
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell.ue11.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg nan
@@ -1203,13 +1203,13 @@ scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:count 0
 scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 0
 scalar MultiCell.ue12.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue12.cellularNic.mac macBufferOverFlowDl:mean nan
-scalar MultiCell.ue12.cellularNic.phy distance:mean 42.495705005928066
+scalar MultiCell.ue12.cellularNic.phy distance:mean 42.49352799088132
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 0
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean nan
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 0
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 58.90083187018305
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 70.90083187018304
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 58.87607463917113
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 70.87607463917114
 scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean nan
 scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell.ue12.cellularNic packetDropInterfaceDown:count 0
@@ -7067,14 +7067,14 @@ scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes)
 scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):max 126
 scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):starttime 0.01
 scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):endtime 19.439
-scalar MultiCell.ue11.cellularNic.phy distance:vector:count 200
-scalar MultiCell.ue11.cellularNic.phy distance:vector:sum 8499.141001185613
-scalar MultiCell.ue11.cellularNic.phy distance:vector:sumweights 200
-scalar MultiCell.ue11.cellularNic.phy distance:vector:mean 42.495705005928066
-scalar MultiCell.ue11.cellularNic.phy distance:vector:stddev 11.760382178913696
+scalar MultiCell.ue11.cellularNic.phy distance:vector:count 8987
+scalar MultiCell.ue11.cellularNic.phy distance:vector:sum 383608.6827736998
+scalar MultiCell.ue11.cellularNic.phy distance:vector:sumweights 8987
+scalar MultiCell.ue11.cellularNic.phy distance:vector:mean 42.68484285898518
+scalar MultiCell.ue11.cellularNic.phy distance:vector:stddev 11.672285878020038
 scalar MultiCell.ue11.cellularNic.phy distance:vector:min 30
-scalar MultiCell.ue11.cellularNic.phy distance:vector:max 76.15773105863909
-scalar MultiCell.ue11.cellularNic.phy distance:vector:starttime 0.1
+scalar MultiCell.ue11.cellularNic.phy distance:vector:max 76.59915404232024
+scalar MultiCell.ue11.cellularNic.phy distance:vector:starttime 0.001
 scalar MultiCell.ue11.cellularNic.phy distance:vector:endtime 20
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:vector:count 0
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:vector:sum 0
@@ -7104,30 +7104,30 @@ scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:vector:max -inf
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:vector:starttime nan
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:vector:endtime nan
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:count 663
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:sum 38833.72659301777
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:sum 38802.784461610325
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:sumweights 663
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:mean 58.572739959302815
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:stddev 4.086432932463333
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:min 48.591187847809124
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:max 64.19937154058539
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:mean 58.52607007784363
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:stddev 4.1089626818362035
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:min 48.4037500043019
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:max 64.19762800977715
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:starttime 0.015
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:vector:endtime 19.44
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:count 3334
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:sum 236377.92918123226
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:sum 236295.3928611798
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 3334
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:mean 70.89919891458676
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:stddev 4.337138182017279
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:min 60.385303462436006
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:max 76.19937154058539
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:mean 70.87444296975998
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:stddev 4.368587344896818
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:min 60.28923670009477
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:max 76.19937059752982
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:starttime 0.002
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:vector:endtime 20
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:count 3334
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:sum 196369.92918123226
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:sum 196287.3928611798
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 3334
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:mean 58.89919891458676
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:stddev 4.337138182017273
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:min 48.385303462436006
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:max 64.19937154058539
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:mean 58.87444296975999
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:stddev 4.3685873448967225
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:min 48.28923670009477
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:max 64.19937059752982
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:starttime 0.002
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:vector:endtime 20
 scalar MultiCell.ue11.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
@@ -7580,14 +7580,14 @@ scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes)
 scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):max -inf
 scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):starttime nan
 scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes):endtime nan
-scalar MultiCell.ue12.cellularNic.phy distance:vector:count 200
-scalar MultiCell.ue12.cellularNic.phy distance:vector:sum 8499.141001185613
-scalar MultiCell.ue12.cellularNic.phy distance:vector:sumweights 200
-scalar MultiCell.ue12.cellularNic.phy distance:vector:mean 42.495705005928066
-scalar MultiCell.ue12.cellularNic.phy distance:vector:stddev 11.760382178913696
+scalar MultiCell.ue12.cellularNic.phy distance:vector:count 6801
+scalar MultiCell.ue12.cellularNic.phy distance:vector:sum 288998.48386598384
+scalar MultiCell.ue12.cellularNic.phy distance:vector:sumweights 6801
+scalar MultiCell.ue12.cellularNic.phy distance:vector:mean 42.49352799088132
+scalar MultiCell.ue12.cellularNic.phy distance:vector:stddev 11.729613051630071
 scalar MultiCell.ue12.cellularNic.phy distance:vector:min 30
-scalar MultiCell.ue12.cellularNic.phy distance:vector:max 76.15773105863909
-scalar MultiCell.ue12.cellularNic.phy distance:vector:starttime 0.1
+scalar MultiCell.ue12.cellularNic.phy distance:vector:max 76.59915404232694
+scalar MultiCell.ue12.cellularNic.phy distance:vector:starttime 0.001
 scalar MultiCell.ue12.cellularNic.phy distance:vector:endtime 20
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:vector:count 0
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:vector:sum 0
@@ -7626,21 +7626,21 @@ scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:vector:max -inf
 scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:vector:starttime nan
 scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:vector:endtime nan
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:count 3334
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:sum 236383.37345519027
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:sum 236300.83284699655
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:sumweights 3334
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:mean 70.90083187018304
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:stddev 4.33647002316521
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:min 60.385303462436006
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:max 76.19937154058539
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:mean 70.87607463917114
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:stddev 4.367886040058973
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:min 60.289236700093326
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:max 76.19937059752982
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:starttime 0.002
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:vector:endtime 20
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:count 3334
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:sum 196375.37345519027
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:sum 196292.83284699655
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:sumweights 3334
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:mean 58.90083187018305
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:stddev 4.33647002316517
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:min 48.385303462436006
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:max 64.19937154058539
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:mean 58.87607463917113
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:stddev 4.367886040059045
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:min 48.289236700093305
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:max 64.19937059752982
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:starttime 0.002
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:vector:endtime 20
 scalar MultiCell.ue12.cellularNic packetDropInterfaceDown:vector(packetBytes):count 0
