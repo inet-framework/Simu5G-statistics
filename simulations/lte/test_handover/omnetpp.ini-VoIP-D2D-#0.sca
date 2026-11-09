@@ -1,8 +1,8 @@
 version 3
-run VoIP-D2D-0-20261108-17:03:55-1206448
+run VoIP-D2D-0-20261109-12:41:32-2395898
 attr configname VoIP-D2D
-attr datetime 20261108-17:03:55
-attr datetimef 20261108-170355
+attr datetime 20261109-12:41:32
+attr datetimef 20261109-124132
 attr experiment VoIP-D2D
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 1206448
+attr processid 2395898
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -34,7 +34,7 @@ config *.ue11.app[*].startTime 0.01s
 config *.ue12.app[*].typename VoipReceiver
 config *.ue12.app[*].localPort 3088
 config **.hasD2D true
-config *.radioMedium.channelModelType "\"D2dChannelModel\""
+config *.radioMedium.channelModelType "\"StochasticChannelModel\""
 config **.amcMode "\"D2D\""
 config *.ue*.cellularNic.d2dInitialMode true
 config *.eNodeB*.cellularNic.phy.enableD2DCqiReporting true
@@ -1152,6 +1152,7 @@ scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 15
 scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 1207
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean nan
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 0
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:mean nan
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 58.87444296976111
 scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 70.87393359507351
 scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 59.21410282842175
@@ -1290,6 +1291,7 @@ scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 0
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean 15
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 145
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:mean 47.40230382725544
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 58.87607463917071
 scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 70.87556524137094
 scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean nan
@@ -1420,6 +1422,7 @@ scalar MultiCell.ue21.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue21.cellularNic.phy averageCqiUl:count 0
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:mean nan
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:count 0
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:mean nan
 scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrUl:mean 29.429606098151407
 scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrDl:mean 41.42960609815142
 scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrUl:mean nan
@@ -1526,6 +1529,7 @@ scalar MultiCell.ue22.cellularNic.phy averageCqiUl:mean nan
 scalar MultiCell.ue22.cellularNic.phy averageCqiUl:count 0
 scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean nan
 scalar MultiCell.ue22.cellularNic.phy averageCqiDl:count 0
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:mean nan
 scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrUl:mean 31.103286903725767
 scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrDl:mean 43.103286903725774
 scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrUl:mean nan
@@ -1534,7 +1538,6 @@ scalar MultiCell.ue22.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.ue22.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:count 0
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:sum(packetBytes) 0
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:mean 47.40230382725544
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:count 0
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:sumweights 0
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:mean nan
@@ -9439,15 +9442,42 @@ scalar MultiCell.ue22.cellularNic packetDropNoCarrier:vector(packetBytes):min in
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:vector(packetBytes):max -inf
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:vector(packetBytes):starttime nan
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:vector(packetBytes):endtime nan
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:count 530
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:sum 25123.221028445383
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:sumweights 530
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:mean 47.40230382725544
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:stddev 6.231121226475194
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:min 44.19937154058533
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:max 62.84831705853584
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:starttime 0.021
-scalar MultiCell.radioMedium.channelModel[0] rcvdSinrD2D:vector:endtime 19.998
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:count 0
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:sum 0
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:sumweights 0
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:mean nan
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:stddev nan
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:min inf
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:max -inf
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:starttime nan
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrD2D:vector:endtime nan
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:count 530
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:sum 25123.221028445383
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:sumweights 530
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:mean 47.40230382725544
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:stddev 6.231121226475194
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:min 44.19937154058533
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:max 62.84831705853584
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:starttime 0.021
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrD2D:vector:endtime 19.998
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:count 0
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:sum 0
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:sumweights 0
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:mean nan
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:stddev nan
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:min inf
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:max -inf
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:starttime nan
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrD2D:vector:endtime nan
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:count 0
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:sum 0
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:sumweights 0
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:mean nan
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:stddev nan
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:min inf
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:max -inf
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:starttime nan
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrD2D:vector:endtime nan
 scalar MultiCell.eNodeB1.sctp.assoc-29 pathRto:vector(demux):count 0
 scalar MultiCell.eNodeB1.sctp.assoc-29 pathRto:vector(demux):sum 0
 scalar MultiCell.eNodeB1.sctp.assoc-29 pathRto:vector(demux):sumweights 0
