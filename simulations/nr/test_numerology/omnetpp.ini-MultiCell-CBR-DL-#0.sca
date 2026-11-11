@@ -1,8 +1,8 @@
 version 3
-run MultiCell-CBR-DL-0-20261108-17:08:25-1213156
+run MultiCell-CBR-DL-0-20261111-14:13:43-4020432
 attr configname MultiCell-CBR-DL
-attr datetime 20261108-17:08:25
-attr datetimef 20261108-170825
+attr datetime 20261111-14:13:43
+attr datetimef 20261111-141343
 attr experiment MultiCell-CBR-DL
 attr inifile omnetpp.ini
 attr iterationvars "$u=0, $numUe=10, $numUeApps=2"
@@ -10,7 +10,7 @@ attr iterationvarsd u=0/numUe=10/numUeApps=2
 attr iterationvarsf u=0,numUe=10,numUeApps=2-
 attr measurement "$u=0, $numUe=10, $numUeApps=2"
 attr network simu5g.simulations.nr.networks.MultiCell_withSecondaryGnb
-attr processid 1213156
+attr processid 4020432
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -40,8 +40,6 @@ config *.masterEnb*.cellularNic.numCarriers 1
 config *.masterEnb*.cellularNic.phy.componentCarrierModules "\"carrierAggregation.componentCarrier[0]\""
 config *.secondaryGnb*.cellularNic.numCarriers 1
 config *.secondaryGnb*.cellularNic.phy.componentCarrierModules "\"carrierAggregation.componentCarrier[1]\""
-config *.ue[*].cellularNic.numCarriers 1
-config *.ue[*].cellularNic.numNrCarriers 1
 config *.ue[*].cellularNic.phy.componentCarrierModules "\"carrierAggregation.componentCarrier[0]\""
 config *.ue[*].cellularNic.nrPhy.componentCarrierModules "\"carrierAggregation.componentCarrier[1]\""
 config *.masterEnb1.mobility.initialX 300m
@@ -1884,7 +1882,7 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcThroughputDl:simu5g_rateavg 6.394815000995221
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.010730593092
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.00941115750648
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -1897,7 +1895,7 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcThroughputDl:simu5g_rateavg 631.1276487392802
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.009538421112756117
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.009538272712756115
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:count 1349
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:sum(packetBytes) 93081
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-1.rx receivedPacketFromLowerLayer:count 1349
@@ -1909,7 +1907,7 @@ scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcThroughputDl:simu5g_rateavg 685.7658159458193
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.005257847015939914
+scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.0052193570925379105
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[0].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2101,7 +2099,7 @@ scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 3451.417848783205
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.005153041501
+scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.0051528931010000004
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:count 2500
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:sum(packetBytes) 172500
 scalar MultiCell_withSecondaryGnb.ue[1].cellularNic.nrRlc-um-2-1.rx receivedPacketFromLowerLayer:count 2500
@@ -2292,7 +2290,7 @@ scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcThroughputDl:simu5g_rateavg 7.667831345320473
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.005265647012583893
+scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.004857751682885906
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2317,7 +2315,7 @@ scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcThroughputDl:simu5g_rateavg 2.2006065708494114
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.005966801106
+scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.00479692906176
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2330,7 +2328,7 @@ scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcThroughputDl:simu5g_rateavg 4.148253017012933
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcDelayDl:mean 0.004226801106
+scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx rlcDelayDl:mean 0.004226652706
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx sentPacketToUpperLayer:count 99
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx sentPacketToUpperLayer:sum(packetBytes) 6831
 scalar MultiCell_withSecondaryGnb.ue[2].cellularNic.nrRlc-um-4-2.rx receivedPacketFromLowerLayer:count 99
@@ -2496,7 +2494,7 @@ scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2.832652051011667
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.008472861049
+scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.007409146607039999
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2509,7 +2507,7 @@ scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 75.06973809376767
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.005115029723698795
+scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.005114881323698795
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:count 498
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:sum(packetBytes) 34362
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-1.rx receivedPacketFromLowerLayer:count 498
@@ -2521,7 +2519,7 @@ scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcThroughputDl:simu5g_rateavg 91.28366329299475
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.005312701149014599
+scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.00521897399100365
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[3].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2700,7 +2698,7 @@ scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcThroughputDl:simu5g_rateavg 10.197352728181677
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.007242859991
+scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.00584348839154
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2713,7 +2711,7 @@ scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcThroughputDl:simu5g_rateavg 1011.4016670025615
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.0064581997968252425
+scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.006458051396825243
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:count 1648
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:sum(packetBytes) 113712
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-1.rx receivedPacketFromLowerLayer:count 1648
@@ -2725,7 +2723,7 @@ scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcThroughputDl:simu5g_rateavg 1088.3195067551376
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.004937592755339612
+scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.004902527327113597
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[4].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2904,7 +2902,7 @@ scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2.925719536563373
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.006642910397000001
+scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.00523993577318
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -2917,7 +2915,7 @@ scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 91.21816678250487
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.010680428645175183
+scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.010680280245175183
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:count 548
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:sum(packetBytes) 37812
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-1.rx receivedPacketFromLowerLayer:count 548
@@ -2929,7 +2927,7 @@ scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcThroughputDl:simu5g_rateavg 109.59717554027742
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.004481611670116861
+scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.0043746515552587645
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[5].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3108,7 +3106,7 @@ scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcThroughputDl:simu5g_rateavg 3.551530247591518
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.006924950290999999
+scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.005519453273539999
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3121,7 +3119,7 @@ scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcThroughputDl:simu5g_rateavg 200.30754117836665
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.0055013207540788485
+scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx rlcDelayDl:mean 0.005501172354078849
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:count 799
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx sentPacketToUpperLayer:sum(packetBytes) 55131
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-1.rx receivedPacketFromLowerLayer:count 799
@@ -3133,7 +3131,7 @@ scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcThroughputDl:simu5g_rateavg 227.93074242505995
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.004741785188321555
+scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.004662228879611307
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[6].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3312,7 +3310,7 @@ scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2.3324206012416093
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.011117115793
+scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.00977208884542
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3325,7 +3323,7 @@ scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 12.663046205948811
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.005211186144758794
+scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx rlcDelayDl:mean 0.005211037744758794
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:count 199
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx sentPacketToUpperLayer:sum(packetBytes) 13731
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-1.rx receivedPacketFromLowerLayer:count 199
@@ -3337,7 +3335,7 @@ scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcThroughputDl:simu5g_rateavg 19.021035970396277
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.0051737112629677414
+scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.rlc-um-1-2.rx rlcDelayDl:mean 0.0049659836227096766
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[7].cellularNic.nrRlc-um-2-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3516,7 +3514,7 @@ scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcThroughputDl:simu5g_rateavg 19.28662030014213
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.007037343772
+scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-1.rx rlcDelayDl:mean 0.0068306290218240005
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-1.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-1.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3541,7 +3539,7 @@ scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcPduDelayDl:
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcThroughputDl:simu5g_rateavg 19.167547123976313
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.005467283297156627
+scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.rlc-um-3-2.rx rlcDelayDl:mean 0.00527483983524498
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-2.tx wastedGrantedBytes:sum 0
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:count 0
 scalar MultiCell_withSecondaryGnb.ue[8].cellularNic.nrRlc-um-4-2.tx sentPacketToLowerLayer:sum(packetBytes) 0
@@ -3758,7 +3756,7 @@ scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcPduDelayD
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcThroughputDl:simu5g_rateavg 3450.6574135395285
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcDelayUl:mean nan
-scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcDelayDl:mean 0.006626002716165666
+scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx rlcDelayDl:mean 0.006625854316165666
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx sentPacketToUpperLayer:count 2499
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx sentPacketToUpperLayer:sum(packetBytes) 172431
 scalar MultiCell_withSecondaryGnb.ue[9].cellularNic.nrRlc-um-2-2.rx receivedPacketFromLowerLayer:count 2499
