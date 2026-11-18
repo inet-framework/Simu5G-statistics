@@ -1,8 +1,8 @@
 version 3
-run AM-RLF-0-20261106-11:07:28-2173672
+run AM-RLF-0-20261118-11:10:30-1505267
 attr configname AM-RLF
-attr datetime 20261106-11:07:28
-attr datetimef 20261106-110728
+attr datetime 20261118-11:10:30
+attr datetimef 20261118-111030
 attr experiment AM-RLF
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 2173672
+attr processid 1505267
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -36,15 +36,12 @@ config *.ue[0].servingNodeId 0
 config *.ue[0].nrServingNodeId 1
 config *.ue[0].mobility.initialX 450m
 config *.ue[0].mobility.initialY 350m
-config *.gnb.cellularNic.channelModelType "\"IdealChannelModel\""
-config *.ue[*].cellularNic.nrChannelModelType "\"IdealChannelModel\""
+config *.radioMedium.nrChannelModelType "\"IdealChannelModel\""
+config **.receiver.errorModel.typename ConfiguredRateErrorModel
 config **.harqReduction 1
 config **.perUl 0
 config **.perD2D 0
 config num-rngs 2
-config **.channelModel[*].rng-0 1
-config **.nrChannelModel[*].rng-0 1
-config *.radioMedium.rng-0 1
 config **.cellularNic.radio.receiver.rng-0 1
 config **.cellularNic.nrRadio.receiver.rng-0 1
 config *.ue[*].numApps 1
@@ -455,8 +452,8 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcThroughputUl:simu5g_ratea
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:count 1108
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 37772
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:count 1147
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 37811
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:count 41
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 123
 scalar SingleCell_Standalone.gnb.cellularNic.mac avgServedBlocksUl:mean 0.00205
@@ -487,8 +484,8 @@ scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:count 61
 scalar SingleCell_Standalone.gnb.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 694
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:count 4344
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 4508
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:count 1108
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 37772
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:count 1147
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 37811
 scalar SingleCell_Standalone.gnb.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar SingleCell_Standalone.gnb.cellularNic.radio.receiver measuredSinrUl:mean nan
@@ -3927,11 +3924,11 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:vector(packetBytes):max 3
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:vector(packetBytes):starttime 1.014
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux receivedPacketFromLowerLayer:vector(packetBytes):endtime 5.013
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):count 1108
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):sum 37772
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):sumweights 1108
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):mean 34.09025270758123
-scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):stddev 35.488015646101715
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):count 1147
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):sum 37811
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):sumweights 1147
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):mean 32.96512641673932
+scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):stddev 35.39118964639324
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):min 0
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.gnb.cellularNic.rlcMux sentPacketToLowerLayer:vector(packetBytes):starttime 1.0000005104000003
@@ -4134,11 +4131,11 @@ scalar SingleCell_Standalone.gnb.cellularNic.mac harqErrorRate_4th_Dl:vector:min
 scalar SingleCell_Standalone.gnb.cellularNic.mac harqErrorRate_4th_Dl:vector:max -inf
 scalar SingleCell_Standalone.gnb.cellularNic.mac harqErrorRate_4th_Dl:vector:starttime nan
 scalar SingleCell_Standalone.gnb.cellularNic.mac harqErrorRate_4th_Dl:vector:endtime nan
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 1108
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 37772
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 1108
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 34.09025270758123
-scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 35.488015646101715
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):count 1147
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sum 37811
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):sumweights 1147
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):mean 32.96512641673932
+scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):stddev 35.39118964639324
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):min 0
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.gnb.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes):starttime 1.0000005104000003
@@ -5619,15 +5616,15 @@ scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx receivedPacketFrom
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx receivedPacketFromUpperLayer:vector(packetBytes):max 70
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx receivedPacketFromUpperLayer:vector(packetBytes):starttime 1.0000005104000003
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx receivedPacketFromUpperLayer:vector(packetBytes):endtime 6.670000510400002
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):count 532
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):sum 37772
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):sumweights 532
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):mean 71
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):stddev 0
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):min 71
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):count 571
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):sum 37811
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):sumweights 571
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):mean 66.21891418563924
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):stddev 17.673830179248167
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):min 1
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):max 71
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):starttime 1.0010000000000001
-scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):endtime 6.591
+scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx sentPacketToLowerLayer:vector(packetBytes):endtime 6.6610000000000005
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx txWindowOccupation:vector:count 569
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx txWindowOccupation:vector:sum 11327
 scalar SingleCell_Standalone.gnb.cellularNic.rlc-am-2049-1.tx txWindowOccupation:vector:sumweights 569
