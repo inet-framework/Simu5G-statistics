@@ -1,8 +1,8 @@
 version 3
-run Interference-NoDownlink-0-20261118-09:21:49-1352468
+run Interference-NoDownlink-0-20261118-09:45:24-1385459
 attr configname Interference-NoDownlink
-attr datetime 20261118-09:21:49
-attr datetimef 20261118-092149
+attr datetime 20261118-09:45:24
+attr datetimef 20261118-094524
 attr experiment Interference-NoDownlink
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 1352468
+attr processid 1385459
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -45,9 +45,9 @@ config *.eNodeB1.mobility.initialX 100m
 config *.eNodeB1.mobility.initialY 100m
 config *.eNodeB2.mobility.initialX 600m
 config *.eNodeB2.mobility.initialY 100m
-config *.eNodeB*.cellularNic.radio.antenna.txDirection "\"ANISOTROPIC\""
-config *.eNodeB1.cellularNic.radio.antenna.txAngle 45deg
-config *.eNodeB2.cellularNic.radio.antenna.txAngle 135deg
+config *.eNodeB*.cellularNic.antenna.txDirection "\"ANISOTROPIC\""
+config *.eNodeB1.cellularNic.antenna.txAngle 45deg
+config *.eNodeB2.cellularNic.antenna.txAngle 135deg
 config *.numExtCells 2
 config *.extCell[*].txPower 20dBm
 config *.extCell[*].txDirection "\"ANISOTROPIC\""
@@ -854,14 +854,14 @@ scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetByt
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue11.cellularNic.phy distance:mean nan
-scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 13.99469964664311
+scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 13.97173144876325
 scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 566
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean 14
 scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 658
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 49.36881190829804
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 50.21132070496632
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 35.45232327079644
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:mean 36.08005185943213
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 48.48002234131745
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 49.34050305730642
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 34.563884799210875
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:mean 35.20923421177223
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
@@ -966,10 +966,10 @@ scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean 12.931325301204819
 scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 830
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean 12
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 740
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 29.999332842856518
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 28.003593498017167
-scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean 29.6654502944464
-scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrDl:mean 29.39627138812789
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 29.896212640580416
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 27.930809558136634
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean 29.564533507441602
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrDl:mean 29.323487448247352
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
@@ -1074,10 +1074,10 @@ scalar MultiCell.ue21.cellularNic.phy averageCqiUl:mean 14.994199535962878
 scalar MultiCell.ue21.cellularNic.phy averageCqiUl:count 862
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:mean 15
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:count 652
-scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrUl:mean 50.462448418007035
-scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrDl:mean 53.11506163435849
-scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrUl:mean 49.645929597202255
-scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrDl:mean 53.21597553640839
+scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrUl:mean 49.5734460340826
+scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrDl:mean 52.24472816905671
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrUl:mean 48.759963352251674
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrDl:mean 52.345642071106596
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan
@@ -1182,10 +1182,10 @@ scalar MultiCell.ue22.cellularNic.phy averageCqiUl:mean 13.988871224165342
 scalar MultiCell.ue22.cellularNic.phy averageCqiUl:count 629
 scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean 14
 scalar MultiCell.ue22.cellularNic.phy averageCqiDl:count 670
-scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrUl:mean 36.47630373473512
-scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrDl:mean 37.24004366466359
-scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrUl:mean 42.337316096669056
-scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrDl:mean 43.20958735677473
+scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrUl:mean 36.37297071551517
+scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrDl:mean 37.16069267835361
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrUl:mean 42.233789558774944
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrDl:mean 43.13023637046476
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan
