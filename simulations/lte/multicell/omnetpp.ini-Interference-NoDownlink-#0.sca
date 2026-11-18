@@ -1,8 +1,8 @@
 version 3
-run Interference-NoDownlink-0-20261106-19:57:07-3168725
+run Interference-NoDownlink-0-20261118-09:21:49-1352468
 attr configname Interference-NoDownlink
-attr datetime 20261106-19:57:07
-attr datetimef 20261106-195707
+attr datetime 20261118-09:21:49
+attr datetimef 20261118-092149
 attr experiment Interference-NoDownlink
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.lte.networks.MultiCell
-attr processid 3168725
+attr processid 1352468
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -96,7 +96,7 @@ config network simu5g.simulations.lte.networks.MultiCell
 config **.routingRecorder.enabled false
 config **.vector-recording false
 config seed-set 0
-config **.cellularNic.channelModel[0].downlinkInterference true
+config *.radioMedium.channelModel[0].downlinkInterference true
 config **.mobility.constraintAreaMinZ 0m
 config **.mobility.constraintAreaMaxZ 0m
 config **.mobility.initFromDisplayString true
@@ -119,21 +119,21 @@ scalar MultiCell.server.ppp[0].queue queueLength:timeavg 0
 scalar MultiCell.server.ppp[0].queue queueBitLength:last 0
 scalar MultiCell.server.ppp[0].queue queueBitLength:max 0
 scalar MultiCell.server.ppp[0].queue queueBitLength:timeavg 0
-scalar MultiCell.server.ppp[0].queue outgoingPackets:count 2211
-scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:sum 1202784
-scalar MultiCell.server.ppp[0].queue incomingPackets:count 2211
-scalar MultiCell.server.ppp[0].queue incomingPacketLengths:sum 1202784
+scalar MultiCell.server.ppp[0].queue outgoingPackets:count 2720
+scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:sum 1479680
+scalar MultiCell.server.ppp[0].queue incomingPackets:count 2720
+scalar MultiCell.server.ppp[0].queue incomingPacketLengths:sum 1479680
 scalar MultiCell.server.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.server.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.server.ppp[0].ppp transmissionState:timeavg 6.633e-06
-scalar MultiCell.server.ppp[0].ppp rxPkOk:count 2231
-scalar MultiCell.server.ppp[0].ppp rxPkOk:sum(packetBytes) 167325
-scalar MultiCell.server.ppp[0].ppp txPk:count 2211
-scalar MultiCell.server.ppp[0].ppp txPk:sum(packetBytes) 165825
-scalar MultiCell.server.ppp[0].ppp rcvdPkFromHl:count 2211
-scalar MultiCell.server.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 150348
-scalar MultiCell.server.ppp[0].ppp passedUpPk:count 2231
-scalar MultiCell.server.ppp[0].ppp passedUpPk:sum(packetBytes) 151708
+scalar MultiCell.server.ppp[0].ppp transmissionState:timeavg 8.16e-06
+scalar MultiCell.server.ppp[0].ppp rxPkOk:count 2762
+scalar MultiCell.server.ppp[0].ppp rxPkOk:sum(packetBytes) 207150
+scalar MultiCell.server.ppp[0].ppp txPk:count 2720
+scalar MultiCell.server.ppp[0].ppp txPk:sum(packetBytes) 204000
+scalar MultiCell.server.ppp[0].ppp rcvdPkFromHl:count 2720
+scalar MultiCell.server.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 184960
+scalar MultiCell.server.ppp[0].ppp passedUpPk:count 2762
+scalar MultiCell.server.ppp[0].ppp passedUpPk:sum(packetBytes) 187816
 scalar MultiCell.server.ppp[0].ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.server.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.server.ppp[0].ppp packetDropInterfaceDown:count 0
@@ -163,25 +163,25 @@ scalar MultiCell.server.ipv4.arp arpReplySent:count 0
 scalar MultiCell.server.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.server.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.server.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.server.udp packetReceived:count 2231
-scalar MultiCell.server.udp packetReceived:sum(packetBytes) 107088
-scalar MultiCell.server.udp packetSent:count 2211
-scalar MultiCell.server.udp packetSent:sum(packetBytes) 106128
-scalar MultiCell.server.udp passedUpPk:count 2231
+scalar MultiCell.server.udp packetReceived:count 2762
+scalar MultiCell.server.udp packetReceived:sum(packetBytes) 132576
+scalar MultiCell.server.udp packetSent:count 2720
+scalar MultiCell.server.udp packetSent:sum(packetBytes) 130560
+scalar MultiCell.server.udp passedUpPk:count 2762
 scalar MultiCell.server.udp droppedPkWrongPort:count 0
 scalar MultiCell.server.udp droppedPkBadChecksum:count 0
-scalar MultiCell.server.app[0] voipGeneratedThroughput:simu5g_rateavg 921.4783629347263
-scalar MultiCell.server.app[1] voipGeneratedThroughput:simu5g_rateavg 1025.412279270219
-scalar MultiCell.server.app[2] voipGeneratedThroughput:simu5g_rateavg 879.0071196437461
-scalar MultiCell.server.app[3] voipGeneratedThroughput:simu5g_rateavg 1345.9366544411039
-scalar MultiCell.server.app[4] voipReceivedThroughput:simu5g_rateavg 4956.10587121283
-scalar MultiCell.server.app[4] voipPlayoutLoss:mean 0.0004032493421903121
-scalar MultiCell.server.app[4] voipJitter:mean 0.23556250079285715
-scalar MultiCell.server.app[4] voipTaildropLoss:mean 0.01764152802973942
-scalar MultiCell.server.app[4] voipMos:mean 1.0553182867971211
-scalar MultiCell.server.app[4] voipFrameDelay:mean 0.0127243390029368
-scalar MultiCell.server.app[4] voipFrameLoss:mean 363995.6073867573
-scalar MultiCell.server.app[4] voipPlayoutDelay:mean 0.00018309859154929577
+scalar MultiCell.server.app[0] voipGeneratedThroughput:simu5g_rateavg 1296.5580029242387
+scalar MultiCell.server.app[1] voipGeneratedThroughput:simu5g_rateavg 1371.3066641222367
+scalar MultiCell.server.app[2] voipGeneratedThroughput:simu5g_rateavg 1174.4292111414884
+scalar MultiCell.server.app[3] voipGeneratedThroughput:simu5g_rateavg 1200.7945589993894
+scalar MultiCell.server.app[4] voipReceivedThroughput:simu5g_rateavg 5579.380856521444
+scalar MultiCell.server.app[4] voipPlayoutLoss:mean 2.0813824106973183e-05
+scalar MultiCell.server.app[4] voipJitter:mean 0.27827273534545455
+scalar MultiCell.server.app[4] voipTaildropLoss:mean 0.012197791425393355
+scalar MultiCell.server.app[4] voipMos:mean 1.0552425212781382
+scalar MultiCell.server.app[4] voipFrameDelay:mean 0.012707682812994206
+scalar MultiCell.server.app[4] voipFrameLoss:mean 205079.87310631378
+scalar MultiCell.server.app[4] voipPlayoutDelay:mean 0.00015642461916630853
 scalar MultiCell.pgw.lo[0].lo rcvdPkFromHl:count 0
 scalar MultiCell.pgw.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
 scalar MultiCell.pgw.lo[0].lo passedUpPk:count 0
@@ -196,21 +196,21 @@ scalar MultiCell.pgw.ppp[0].queue queueLength:timeavg 0
 scalar MultiCell.pgw.ppp[0].queue queueBitLength:last 0
 scalar MultiCell.pgw.ppp[0].queue queueBitLength:max 0
 scalar MultiCell.pgw.ppp[0].queue queueBitLength:timeavg 0
-scalar MultiCell.pgw.ppp[0].queue outgoingPackets:count 1008
-scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:sum 838656
-scalar MultiCell.pgw.ppp[0].queue incomingPackets:count 1008
-scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:sum 838656
+scalar MultiCell.pgw.ppp[0].queue outgoingPackets:count 1398
+scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:sum 1163136
+scalar MultiCell.pgw.ppp[0].queue incomingPackets:count 1398
+scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:sum 1163136
 scalar MultiCell.pgw.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.pgw.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.pgw.ppp[0].ppp transmissionState:timeavg 4.47552e-06
-scalar MultiCell.pgw.ppp[0].ppp rxPkOk:count 1163
-scalar MultiCell.pgw.ppp[0].ppp rxPkOk:sum(packetBytes) 129093
-scalar MultiCell.pgw.ppp[0].ppp txPk:count 1008
-scalar MultiCell.pgw.ppp[0].ppp txPk:sum(packetBytes) 111888
-scalar MultiCell.pgw.ppp[0].ppp rcvdPkFromHl:count 1008
-scalar MultiCell.pgw.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 104832
-scalar MultiCell.pgw.ppp[0].ppp passedUpPk:count 1163
-scalar MultiCell.pgw.ppp[0].ppp passedUpPk:sum(packetBytes) 120952
+scalar MultiCell.pgw.ppp[0].ppp transmissionState:timeavg 6.20712e-06
+scalar MultiCell.pgw.ppp[0].ppp rxPkOk:count 1273
+scalar MultiCell.pgw.ppp[0].ppp rxPkOk:sum(packetBytes) 141303
+scalar MultiCell.pgw.ppp[0].ppp txPk:count 1398
+scalar MultiCell.pgw.ppp[0].ppp txPk:sum(packetBytes) 155178
+scalar MultiCell.pgw.ppp[0].ppp rcvdPkFromHl:count 1398
+scalar MultiCell.pgw.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 145392
+scalar MultiCell.pgw.ppp[0].ppp passedUpPk:count 1273
+scalar MultiCell.pgw.ppp[0].ppp passedUpPk:sum(packetBytes) 132392
 scalar MultiCell.pgw.ppp[0].ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.pgw.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.pgw.ppp[0].ppp packetDropInterfaceDown:count 0
@@ -225,21 +225,21 @@ scalar MultiCell.pgw.ppp[1].queue queueLength:timeavg 0
 scalar MultiCell.pgw.ppp[1].queue queueBitLength:last 0
 scalar MultiCell.pgw.ppp[1].queue queueBitLength:max 0
 scalar MultiCell.pgw.ppp[1].queue queueBitLength:timeavg 0
-scalar MultiCell.pgw.ppp[1].queue outgoingPackets:count 1203
-scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:sum 1000896
-scalar MultiCell.pgw.ppp[1].queue incomingPackets:count 1203
-scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:sum 1000896
+scalar MultiCell.pgw.ppp[1].queue outgoingPackets:count 1322
+scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:sum 1099904
+scalar MultiCell.pgw.ppp[1].queue incomingPackets:count 1322
+scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:sum 1099904
 scalar MultiCell.pgw.ppp[1].queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.pgw.ppp[1].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.pgw.ppp[1].ppp transmissionState:timeavg 5.34132e-06
-scalar MultiCell.pgw.ppp[1].ppp rxPkOk:count 1068
-scalar MultiCell.pgw.ppp[1].ppp rxPkOk:sum(packetBytes) 118548
-scalar MultiCell.pgw.ppp[1].ppp txPk:count 1203
-scalar MultiCell.pgw.ppp[1].ppp txPk:sum(packetBytes) 133533
-scalar MultiCell.pgw.ppp[1].ppp rcvdPkFromHl:count 1203
-scalar MultiCell.pgw.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 125112
-scalar MultiCell.pgw.ppp[1].ppp passedUpPk:count 1068
-scalar MultiCell.pgw.ppp[1].ppp passedUpPk:sum(packetBytes) 111072
+scalar MultiCell.pgw.ppp[1].ppp transmissionState:timeavg 5.86968e-06
+scalar MultiCell.pgw.ppp[1].ppp rxPkOk:count 1489
+scalar MultiCell.pgw.ppp[1].ppp rxPkOk:sum(packetBytes) 165279
+scalar MultiCell.pgw.ppp[1].ppp txPk:count 1322
+scalar MultiCell.pgw.ppp[1].ppp txPk:sum(packetBytes) 146742
+scalar MultiCell.pgw.ppp[1].ppp rcvdPkFromHl:count 1322
+scalar MultiCell.pgw.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 137488
+scalar MultiCell.pgw.ppp[1].ppp passedUpPk:count 1489
+scalar MultiCell.pgw.ppp[1].ppp passedUpPk:sum(packetBytes) 154856
 scalar MultiCell.pgw.ppp[1].ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.pgw.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.pgw.ppp[1].ppp packetDropInterfaceDown:count 0
@@ -269,34 +269,34 @@ scalar MultiCell.pgw.ipv4.arp arpReplySent:count 0
 scalar MultiCell.pgw.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.pgw.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.pgw.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.pgw.udp packetReceived:count 2231
-scalar MultiCell.pgw.udp packetReceived:sum(packetBytes) 187404
-scalar MultiCell.pgw.udp packetSent:count 2211
-scalar MultiCell.pgw.udp packetSent:sum(packetBytes) 185724
-scalar MultiCell.pgw.udp passedUpPk:count 2231
+scalar MultiCell.pgw.udp packetReceived:count 2762
+scalar MultiCell.pgw.udp packetReceived:sum(packetBytes) 232008
+scalar MultiCell.pgw.udp packetSent:count 2720
+scalar MultiCell.pgw.udp packetSent:sum(packetBytes) 228480
+scalar MultiCell.pgw.udp passedUpPk:count 2762
 scalar MultiCell.pgw.udp droppedPkWrongPort:count 0
 scalar MultiCell.pgw.udp droppedPkBadChecksum:count 0
 scalar MultiCell.pgw.dnPpp.queue queueLength:last 0
 scalar MultiCell.pgw.dnPpp.queue queueLength:max 1
-scalar MultiCell.pgw.dnPpp.queue queueLength:timeavg 2.7359999999999995e-08
+scalar MultiCell.pgw.dnPpp.queue queueLength:timeavg 1.9968e-07
 scalar MultiCell.pgw.dnPpp.queue queueBitLength:last 0
 scalar MultiCell.pgw.dnPpp.queue queueBitLength:max 544
-scalar MultiCell.pgw.dnPpp.queue queueBitLength:timeavg 1.4883839999999999e-05
-scalar MultiCell.pgw.dnPpp.queue outgoingPackets:count 2231
-scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:sum 1213664
-scalar MultiCell.pgw.dnPpp.queue incomingPackets:count 2231
-scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:sum 1213664
+scalar MultiCell.pgw.dnPpp.queue queueBitLength:timeavg 0.00010862592000000001
+scalar MultiCell.pgw.dnPpp.queue outgoingPackets:count 2762
+scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:sum 1502528
+scalar MultiCell.pgw.dnPpp.queue incomingPackets:count 2762
+scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:sum 1502528
 scalar MultiCell.pgw.dnPpp.queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.pgw.dnPpp.queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.pgw.dnPpp.ppp transmissionState:timeavg 6.693e-06
-scalar MultiCell.pgw.dnPpp.ppp rxPkOk:count 2211
-scalar MultiCell.pgw.dnPpp.ppp rxPkOk:sum(packetBytes) 165825
-scalar MultiCell.pgw.dnPpp.ppp txPk:count 2231
-scalar MultiCell.pgw.dnPpp.ppp txPk:sum(packetBytes) 167325
-scalar MultiCell.pgw.dnPpp.ppp rcvdPkFromHl:count 2231
-scalar MultiCell.pgw.dnPpp.ppp rcvdPkFromHl:sum(packetBytes) 151708
-scalar MultiCell.pgw.dnPpp.ppp passedUpPk:count 2211
-scalar MultiCell.pgw.dnPpp.ppp passedUpPk:sum(packetBytes) 150348
+scalar MultiCell.pgw.dnPpp.ppp transmissionState:timeavg 8.285999999999998e-06
+scalar MultiCell.pgw.dnPpp.ppp rxPkOk:count 2720
+scalar MultiCell.pgw.dnPpp.ppp rxPkOk:sum(packetBytes) 204000
+scalar MultiCell.pgw.dnPpp.ppp txPk:count 2762
+scalar MultiCell.pgw.dnPpp.ppp txPk:sum(packetBytes) 207150
+scalar MultiCell.pgw.dnPpp.ppp rcvdPkFromHl:count 2762
+scalar MultiCell.pgw.dnPpp.ppp rcvdPkFromHl:sum(packetBytes) 187816
+scalar MultiCell.pgw.dnPpp.ppp passedUpPk:count 2720
+scalar MultiCell.pgw.dnPpp.ppp passedUpPk:sum(packetBytes) 184960
 scalar MultiCell.pgw.dnPpp.ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.pgw.dnPpp.ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.pgw.dnPpp.ppp packetDropInterfaceDown:count 0
@@ -319,21 +319,21 @@ scalar MultiCell.router.ppp[0].queue queueLength:timeavg 0
 scalar MultiCell.router.ppp[0].queue queueBitLength:last 0
 scalar MultiCell.router.ppp[0].queue queueBitLength:max 0
 scalar MultiCell.router.ppp[0].queue queueBitLength:timeavg 0
-scalar MultiCell.router.ppp[0].queue outgoingPackets:count 2231
-scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:sum 1213664
-scalar MultiCell.router.ppp[0].queue incomingPackets:count 2231
-scalar MultiCell.router.ppp[0].queue incomingPacketLengths:sum 1213664
+scalar MultiCell.router.ppp[0].queue outgoingPackets:count 2762
+scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:sum 1502528
+scalar MultiCell.router.ppp[0].queue incomingPackets:count 2762
+scalar MultiCell.router.ppp[0].queue incomingPacketLengths:sum 1502528
 scalar MultiCell.router.ppp[0].queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.router.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.router.ppp[0].ppp transmissionState:timeavg 6.693e-06
-scalar MultiCell.router.ppp[0].ppp rxPkOk:count 2211
-scalar MultiCell.router.ppp[0].ppp rxPkOk:sum(packetBytes) 165825
-scalar MultiCell.router.ppp[0].ppp txPk:count 2231
-scalar MultiCell.router.ppp[0].ppp txPk:sum(packetBytes) 167325
-scalar MultiCell.router.ppp[0].ppp rcvdPkFromHl:count 2231
-scalar MultiCell.router.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 151708
-scalar MultiCell.router.ppp[0].ppp passedUpPk:count 2211
-scalar MultiCell.router.ppp[0].ppp passedUpPk:sum(packetBytes) 150348
+scalar MultiCell.router.ppp[0].ppp transmissionState:timeavg 8.285999999999998e-06
+scalar MultiCell.router.ppp[0].ppp rxPkOk:count 2720
+scalar MultiCell.router.ppp[0].ppp rxPkOk:sum(packetBytes) 204000
+scalar MultiCell.router.ppp[0].ppp txPk:count 2762
+scalar MultiCell.router.ppp[0].ppp txPk:sum(packetBytes) 207150
+scalar MultiCell.router.ppp[0].ppp rcvdPkFromHl:count 2762
+scalar MultiCell.router.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 187816
+scalar MultiCell.router.ppp[0].ppp passedUpPk:count 2720
+scalar MultiCell.router.ppp[0].ppp passedUpPk:sum(packetBytes) 184960
 scalar MultiCell.router.ppp[0].ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.router.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.router.ppp[0].ppp packetDropInterfaceDown:count 0
@@ -348,21 +348,21 @@ scalar MultiCell.router.ppp[1].queue queueLength:timeavg 0
 scalar MultiCell.router.ppp[1].queue queueBitLength:last 0
 scalar MultiCell.router.ppp[1].queue queueBitLength:max 0
 scalar MultiCell.router.ppp[1].queue queueBitLength:timeavg 0
-scalar MultiCell.router.ppp[1].queue outgoingPackets:count 2211
-scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:sum 1202784
-scalar MultiCell.router.ppp[1].queue incomingPackets:count 2211
-scalar MultiCell.router.ppp[1].queue incomingPacketLengths:sum 1202784
+scalar MultiCell.router.ppp[1].queue outgoingPackets:count 2720
+scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:sum 1479680
+scalar MultiCell.router.ppp[1].queue incomingPackets:count 2720
+scalar MultiCell.router.ppp[1].queue incomingPacketLengths:sum 1479680
 scalar MultiCell.router.ppp[1].queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.router.ppp[1].queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.router.ppp[1].ppp transmissionState:timeavg 6.633e-06
-scalar MultiCell.router.ppp[1].ppp rxPkOk:count 2231
-scalar MultiCell.router.ppp[1].ppp rxPkOk:sum(packetBytes) 167325
-scalar MultiCell.router.ppp[1].ppp txPk:count 2211
-scalar MultiCell.router.ppp[1].ppp txPk:sum(packetBytes) 165825
-scalar MultiCell.router.ppp[1].ppp rcvdPkFromHl:count 2211
-scalar MultiCell.router.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 150348
-scalar MultiCell.router.ppp[1].ppp passedUpPk:count 2231
-scalar MultiCell.router.ppp[1].ppp passedUpPk:sum(packetBytes) 151708
+scalar MultiCell.router.ppp[1].ppp transmissionState:timeavg 8.16e-06
+scalar MultiCell.router.ppp[1].ppp rxPkOk:count 2762
+scalar MultiCell.router.ppp[1].ppp rxPkOk:sum(packetBytes) 207150
+scalar MultiCell.router.ppp[1].ppp txPk:count 2720
+scalar MultiCell.router.ppp[1].ppp txPk:sum(packetBytes) 204000
+scalar MultiCell.router.ppp[1].ppp rcvdPkFromHl:count 2720
+scalar MultiCell.router.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 184960
+scalar MultiCell.router.ppp[1].ppp passedUpPk:count 2762
+scalar MultiCell.router.ppp[1].ppp passedUpPk:sum(packetBytes) 187816
 scalar MultiCell.router.ppp[1].ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.router.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.router.ppp[1].ppp packetDropInterfaceDown:count 0
@@ -400,12 +400,12 @@ scalar MultiCell.eNodeB1.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.eNodeB1.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.eNodeB1.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.eNodeB1.cellularNic.rlcMux sentPacketToLowerLayer:count 2016
-scalar MultiCell.eNodeB1.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 141120
-scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1190
-scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 82627
-scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksUl:mean 0.06035
-scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksDl:mean 0.077
+scalar MultiCell.eNodeB1.cellularNic.rlcMux sentPacketToLowerLayer:count 2796
+scalar MultiCell.eNodeB1.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 195720
+scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1330
+scalar MultiCell.eNodeB1.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 90497
+scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksUl:mean 0.0698
+scalar MultiCell.eNodeB1.cellularNic.mac avgServedBlocksDl:mean 0.1069
 scalar MultiCell.eNodeB1.cellularNic.mac harqTxAttemptsUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac harqTxAttemptsDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -426,14 +426,14 @@ scalar MultiCell.eNodeB1.cellularNic.mac macThroughputUl:simu5g_rateavg nan
 scalar MultiCell.eNodeB1.cellularNic.mac macThroughputDl:simu5g_rateavg nan
 scalar MultiCell.eNodeB1.cellularNic.mac macDelayUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac macDelayDl:mean nan
-scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToLowerLayer:count 4602
-scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 77178
-scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToUpperLayer:count 2198
-scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 83635
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:count 10063
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 95104
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:count 2016
-scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 141120
+scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToLowerLayer:count 5528
+scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 106184
+scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToUpperLayer:count 2728
+scalar MultiCell.eNodeB1.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 91895
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:count 10801
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 107380
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:count 2796
+scalar MultiCell.eNodeB1.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 195720
 scalar MultiCell.eNodeB1.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.radio.receiver measuredSinrUl:mean nan
@@ -442,45 +442,45 @@ scalar MultiCell.eNodeB1.cellularNic.radio.receiver rcvdSinrUl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.radio.receiver rcvdSinrDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcPduThroughputUl:simu5g_rateavg 0
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcPduThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcPduDelayUl:mean 0.005018387553041018
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcPduDelayUl:mean 0.007457504520795659
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcPduDelayDl:mean nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcThroughputUl:simu5g_rateavg 3105.5673868775543
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcThroughputUl:simu5g_rateavg 2299.8473753675185
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcDelayUl:mean 0.010085306332790665
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcDelayUl:mean 0.02269240018816998
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1025-1.rx rlcDelayDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcPduThroughputUl:simu5g_rateavg 0
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcPduThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcPduDelayUl:mean 0.004
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcPduDelayUl:mean 0.006676962676962677
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcPduDelayDl:mean nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcThroughputUl:simu5g_rateavg 2029.257381728594
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcThroughputUl:simu5g_rateavg 2584.640613423747
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcDelayUl:mean 0.008781991700741228
+scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcDelayUl:mean 0.013508706899618056
 scalar MultiCell.eNodeB1.cellularNic.rlc-um-1026-1.rx rlcDelayDl:mean nan
 scalar MultiCell.eNodeB1.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.eNodeB1.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.eNodeB1.cellularNic packetDropNoCarrier:count 0
 scalar MultiCell.eNodeB1.cellularNic packetDropNoCarrier:sum(packetBytes) 0
 scalar MultiCell.eNodeB1.pppIf.queue queueLength:last 0
-scalar MultiCell.eNodeB1.pppIf.queue queueLength:max 3
-scalar MultiCell.eNodeB1.pppIf.queue queueLength:timeavg 5.328e-08
+scalar MultiCell.eNodeB1.pppIf.queue queueLength:max 9
+scalar MultiCell.eNodeB1.pppIf.queue queueLength:timeavg 5.461200000000001e-07
 scalar MultiCell.eNodeB1.pppIf.queue queueBitLength:last 0
-scalar MultiCell.eNodeB1.pppIf.queue queueBitLength:max 2496
-scalar MultiCell.eNodeB1.pppIf.queue queueBitLength:timeavg 4.432896e-05
-scalar MultiCell.eNodeB1.pppIf.queue outgoingPackets:count 1163
-scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:sum 967616
-scalar MultiCell.eNodeB1.pppIf.queue incomingPackets:count 1163
-scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:sum 967616
+scalar MultiCell.eNodeB1.pppIf.queue queueBitLength:max 7488
+scalar MultiCell.eNodeB1.pppIf.queue queueBitLength:timeavg 0.00045437183999999997
+scalar MultiCell.eNodeB1.pppIf.queue outgoingPackets:count 1273
+scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:sum 1059136
+scalar MultiCell.eNodeB1.pppIf.queue incomingPackets:count 1273
+scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:sum 1059136
 scalar MultiCell.eNodeB1.pppIf.queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.eNodeB1.pppIf.queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.eNodeB1.pppIf.ppp transmissionState:timeavg 5.16372e-06
-scalar MultiCell.eNodeB1.pppIf.ppp rxPkOk:count 1008
-scalar MultiCell.eNodeB1.pppIf.ppp rxPkOk:sum(packetBytes) 111888
-scalar MultiCell.eNodeB1.pppIf.ppp txPk:count 1163
-scalar MultiCell.eNodeB1.pppIf.ppp txPk:sum(packetBytes) 129093
-scalar MultiCell.eNodeB1.pppIf.ppp rcvdPkFromHl:count 1163
-scalar MultiCell.eNodeB1.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 120952
-scalar MultiCell.eNodeB1.pppIf.ppp passedUpPk:count 1008
-scalar MultiCell.eNodeB1.pppIf.ppp passedUpPk:sum(packetBytes) 104832
+scalar MultiCell.eNodeB1.pppIf.ppp transmissionState:timeavg 5.65212e-06
+scalar MultiCell.eNodeB1.pppIf.ppp rxPkOk:count 1398
+scalar MultiCell.eNodeB1.pppIf.ppp rxPkOk:sum(packetBytes) 155178
+scalar MultiCell.eNodeB1.pppIf.ppp txPk:count 1273
+scalar MultiCell.eNodeB1.pppIf.ppp txPk:sum(packetBytes) 141303
+scalar MultiCell.eNodeB1.pppIf.ppp rcvdPkFromHl:count 1273
+scalar MultiCell.eNodeB1.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 132392
+scalar MultiCell.eNodeB1.pppIf.ppp passedUpPk:count 1398
+scalar MultiCell.eNodeB1.pppIf.ppp passedUpPk:sum(packetBytes) 145392
 scalar MultiCell.eNodeB1.pppIf.ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.eNodeB1.pppIf.ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.eNodeB1.pppIf.ppp packetDropInterfaceDown:count 0
@@ -568,11 +568,11 @@ scalar MultiCell.eNodeB1.ipv4.arp arpReplySent:count 0
 scalar MultiCell.eNodeB1.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.eNodeB1.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.eNodeB1.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.eNodeB1.udp packetReceived:count 1008
-scalar MultiCell.eNodeB1.udp packetReceived:sum(packetBytes) 84672
-scalar MultiCell.eNodeB1.udp packetSent:count 1163
-scalar MultiCell.eNodeB1.udp packetSent:sum(packetBytes) 97692
-scalar MultiCell.eNodeB1.udp passedUpPk:count 1008
+scalar MultiCell.eNodeB1.udp packetReceived:count 1398
+scalar MultiCell.eNodeB1.udp packetReceived:sum(packetBytes) 117432
+scalar MultiCell.eNodeB1.udp packetSent:count 1273
+scalar MultiCell.eNodeB1.udp packetSent:sum(packetBytes) 106932
+scalar MultiCell.eNodeB1.udp passedUpPk:count 1398
 scalar MultiCell.eNodeB1.udp droppedPkWrongPort:count 0
 scalar MultiCell.eNodeB1.udp droppedPkBadChecksum:count 0
 scalar MultiCell.eNodeB1.sctp "Packets Received" 0
@@ -587,12 +587,12 @@ scalar MultiCell.eNodeB2.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.eNodeB2.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.eNodeB2.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.eNodeB2.cellularNic.rlcMux sentPacketToLowerLayer:count 2406
-scalar MultiCell.eNodeB2.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 168420
-scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1090
-scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 76079
-scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksUl:mean 0.05545
-scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksDl:mean 0.09255
+scalar MultiCell.eNodeB2.cellularNic.rlcMux sentPacketToLowerLayer:count 2644
+scalar MultiCell.eNodeB2.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 185080
+scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:count 1489
+scalar MultiCell.eNodeB2.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 105719
+scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksUl:mean 0.07455
+scalar MultiCell.eNodeB2.cellularNic.mac avgServedBlocksDl:mean 0.0661
 scalar MultiCell.eNodeB2.cellularNic.mac harqTxAttemptsUl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac harqTxAttemptsDl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -613,14 +613,14 @@ scalar MultiCell.eNodeB2.cellularNic.mac macThroughputUl:simu5g_rateavg nan
 scalar MultiCell.eNodeB2.cellularNic.mac macThroughputDl:simu5g_rateavg nan
 scalar MultiCell.eNodeB2.cellularNic.mac macDelayUl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac macDelayDl:mean nan
-scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToLowerLayer:count 4510
-scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 91126
-scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToUpperLayer:count 2293
-scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 77282
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:count 10069
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 88534
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:count 2406
-scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 168420
+scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToLowerLayer:count 5795
+scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 100979
+scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToUpperLayer:count 2811
+scalar MultiCell.eNodeB2.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 107041
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:count 10972
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 118324
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:count 2644
+scalar MultiCell.eNodeB2.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 185080
 scalar MultiCell.eNodeB2.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.radio.receiver measuredSinrUl:mean nan
@@ -631,43 +631,43 @@ scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcPduThroughputUl:simu5g_
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcPduThroughputDl:simu5g_rateavg nan
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcPduDelayUl:mean 0.004
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcPduDelayDl:mean nan
-scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcThroughputUl:simu5g_rateavg 1107.518771541112
+scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcThroughputUl:simu5g_rateavg 1549.8373313063316
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcDelayUl:mean 0.008873146628435555
+scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcDelayUl:mean 0.008601050670957075
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1028-1.rx rlcDelayDl:mean nan
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcPduThroughputUl:simu5g_rateavg 0
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcPduThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcPduDelayUl:mean 0.005229773462783172
+scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcPduDelayUl:mean 0.004093023255813954
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcPduDelayDl:mean nan
-scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcThroughputUl:simu5g_rateavg 2070.6630028452073
+scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcThroughputUl:simu5g_rateavg 2993.904739229039
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcThroughputDl:simu5g_rateavg nan
-scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcDelayUl:mean 0.0214553020587945
+scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcDelayUl:mean 0.008619052014970931
 scalar MultiCell.eNodeB2.cellularNic.rlc-um-1027-1.rx rlcDelayDl:mean nan
 scalar MultiCell.eNodeB2.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.eNodeB2.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.eNodeB2.cellularNic packetDropNoCarrier:count 0
 scalar MultiCell.eNodeB2.cellularNic packetDropNoCarrier:sum(packetBytes) 0
 scalar MultiCell.eNodeB2.pppIf.queue queueLength:last 0
-scalar MultiCell.eNodeB2.pppIf.queue queueLength:max 7
-scalar MultiCell.eNodeB2.pppIf.queue queueLength:timeavg 2.886e-07
+scalar MultiCell.eNodeB2.pppIf.queue queueLength:max 1
+scalar MultiCell.eNodeB2.pppIf.queue queueLength:timeavg 1.0656e-07
 scalar MultiCell.eNodeB2.pppIf.queue queueBitLength:last 0
-scalar MultiCell.eNodeB2.pppIf.queue queueBitLength:max 5824
-scalar MultiCell.eNodeB2.pppIf.queue queueBitLength:timeavg 0.00024011520000000001
-scalar MultiCell.eNodeB2.pppIf.queue outgoingPackets:count 1068
-scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:sum 888576
-scalar MultiCell.eNodeB2.pppIf.queue incomingPackets:count 1068
-scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:sum 888576
+scalar MultiCell.eNodeB2.pppIf.queue queueBitLength:max 832
+scalar MultiCell.eNodeB2.pppIf.queue queueBitLength:timeavg 8.865792e-05
+scalar MultiCell.eNodeB2.pppIf.queue outgoingPackets:count 1489
+scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:sum 1238848
+scalar MultiCell.eNodeB2.pppIf.queue incomingPackets:count 1489
+scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:sum 1238848
 scalar MultiCell.eNodeB2.pppIf.queue droppedPacketsQueueOverflow:count 0
 scalar MultiCell.eNodeB2.pppIf.queue droppedPacketLengthsQueueOverflow:sum 0
-scalar MultiCell.eNodeB2.pppIf.ppp transmissionState:timeavg 4.74192e-06
-scalar MultiCell.eNodeB2.pppIf.ppp rxPkOk:count 1203
-scalar MultiCell.eNodeB2.pppIf.ppp rxPkOk:sum(packetBytes) 133533
-scalar MultiCell.eNodeB2.pppIf.ppp txPk:count 1068
-scalar MultiCell.eNodeB2.pppIf.ppp txPk:sum(packetBytes) 118548
-scalar MultiCell.eNodeB2.pppIf.ppp rcvdPkFromHl:count 1068
-scalar MultiCell.eNodeB2.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 111072
-scalar MultiCell.eNodeB2.pppIf.ppp passedUpPk:count 1203
-scalar MultiCell.eNodeB2.pppIf.ppp passedUpPk:sum(packetBytes) 125112
+scalar MultiCell.eNodeB2.pppIf.ppp transmissionState:timeavg 6.611160000000001e-06
+scalar MultiCell.eNodeB2.pppIf.ppp rxPkOk:count 1322
+scalar MultiCell.eNodeB2.pppIf.ppp rxPkOk:sum(packetBytes) 146742
+scalar MultiCell.eNodeB2.pppIf.ppp txPk:count 1489
+scalar MultiCell.eNodeB2.pppIf.ppp txPk:sum(packetBytes) 165279
+scalar MultiCell.eNodeB2.pppIf.ppp rcvdPkFromHl:count 1489
+scalar MultiCell.eNodeB2.pppIf.ppp rcvdPkFromHl:sum(packetBytes) 154856
+scalar MultiCell.eNodeB2.pppIf.ppp passedUpPk:count 1322
+scalar MultiCell.eNodeB2.pppIf.ppp passedUpPk:sum(packetBytes) 137488
 scalar MultiCell.eNodeB2.pppIf.ppp packetDropIncorrectlyReceived:count 0
 scalar MultiCell.eNodeB2.pppIf.ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
 scalar MultiCell.eNodeB2.pppIf.ppp packetDropInterfaceDown:count 0
@@ -755,11 +755,11 @@ scalar MultiCell.eNodeB2.ipv4.arp arpReplySent:count 0
 scalar MultiCell.eNodeB2.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.eNodeB2.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.eNodeB2.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.eNodeB2.udp packetReceived:count 1203
-scalar MultiCell.eNodeB2.udp packetReceived:sum(packetBytes) 101052
-scalar MultiCell.eNodeB2.udp packetSent:count 1068
-scalar MultiCell.eNodeB2.udp packetSent:sum(packetBytes) 89712
-scalar MultiCell.eNodeB2.udp passedUpPk:count 1203
+scalar MultiCell.eNodeB2.udp packetReceived:count 1322
+scalar MultiCell.eNodeB2.udp packetReceived:sum(packetBytes) 111048
+scalar MultiCell.eNodeB2.udp packetSent:count 1489
+scalar MultiCell.eNodeB2.udp packetSent:sum(packetBytes) 125076
+scalar MultiCell.eNodeB2.udp passedUpPk:count 1322
 scalar MultiCell.eNodeB2.udp droppedPkWrongPort:count 0
 scalar MultiCell.eNodeB2.udp droppedPkBadChecksum:count 0
 scalar MultiCell.eNodeB2.sctp "Packets Received" 0
@@ -795,22 +795,22 @@ scalar MultiCell.ue11.ipv4.arp arpReplySent:count 0
 scalar MultiCell.ue11.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.ue11.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.ue11.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.ue11.udp packetReceived:count 476
-scalar MultiCell.ue11.udp packetReceived:sum(packetBytes) 22848
-scalar MultiCell.ue11.udp packetSent:count 707
-scalar MultiCell.ue11.udp packetSent:sum(packetBytes) 33936
-scalar MultiCell.ue11.udp passedUpPk:count 476
+scalar MultiCell.ue11.udp packetReceived:count 658
+scalar MultiCell.ue11.udp packetReceived:sum(packetBytes) 31584
+scalar MultiCell.ue11.udp packetSent:count 553
+scalar MultiCell.ue11.udp packetSent:sum(packetBytes) 26544
+scalar MultiCell.ue11.udp passedUpPk:count 658
 scalar MultiCell.ue11.udp droppedPkWrongPort:count 0
 scalar MultiCell.ue11.udp droppedPkBadChecksum:count 0
-scalar MultiCell.ue11.app[0] voipReceivedThroughput:simu5g_rateavg 918.8218491371765
+scalar MultiCell.ue11.app[0] voipReceivedThroughput:simu5g_rateavg 1294.0826368864884
 scalar MultiCell.ue11.app[0] voipPlayoutLoss:mean 0
 scalar MultiCell.ue11.app[0] voipJitter:mean nan
 scalar MultiCell.ue11.app[0] voipTaildropLoss:mean 0
 scalar MultiCell.ue11.app[0] voipMos:mean 4.409285824
-scalar MultiCell.ue11.app[0] voipFrameDelay:mean 0.004244586585810924
+scalar MultiCell.ue11.app[0] voipFrameDelay:mean 0.0046242370215790266
 scalar MultiCell.ue11.app[0] voipFrameLoss:mean 0
 scalar MultiCell.ue11.app[0] voipPlayoutDelay:mean 0
-scalar MultiCell.ue11.app[1] voipGeneratedThroughput:simu5g_rateavg 1808.4078128215824
+scalar MultiCell.ue11.app[1] voipGeneratedThroughput:simu5g_rateavg 1344.2136305595677
 scalar MultiCell.ue11.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlcMux rlcPduDelayUl:mean nan
@@ -819,57 +819,57 @@ scalar MultiCell.ue11.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.ue11.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.ue11.cellularNic.rlcMux sentPacketToLowerLayer:count 1414
-scalar MultiCell.ue11.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 98980
-scalar MultiCell.ue11.cellularNic.rlcMux receivedPacketFromLowerLayer:count 476
-scalar MultiCell.ue11.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 33796
-scalar MultiCell.ue11.cellularNic.mac harqTxAttemptsUl:mean 1.024045261669024
+scalar MultiCell.ue11.cellularNic.rlcMux sentPacketToLowerLayer:count 1106
+scalar MultiCell.ue11.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 77420
+scalar MultiCell.ue11.cellularNic.rlcMux receivedPacketFromLowerLayer:count 658
+scalar MultiCell.ue11.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 46718
+scalar MultiCell.ue11.cellularNic.mac harqTxAttemptsUl:mean 1.0235081374321882
 scalar MultiCell.ue11.cellularNic.mac harqTxAttemptsDl:mean 1
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_4th_Ul:mean nan
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_4th_Dl:mean nan
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_3rd_Ul:mean 0
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_3rd_Dl:mean nan
-scalar MultiCell.ue11.cellularNic.mac harqErrorRate_2nd_Ul:mean 0.13333333333333333
+scalar MultiCell.ue11.cellularNic.mac harqErrorRate_2nd_Ul:mean 0.3
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_2nd_Dl:mean nan
-scalar MultiCell.ue11.cellularNic.mac harqErrorRate_1st_Ul:mean 0.021216407355021217
+scalar MultiCell.ue11.cellularNic.mac harqErrorRate_1st_Ul:mean 0.018083182640144666
 scalar MultiCell.ue11.cellularNic.mac harqErrorRate_1st_Dl:mean 0
-scalar MultiCell.ue11.cellularNic.mac harqErrorRateUl:mean 0.023480662983425413
+scalar MultiCell.ue11.cellularNic.mac harqErrorRateUl:mean 0.022968197879858657
 scalar MultiCell.ue11.cellularNic.mac harqErrorRateDl:mean 0
 scalar MultiCell.ue11.cellularNic.mac macCellPacketLossUl:mean nan
 scalar MultiCell.ue11.cellularNic.mac macCellPacketLossDl:mean nan
 scalar MultiCell.ue11.cellularNic.mac macPacketLossUl:mean 0
 scalar MultiCell.ue11.cellularNic.mac macPacketLossDl:mean 0
-scalar MultiCell.ue11.cellularNic.mac macThroughputUl:simu5g_rateavg 3285.695314400778
-scalar MultiCell.ue11.cellularNic.mac macThroughputDl:simu5g_rateavg 1676.8498746753462
-scalar MultiCell.ue11.cellularNic.mac macDelayUl:mean 0.005018387553041018
+scalar MultiCell.ue11.cellularNic.mac macThroughputUl:simu5g_rateavg 2440.228821758837
+scalar MultiCell.ue11.cellularNic.mac macThroughputDl:simu5g_rateavg 2361.7008123178375
+scalar MultiCell.ue11.cellularNic.mac macDelayUl:mean 0.007457504520795659
 scalar MultiCell.ue11.cellularNic.mac macDelayDl:mean 0.004
-scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:count 1924
-scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 54052
-scalar MultiCell.ue11.cellularNic.mac sentPacketToUpperLayer:count 1183
-scalar MultiCell.ue11.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 34503
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:count 2648
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 36920
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:count 1414
-scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 98980
+scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:count 1790
+scalar MultiCell.ue11.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 42542
+scalar MultiCell.ue11.cellularNic.mac sentPacketToUpperLayer:count 1211
+scalar MultiCell.ue11.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 47271
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:count 2356
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 49732
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:count 1106
+scalar MultiCell.ue11.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 77420
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue11.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue11.cellularNic.phy distance:mean nan
-scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 13.975138121546962
-scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 724
-scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean 15
-scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 476
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 49.49957561052853
-scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 52.51322029114729
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 36.318761225861955
-scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:mean 38.38195144561311
+scalar MultiCell.ue11.cellularNic.phy averageCqiUl:mean 13.99469964664311
+scalar MultiCell.ue11.cellularNic.phy averageCqiUl:count 566
+scalar MultiCell.ue11.cellularNic.phy averageCqiDl:mean 14
+scalar MultiCell.ue11.cellularNic.phy averageCqiDl:count 658
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrUl:mean 49.36881190829804
+scalar MultiCell.ue11.cellularNic.radio.receiver measuredSinrDl:mean 50.21132070496632
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrUl:mean 35.45232327079644
+scalar MultiCell.ue11.cellularNic.radio.receiver rcvdSinrDl:mean 36.08005185943213
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcPduDelayDl:mean 0.004
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
-scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 1584.9676897616291
+scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2232.29254862919
 scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.004244227785810925
+scalar MultiCell.ue11.cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.0046238782215790265
 scalar MultiCell.ue11.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.ue11.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.ue11.cellularNic packetDropNoCarrier:count 0
@@ -903,22 +903,22 @@ scalar MultiCell.ue12.ipv4.arp arpReplySent:count 0
 scalar MultiCell.ue12.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.ue12.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.ue12.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.ue12.udp packetReceived:count 532
-scalar MultiCell.ue12.udp packetReceived:sum(packetBytes) 25536
-scalar MultiCell.ue12.udp packetSent:count 456
-scalar MultiCell.ue12.udp packetSent:sum(packetBytes) 21888
-scalar MultiCell.ue12.udp passedUpPk:count 532
+scalar MultiCell.ue12.udp packetReceived:count 740
+scalar MultiCell.ue12.udp packetReceived:sum(packetBytes) 35520
+scalar MultiCell.ue12.udp packetSent:count 721
+scalar MultiCell.ue12.udp packetSent:sum(packetBytes) 34608
+scalar MultiCell.ue12.udp passedUpPk:count 740
 scalar MultiCell.ue12.udp droppedPkWrongPort:count 0
 scalar MultiCell.ue12.udp droppedPkBadChecksum:count 0
-scalar MultiCell.ue12.app[0] voipReceivedThroughput:simu5g_rateavg 1022.8846067231688
+scalar MultiCell.ue12.app[0] voipReceivedThroughput:simu5g_rateavg 1367.9541217445967
 scalar MultiCell.ue12.app[0] voipPlayoutLoss:mean 0
 scalar MultiCell.ue12.app[0] voipJitter:mean nan
 scalar MultiCell.ue12.app[0] voipTaildropLoss:mean 0
 scalar MultiCell.ue12.app[0] voipMos:mean 4.409285824
-scalar MultiCell.ue12.app[0] voipFrameDelay:mean 0.004636625201657895
+scalar MultiCell.ue12.app[0] voipFrameDelay:mean 0.004618694539195946
 scalar MultiCell.ue12.app[0] voipFrameLoss:mean 0
 scalar MultiCell.ue12.app[0] voipPlayoutDelay:mean 0
-scalar MultiCell.ue12.app[1] voipGeneratedThroughput:simu5g_rateavg 1183.118829399788
+scalar MultiCell.ue12.app[1] voipGeneratedThroughput:simu5g_rateavg 1505.4986173871068
 scalar MultiCell.ue12.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlcMux rlcPduDelayUl:mean nan
@@ -927,57 +927,57 @@ scalar MultiCell.ue12.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.ue12.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.ue12.cellularNic.rlcMux sentPacketToLowerLayer:count 939
-scalar MultiCell.ue12.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 63894
-scalar MultiCell.ue12.cellularNic.rlcMux receivedPacketFromLowerLayer:count 532
-scalar MultiCell.ue12.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 37772
-scalar MultiCell.ue12.cellularNic.mac harqTxAttemptsUl:mean 1
+scalar MultiCell.ue12.cellularNic.rlcMux sentPacketToLowerLayer:count 1499
+scalar MultiCell.ue12.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 101054
+scalar MultiCell.ue12.cellularNic.rlcMux receivedPacketFromLowerLayer:count 740
+scalar MultiCell.ue12.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 52540
+scalar MultiCell.ue12.cellularNic.mac harqTxAttemptsUl:mean 1.066924066924067
 scalar MultiCell.ue12.cellularNic.mac harqTxAttemptsDl:mean 1
-scalar MultiCell.ue12.cellularNic.mac harqErrorRate_4th_Ul:mean nan
+scalar MultiCell.ue12.cellularNic.mac harqErrorRate_4th_Ul:mean 0
 scalar MultiCell.ue12.cellularNic.mac harqErrorRate_4th_Dl:mean nan
-scalar MultiCell.ue12.cellularNic.mac harqErrorRate_3rd_Ul:mean nan
+scalar MultiCell.ue12.cellularNic.mac harqErrorRate_3rd_Ul:mean 0.14285714285714285
 scalar MultiCell.ue12.cellularNic.mac harqErrorRate_3rd_Dl:mean nan
-scalar MultiCell.ue12.cellularNic.mac harqErrorRate_2nd_Ul:mean nan
+scalar MultiCell.ue12.cellularNic.mac harqErrorRate_2nd_Ul:mean 0.1590909090909091
 scalar MultiCell.ue12.cellularNic.mac harqErrorRate_2nd_Dl:mean nan
-scalar MultiCell.ue12.cellularNic.mac harqErrorRate_1st_Ul:mean 0
+scalar MultiCell.ue12.cellularNic.mac harqErrorRate_1st_Ul:mean 0.05662805662805663
 scalar MultiCell.ue12.cellularNic.mac harqErrorRate_1st_Dl:mean 0
-scalar MultiCell.ue12.cellularNic.mac harqErrorRateUl:mean 0
+scalar MultiCell.ue12.cellularNic.mac harqErrorRateUl:mean 0.06272617611580217
 scalar MultiCell.ue12.cellularNic.mac harqErrorRateDl:mean 0
 scalar MultiCell.ue12.cellularNic.mac macCellPacketLossUl:mean nan
 scalar MultiCell.ue12.cellularNic.mac macCellPacketLossDl:mean nan
 scalar MultiCell.ue12.cellularNic.mac macPacketLossUl:mean 0
 scalar MultiCell.ue12.cellularNic.mac macPacketLossDl:mean 0
-scalar MultiCell.ue12.cellularNic.mac macThroughputUl:simu5g_rateavg 2160.399483454449
-scalar MultiCell.ue12.cellularNic.mac macThroughputDl:simu5g_rateavg 1866.7644072697826
-scalar MultiCell.ue12.cellularNic.mac macDelayUl:mean 0.004
+scalar MultiCell.ue12.cellularNic.mac macThroughputUl:simu5g_rateavg 2757.1387599224986
+scalar MultiCell.ue12.cellularNic.mac macThroughputDl:simu5g_rateavg 2496.5162721838897
+scalar MultiCell.ue12.cellularNic.mac macDelayUl:mean 0.006676962676962677
 scalar MultiCell.ue12.cellularNic.mac macDelayDl:mean 0.004
-scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:count 1471
-scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 34384
-scalar MultiCell.ue12.cellularNic.mac sentPacketToUpperLayer:count 1015
-scalar MultiCell.ue12.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 38255
-scalar MultiCell.ue12.cellularNic.mac receivedPacketFromLowerLayer:count 1954
-scalar MultiCell.ue12.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 40258
-scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:count 939
-scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 63894
+scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:count 2343
+scalar MultiCell.ue12.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 58170
+scalar MultiCell.ue12.cellularNic.mac sentPacketToUpperLayer:count 1518
+scalar MultiCell.ue12.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 53318
+scalar MultiCell.ue12.cellularNic.mac receivedPacketFromLowerLayer:count 3172
+scalar MultiCell.ue12.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 56452
+scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:count 1499
+scalar MultiCell.ue12.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 101054
 scalar MultiCell.ue12.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue12.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue12.cellularNic.phy distance:mean nan
-scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean 12.925465838509316
-scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 483
+scalar MultiCell.ue12.cellularNic.phy averageCqiUl:mean 12.931325301204819
+scalar MultiCell.ue12.cellularNic.phy averageCqiUl:count 830
 scalar MultiCell.ue12.cellularNic.phy averageCqiDl:mean 12
-scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 532
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 30.780265384686974
-scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 29.14878487839381
-scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean 35.16636247179499
-scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrDl:mean 29.549726167952556
+scalar MultiCell.ue12.cellularNic.phy averageCqiDl:count 740
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrUl:mean 29.999332842856518
+scalar MultiCell.ue12.cellularNic.radio.receiver measuredSinrDl:mean 28.003593498017167
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrUl:mean 29.6654502944464
+scalar MultiCell.ue12.cellularNic.radio.receiver rcvdSinrDl:mean 29.39627138812789
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduDelayUl:mean nan
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcPduDelayDl:mean 0.004
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcThroughputUl:simu5g_rateavg nan
-scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 1764.4759465974655
+scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcThroughputDl:simu5g_rateavg 2359.720860009429
 scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcDelayUl:mean nan
-scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.004636266401657895
+scalar MultiCell.ue12.cellularNic.rlc-um-1-1.rx rlcDelayDl:mean 0.004618335739195946
 scalar MultiCell.ue12.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.ue12.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.ue12.cellularNic packetDropNoCarrier:count 0
@@ -1011,22 +1011,22 @@ scalar MultiCell.ue21.ipv4.arp arpReplySent:count 0
 scalar MultiCell.ue21.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.ue21.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.ue21.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.ue21.udp packetReceived:count 555
-scalar MultiCell.ue21.udp packetReceived:sum(packetBytes) 26640
-scalar MultiCell.ue21.udp packetSent:count 622
-scalar MultiCell.ue21.udp packetSent:sum(packetBytes) 29856
-scalar MultiCell.ue21.udp passedUpPk:count 555
+scalar MultiCell.ue21.udp packetReceived:count 652
+scalar MultiCell.ue21.udp packetReceived:sum(packetBytes) 31296
+scalar MultiCell.ue21.udp packetSent:count 860
+scalar MultiCell.ue21.udp packetSent:sum(packetBytes) 41280
+scalar MultiCell.ue21.udp passedUpPk:count 652
 scalar MultiCell.ue21.udp droppedPkWrongPort:count 0
 scalar MultiCell.ue21.udp droppedPkBadChecksum:count 0
-scalar MultiCell.ue21.app[0] voipReceivedThroughput:simu5g_rateavg 876.8181895120492
+scalar MultiCell.ue21.app[0] voipReceivedThroughput:simu5g_rateavg 1171.5058742470317
 scalar MultiCell.ue21.app[0] voipPlayoutLoss:mean 0
 scalar MultiCell.ue21.app[0] voipJitter:mean nan
 scalar MultiCell.ue21.app[0] voipTaildropLoss:mean 0
 scalar MultiCell.ue21.app[0] voipMos:mean 4.409285824
-scalar MultiCell.ue21.app[0] voipFrameDelay:mean 0.0041177080778360365
+scalar MultiCell.ue21.app[0] voipFrameDelay:mean 0.004585156846047546
 scalar MultiCell.ue21.app[0] voipFrameLoss:mean 0
 scalar MultiCell.ue21.app[0] voipPlayoutDelay:mean 0
-scalar MultiCell.ue21.app[1] voipGeneratedThroughput:simu5g_rateavg 1212.794914406367
+scalar MultiCell.ue21.app[1] voipGeneratedThroughput:simu5g_rateavg 1742.1209722498788
 scalar MultiCell.ue21.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlcMux rlcPduDelayUl:mean nan
@@ -1035,57 +1035,57 @@ scalar MultiCell.ue21.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.ue21.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.ue21.cellularNic.rlcMux sentPacketToLowerLayer:count 1244
-scalar MultiCell.ue21.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 87080
-scalar MultiCell.ue21.cellularNic.rlcMux receivedPacketFromLowerLayer:count 555
-scalar MultiCell.ue21.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 39405
-scalar MultiCell.ue21.cellularNic.mac harqTxAttemptsUl:mean 1.0289855072463767
+scalar MultiCell.ue21.cellularNic.rlcMux sentPacketToLowerLayer:count 1720
+scalar MultiCell.ue21.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 120400
+scalar MultiCell.ue21.cellularNic.rlcMux receivedPacketFromLowerLayer:count 652
+scalar MultiCell.ue21.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 46292
+scalar MultiCell.ue21.cellularNic.mac harqTxAttemptsUl:mean 1.0023255813953489
 scalar MultiCell.ue21.cellularNic.mac harqTxAttemptsDl:mean 1
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_4th_Ul:mean nan
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_4th_Dl:mean nan
-scalar MultiCell.ue21.cellularNic.mac harqErrorRate_3rd_Ul:mean 0
+scalar MultiCell.ue21.cellularNic.mac harqErrorRate_3rd_Ul:mean nan
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_3rd_Dl:mean nan
-scalar MultiCell.ue21.cellularNic.mac harqErrorRate_2nd_Ul:mean 0.058823529411764705
+scalar MultiCell.ue21.cellularNic.mac harqErrorRate_2nd_Ul:mean 0
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_2nd_Dl:mean nan
-scalar MultiCell.ue21.cellularNic.mac harqErrorRate_1st_Ul:mean 0.027375201288244767
+scalar MultiCell.ue21.cellularNic.mac harqErrorRate_1st_Ul:mean 0.002325581395348837
 scalar MultiCell.ue21.cellularNic.mac harqErrorRate_1st_Dl:mean 0
-scalar MultiCell.ue21.cellularNic.mac harqErrorRateUl:mean 0.028169014084507043
+scalar MultiCell.ue21.cellularNic.mac harqErrorRateUl:mean 0.002320185614849188
 scalar MultiCell.ue21.cellularNic.mac harqErrorRateDl:mean 0
 scalar MultiCell.ue21.cellularNic.mac macCellPacketLossUl:mean nan
 scalar MultiCell.ue21.cellularNic.mac macCellPacketLossDl:mean nan
 scalar MultiCell.ue21.cellularNic.mac macPacketLossUl:mean 0
 scalar MultiCell.ue21.cellularNic.mac macPacketLossDl:mean 0
-scalar MultiCell.ue21.cellularNic.mac macThroughputUl:simu5g_rateavg 2199.9547847302983
-scalar MultiCell.ue21.cellularNic.mac macThroughputDl:simu5g_rateavg 1600.1931958594894
-scalar MultiCell.ue21.cellularNic.mac macDelayUl:mean 0.022396135265700483
+scalar MultiCell.ue21.cellularNic.mac macThroughputUl:simu5g_rateavg 3167.4984671697835
+scalar MultiCell.ue21.cellularNic.mac macThroughputDl:simu5g_rateavg 2137.998220500835
+scalar MultiCell.ue21.cellularNic.mac macDelayUl:mean 0.004093023255813954
 scalar MultiCell.ue21.cellularNic.mac macDelayDl:mean 0.004
-scalar MultiCell.ue21.cellularNic.mac sentPacketToLowerLayer:count 1835
-scalar MultiCell.ue21.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 47915
-scalar MultiCell.ue21.cellularNic.mac sentPacketToUpperLayer:count 1177
-scalar MultiCell.ue21.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 40027
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:count 2474
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 42434
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:count 1244
-scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 87080
+scalar MultiCell.ue21.cellularNic.mac sentPacketToLowerLayer:count 2376
+scalar MultiCell.ue21.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 64440
+scalar MultiCell.ue21.cellularNic.mac sentPacketToUpperLayer:count 1512
+scalar MultiCell.ue21.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 47152
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:count 3238
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 50182
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:count 1720
+scalar MultiCell.ue21.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 120400
 scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue21.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue21.cellularNic.phy distance:mean nan
-scalar MultiCell.ue21.cellularNic.phy averageCqiUl:mean 14.953125
-scalar MultiCell.ue21.cellularNic.phy averageCqiUl:count 640
+scalar MultiCell.ue21.cellularNic.phy averageCqiUl:mean 14.994199535962878
+scalar MultiCell.ue21.cellularNic.phy averageCqiUl:count 862
 scalar MultiCell.ue21.cellularNic.phy averageCqiDl:mean 15
-scalar MultiCell.ue21.cellularNic.phy averageCqiDl:count 555
-scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrUl:mean 52.160026196962605
-scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrDl:mean 55.221574073487346
-scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrUl:mean 44.66214877836949
-scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrDl:mean 48.00508404130095
+scalar MultiCell.ue21.cellularNic.phy averageCqiDl:count 652
+scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrUl:mean 50.462448418007035
+scalar MultiCell.ue21.cellularNic.radio.receiver measuredSinrDl:mean 53.11506163435849
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrUl:mean 49.645929597202255
+scalar MultiCell.ue21.cellularNic.radio.receiver rcvdSinrDl:mean 53.21597553640839
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcPduDelayDl:mean 0.004
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
-scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 1512.511376908285
+scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 2020.8476330761305
 scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcDelayDl:mean 0.004117349277836036
+scalar MultiCell.ue21.cellularNic.rlc-um-2-1.rx rlcDelayDl:mean 0.004584798046047546
 scalar MultiCell.ue21.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.ue21.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.ue21.cellularNic packetDropNoCarrier:count 0
@@ -1119,22 +1119,22 @@ scalar MultiCell.ue22.ipv4.arp arpReplySent:count 0
 scalar MultiCell.ue22.ipv4.arp arpReplySent:sum(packetBytes) 0
 scalar MultiCell.ue22.ipv4.arp arpRequestSent:count 0
 scalar MultiCell.ue22.ipv4.arp arpRequestSent:sum(packetBytes) 0
-scalar MultiCell.ue22.udp packetReceived:count 648
-scalar MultiCell.ue22.udp packetReceived:sum(packetBytes) 31104
-scalar MultiCell.ue22.udp packetSent:count 450
-scalar MultiCell.ue22.udp packetSent:sum(packetBytes) 21600
-scalar MultiCell.ue22.udp passedUpPk:count 648
+scalar MultiCell.ue22.udp packetReceived:count 670
+scalar MultiCell.ue22.udp packetReceived:sum(packetBytes) 32160
+scalar MultiCell.ue22.udp packetSent:count 629
+scalar MultiCell.ue22.udp packetSent:sum(packetBytes) 30192
+scalar MultiCell.ue22.udp passedUpPk:count 670
 scalar MultiCell.ue22.udp droppedPkWrongPort:count 0
 scalar MultiCell.ue22.udp droppedPkBadChecksum:count 0
-scalar MultiCell.ue22.app[0] voipReceivedThroughput:simu5g_rateavg 1343.1441940041675
+scalar MultiCell.ue22.app[0] voipReceivedThroughput:simu5g_rateavg 1199.038051138287
 scalar MultiCell.ue22.app[0] voipPlayoutLoss:mean 0
 scalar MultiCell.ue22.app[0] voipJitter:mean nan
 scalar MultiCell.ue22.app[0] voipTaildropLoss:mean 0
 scalar MultiCell.ue22.app[0] voipMos:mean 4.409285824
-scalar MultiCell.ue22.app[0] voipFrameDelay:mean 0.004385376460848765
+scalar MultiCell.ue22.app[0] voipFrameDelay:mean 0.004525170854646269
 scalar MultiCell.ue22.app[0] voipFrameLoss:mean 0
 scalar MultiCell.ue22.app[0] voipPlayoutDelay:mean 0
-scalar MultiCell.ue22.app[1] voipGeneratedThroughput:simu5g_rateavg 645.798425652724
+scalar MultiCell.ue22.app[1] voipGeneratedThroughput:simu5g_rateavg 902.406512127257
 scalar MultiCell.ue22.cellularNic.rlcMux rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlcMux rlcPduThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlcMux rlcPduDelayUl:mean nan
@@ -1143,10 +1143,10 @@ scalar MultiCell.ue22.cellularNic.rlcMux rlcThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlcMux rlcThroughputDl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlcMux rlcDelayUl:mean nan
 scalar MultiCell.ue22.cellularNic.rlcMux rlcDelayDl:mean nan
-scalar MultiCell.ue22.cellularNic.rlcMux sentPacketToLowerLayer:count 919
-scalar MultiCell.ue22.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 63038
-scalar MultiCell.ue22.cellularNic.rlcMux receivedPacketFromLowerLayer:count 648
-scalar MultiCell.ue22.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 46008
+scalar MultiCell.ue22.cellularNic.rlcMux sentPacketToLowerLayer:count 1258
+scalar MultiCell.ue22.cellularNic.rlcMux sentPacketToLowerLayer:sum(packetBytes) 88060
+scalar MultiCell.ue22.cellularNic.rlcMux receivedPacketFromLowerLayer:count 670
+scalar MultiCell.ue22.cellularNic.rlcMux receivedPacketFromLowerLayer:sum(packetBytes) 47570
 scalar MultiCell.ue22.cellularNic.mac harqTxAttemptsUl:mean 1
 scalar MultiCell.ue22.cellularNic.mac harqTxAttemptsDl:mean 1
 scalar MultiCell.ue22.cellularNic.mac harqErrorRate_4th_Ul:mean nan
@@ -1163,43 +1163,43 @@ scalar MultiCell.ue22.cellularNic.mac macCellPacketLossUl:mean nan
 scalar MultiCell.ue22.cellularNic.mac macCellPacketLossDl:mean nan
 scalar MultiCell.ue22.cellularNic.mac macPacketLossUl:mean 0
 scalar MultiCell.ue22.cellularNic.mac macPacketLossDl:mean 0
-scalar MultiCell.ue22.cellularNic.mac macThroughputUl:simu5g_rateavg 1174.1937185244967
-scalar MultiCell.ue22.cellularNic.mac macThroughputDl:simu5g_rateavg 2451.238154057605
+scalar MultiCell.ue22.cellularNic.mac macThroughputUl:simu5g_rateavg 1639.6829737009002
+scalar MultiCell.ue22.cellularNic.mac macThroughputDl:simu5g_rateavg 2188.2444433273754
 scalar MultiCell.ue22.cellularNic.mac macDelayUl:mean 0.004
 scalar MultiCell.ue22.cellularNic.mac macDelayDl:mean 0.004
-scalar MultiCell.ue22.cellularNic.mac sentPacketToLowerLayer:count 1567
-scalar MultiCell.ue22.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 34024
-scalar MultiCell.ue22.cellularNic.mac sentPacketToUpperLayer:count 1117
-scalar MultiCell.ue22.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 46477
-scalar MultiCell.ue22.cellularNic.mac receivedPacketFromLowerLayer:count 2036
-scalar MultiCell.ue22.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 48692
-scalar MultiCell.ue22.cellularNic.mac receivedPacketFromUpperLayer:count 919
-scalar MultiCell.ue22.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 63038
+scalar MultiCell.ue22.cellularNic.mac sentPacketToLowerLayer:count 1928
+scalar MultiCell.ue22.cellularNic.mac sentPacketToLowerLayer:sum(packetBytes) 47216
+scalar MultiCell.ue22.cellularNic.mac sentPacketToUpperLayer:count 1299
+scalar MultiCell.ue22.cellularNic.mac sentPacketToUpperLayer:sum(packetBytes) 48199
+scalar MultiCell.ue22.cellularNic.mac receivedPacketFromLowerLayer:count 2557
+scalar MultiCell.ue22.cellularNic.mac receivedPacketFromLowerLayer:sum(packetBytes) 50797
+scalar MultiCell.ue22.cellularNic.mac receivedPacketFromUpperLayer:count 1258
+scalar MultiCell.ue22.cellularNic.mac receivedPacketFromUpperLayer:sum(packetBytes) 88060
 scalar MultiCell.ue22.cellularNic.mac macBufferOverFlowUl:mean nan
 scalar MultiCell.ue22.cellularNic.mac macBufferOverFlowDl:mean nan
 scalar MultiCell.ue22.cellularNic.phy distance:mean nan
-scalar MultiCell.ue22.cellularNic.phy averageCqiUl:mean 12.957356076759062
-scalar MultiCell.ue22.cellularNic.phy averageCqiUl:count 469
-scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean 12
-scalar MultiCell.ue22.cellularNic.phy averageCqiDl:count 648
-scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrUl:mean 30.02220383615877
-scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrDl:mean 28.438626525771586
-scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrUl:mean 31.22233120087252
-scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrDl:mean 31.848412806379248
+scalar MultiCell.ue22.cellularNic.phy averageCqiUl:mean 13.988871224165342
+scalar MultiCell.ue22.cellularNic.phy averageCqiUl:count 629
+scalar MultiCell.ue22.cellularNic.phy averageCqiDl:mean 14
+scalar MultiCell.ue22.cellularNic.phy averageCqiDl:count 670
+scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrUl:mean 36.47630373473512
+scalar MultiCell.ue22.cellularNic.radio.receiver measuredSinrDl:mean 37.24004366466359
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrUl:mean 42.337316096669056
+scalar MultiCell.ue22.cellularNic.radio.receiver rcvdSinrDl:mean 43.20958735677473
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputUl:simu5g_rateavg nan
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduThroughputDl:simu5g_rateavg 0
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduDelayUl:mean nan
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcPduDelayDl:mean 0.004
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcThroughputUl:simu5g_rateavg nan
-scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 2316.923734657186
+scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcThroughputDl:simu5g_rateavg 2068.340638213543
 scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcDelayUl:mean nan
-scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcDelayDl:mean 0.004385017660848765
+scalar MultiCell.ue22.cellularNic.rlc-um-2-1.rx rlcDelayDl:mean 0.004524812054646268
 scalar MultiCell.ue22.cellularNic packetDropInterfaceDown:count 0
 scalar MultiCell.ue22.cellularNic packetDropInterfaceDown:sum(packetBytes) 0
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:count 0
 scalar MultiCell.ue22.cellularNic packetDropNoCarrier:sum(packetBytes) 0
-scalar MultiCell.server.ppp[0].queue queueingTime:histogram:count 2211
-scalar MultiCell.server.ppp[0].queue queueingTime:histogram:sumweights 2211
+scalar MultiCell.server.ppp[0].queue queueingTime:histogram:count 2720
+scalar MultiCell.server.ppp[0].queue queueingTime:histogram:sumweights 2720
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:mean 0
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:stddev 0
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:min 0
@@ -1209,8 +1209,8 @@ scalar MultiCell.server.ppp[0].queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:underflows 0
 scalar MultiCell.server.ppp[0].queue queueingTime:histogram:overflows 0
-scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:count 2211
-scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:sumweights 2211
+scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:count 2720
+scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:sumweights 2720
 scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:mean 544
 scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram:min 544
@@ -1231,8 +1231,8 @@ scalar MultiCell.server.ppp[0].queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.server.ppp[0].queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.server.ppp[0].queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.server.ppp[0].queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:count 2211
-scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:sumweights 2211
+scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:count 2720
+scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:sumweights 2720
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:mean 544
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:min 544
@@ -1242,8 +1242,8 @@ scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:rangemin 54
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:rangemax 545
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.server.ppp[0].queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:count 1008
-scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:sumweights 1008
+scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:count 1398
+scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:sumweights 1398
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:mean 0
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:stddev 0
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:min 0
@@ -1253,8 +1253,8 @@ scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:underflows 0
 scalar MultiCell.pgw.ppp[0].queue queueingTime:histogram:overflows 0
-scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:count 1008
-scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:sumweights 1008
+scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:count 1398
+scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:sumweights 1398
 scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:mean 832
 scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram:min 832
@@ -1275,8 +1275,8 @@ scalar MultiCell.pgw.ppp[0].queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.pgw.ppp[0].queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.pgw.ppp[0].queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.pgw.ppp[0].queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:count 1008
-scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:sumweights 1008
+scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:count 1398
+scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:sumweights 1398
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:mean 832
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:min 832
@@ -1286,8 +1286,8 @@ scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:rangemin 831
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:rangemax 833
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:count 1203
-scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:sumweights 1203
+scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:count 1322
+scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:sumweights 1322
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:mean 0
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:stddev 0
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:min 0
@@ -1297,8 +1297,8 @@ scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:underflows 0
 scalar MultiCell.pgw.ppp[1].queue queueingTime:histogram:overflows 0
-scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:count 1203
-scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:sumweights 1203
+scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:count 1322
+scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:sumweights 1322
 scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:mean 832
 scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram:min 832
@@ -1319,8 +1319,8 @@ scalar MultiCell.pgw.ppp[1].queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.pgw.ppp[1].queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.pgw.ppp[1].queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.pgw.ppp[1].queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:count 1203
-scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:sumweights 1203
+scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:count 1322
+scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:sumweights 1322
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:mean 832
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:min 832
@@ -1330,10 +1330,10 @@ scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:rangemin 831
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:rangemax 833
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:count 2231
-scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:sumweights 2231
-scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:mean 2.4527117884356785e-10
-scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:stddev 3.7057819089193444e-09
+scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:count 2762
+scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:sumweights 2762
+scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:mean 1.4459087617668357e-09
+scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:stddev 8.605516512102039e-09
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:min 0
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:max 6e-08
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:numbins 50
@@ -1341,8 +1341,8 @@ scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:underflows 0
 scalar MultiCell.pgw.dnPpp.queue queueingTime:histogram:overflows 0
-scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:count 2231
-scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:sumweights 2231
+scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:count 2762
+scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:sumweights 2762
 scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:mean 544
 scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram:min 544
@@ -1363,8 +1363,8 @@ scalar MultiCell.pgw.dnPpp.queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.pgw.dnPpp.queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.pgw.dnPpp.queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.pgw.dnPpp.queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:count 2231
-scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:sumweights 2231
+scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:count 2762
+scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:sumweights 2762
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:mean 544
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:min 544
@@ -1374,8 +1374,8 @@ scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:rangemin 543
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:rangemax 545
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.router.ppp[0].queue queueingTime:histogram:count 2231
-scalar MultiCell.router.ppp[0].queue queueingTime:histogram:sumweights 2231
+scalar MultiCell.router.ppp[0].queue queueingTime:histogram:count 2762
+scalar MultiCell.router.ppp[0].queue queueingTime:histogram:sumweights 2762
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:mean 0
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:stddev 0
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:min 0
@@ -1385,8 +1385,8 @@ scalar MultiCell.router.ppp[0].queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:underflows 0
 scalar MultiCell.router.ppp[0].queue queueingTime:histogram:overflows 0
-scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:count 2231
-scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:sumweights 2231
+scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:count 2762
+scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:sumweights 2762
 scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:mean 544
 scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram:min 544
@@ -1407,8 +1407,8 @@ scalar MultiCell.router.ppp[0].queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.router.ppp[0].queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.router.ppp[0].queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.router.ppp[0].queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:count 2231
-scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:sumweights 2231
+scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:count 2762
+scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:sumweights 2762
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:mean 544
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:min 544
@@ -1418,8 +1418,8 @@ scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:rangemin 54
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:rangemax 545
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.router.ppp[0].queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.router.ppp[1].queue queueingTime:histogram:count 2211
-scalar MultiCell.router.ppp[1].queue queueingTime:histogram:sumweights 2211
+scalar MultiCell.router.ppp[1].queue queueingTime:histogram:count 2720
+scalar MultiCell.router.ppp[1].queue queueingTime:histogram:sumweights 2720
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:mean 0
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:stddev 0
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:min 0
@@ -1429,8 +1429,8 @@ scalar MultiCell.router.ppp[1].queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:underflows 0
 scalar MultiCell.router.ppp[1].queue queueingTime:histogram:overflows 0
-scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:count 2211
-scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:sumweights 2211
+scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:count 2720
+scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:sumweights 2720
 scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:mean 544
 scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram:min 544
@@ -1451,8 +1451,8 @@ scalar MultiCell.router.ppp[1].queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.router.ppp[1].queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.router.ppp[1].queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.router.ppp[1].queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:count 2211
-scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:sumweights 2211
+scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:count 2720
+scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:sumweights 2720
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:mean 544
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:min 544
@@ -1462,19 +1462,19 @@ scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:rangemin 54
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:rangemax 545
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.router.ppp[1].queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:count 1163
-scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:sumweights 1163
-scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:mean 9.162510748065348e-10
-scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:stddev 1.1613854672625828e-08
+scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:count 1273
+scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:sumweights 1273
+scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:mean 8.580047132757267e-09
+scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:stddev 5.0850773272887473e-08
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:min 0
-scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:max 2.664e-07
+scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:max 7.992e-07
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:numbins 50
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:underflows 0
 scalar MultiCell.eNodeB1.pppIf.queue queueingTime:histogram:overflows 0
-scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:count 1163
-scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:sumweights 1163
+scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:count 1273
+scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:sumweights 1273
 scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:mean 832
 scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram:min 832
@@ -1495,8 +1495,8 @@ scalar MultiCell.eNodeB1.pppIf.queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.eNodeB1.pppIf.queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.eNodeB1.pppIf.queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.eNodeB1.pppIf.queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:count 1163
-scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:sumweights 1163
+scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:count 1273
+scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:sumweights 1273
 scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:mean 832
 scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram:min 832
@@ -1594,19 +1594,19 @@ scalar MultiCell.eNodeB1.pppMEHostIf.queue incomingPacketLengths:histogram:range
 scalar MultiCell.eNodeB1.pppMEHostIf.queue incomingPacketLengths:histogram:rangemax 1
 scalar MultiCell.eNodeB1.pppMEHostIf.queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.eNodeB1.pppMEHostIf.queue incomingPacketLengths:histogram:overflows 0
-scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:count 1068
-scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:sumweights 1068
-scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:mean 5.404494382022472e-09
-scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:stddev 4.6536870916128945e-08
+scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:count 1489
+scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:sumweights 1489
+scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:mean 1.431296171927468e-09
+scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:stddev 1.118635466289524e-08
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:min 0
-scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:max 6.216e-07
+scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:max 8.88e-08
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:numbins 50
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:rangemin -0.5
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:rangemax 0.5
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:underflows 0
 scalar MultiCell.eNodeB2.pppIf.queue queueingTime:histogram:overflows 0
-scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:count 1068
-scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:sumweights 1068
+scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:count 1489
+scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:sumweights 1489
 scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:mean 832
 scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:stddev 0
 scalar MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram:min 832
@@ -1627,8 +1627,8 @@ scalar MultiCell.eNodeB2.pppIf.queue flowQueueingTime:histogram:rangemin 0
 scalar MultiCell.eNodeB2.pppIf.queue flowQueueingTime:histogram:rangemax 1
 scalar MultiCell.eNodeB2.pppIf.queue flowQueueingTime:histogram:underflows 0
 scalar MultiCell.eNodeB2.pppIf.queue flowQueueingTime:histogram:overflows 0
-scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:count 1068
-scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:sumweights 1068
+scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:count 1489
+scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:sumweights 1489
 scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:mean 832
 scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:stddev 0
 scalar MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram:min 832
@@ -1727,7 +1727,7 @@ scalar MultiCell.eNodeB2.pppMEHostIf.queue incomingPacketLengths:histogram:range
 scalar MultiCell.eNodeB2.pppMEHostIf.queue incomingPacketLengths:histogram:underflows 0
 scalar MultiCell.eNodeB2.pppMEHostIf.queue incomingPacketLengths:histogram:overflows 0
 statistic MultiCell.server.ppp[0].queue queueingTime:histogram
-field count 2211
+field count 2720
 field mean 0
 field stddev 0
 field min 0
@@ -1760,7 +1760,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	2211
+bin	0	2720
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -1787,16 +1787,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.server.ppp[0].queue outgoingPacketLengths:histogram
-field count 2211
+field count 2720
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1202784
-field sqrsum 654314496
+field sum 1479680
+field sqrsum 804945920
 bin	-inf	0
 bin	543	0
-bin	544	2211
+bin	544	2720
 bin	545	0
 statistic MultiCell.server.ppp[0].queue flowQueueingTime:histogram
 field count 0
@@ -1810,19 +1810,19 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.server.ppp[0].queue incomingPacketLengths:histogram
-field count 2211
+field count 2720
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1202784
-field sqrsum 654314496
+field sum 1479680
+field sqrsum 804945920
 bin	-inf	0
 bin	543	0
-bin	544	2211
+bin	544	2720
 bin	545	0
 statistic MultiCell.pgw.ppp[0].queue queueingTime:histogram
-field count 1008
+field count 1398
 field mean 0
 field stddev 0
 field min 0
@@ -1855,7 +1855,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	1008
+bin	0	1398
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -1882,16 +1882,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.pgw.ppp[0].queue outgoingPacketLengths:histogram
-field count 1008
+field count 1398
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 838656
-field sqrsum 697761792
+field sum 1163136
+field sqrsum 967729152
 bin	-inf	0
 bin	831	0
-bin	832	1008
+bin	832	1398
 bin	833	0
 statistic MultiCell.pgw.ppp[0].queue flowQueueingTime:histogram
 field count 0
@@ -1905,19 +1905,19 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.pgw.ppp[0].queue incomingPacketLengths:histogram
-field count 1008
+field count 1398
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 838656
-field sqrsum 697761792
+field sum 1163136
+field sqrsum 967729152
 bin	-inf	0
 bin	831	0
-bin	832	1008
+bin	832	1398
 bin	833	0
 statistic MultiCell.pgw.ppp[1].queue queueingTime:histogram
-field count 1203
+field count 1322
 field mean 0
 field stddev 0
 field min 0
@@ -1950,7 +1950,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	1203
+bin	0	1322
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -1977,16 +1977,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.pgw.ppp[1].queue outgoingPacketLengths:histogram
-field count 1203
+field count 1322
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 1000896
-field sqrsum 832745472
+field sum 1099904
+field sqrsum 915120128
 bin	-inf	0
 bin	831	0
-bin	832	1203
+bin	832	1322
 bin	833	0
 statistic MultiCell.pgw.ppp[1].queue flowQueueingTime:histogram
 field count 0
@@ -2000,25 +2000,25 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.pgw.ppp[1].queue incomingPacketLengths:histogram
-field count 1203
+field count 1322
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 1000896
-field sqrsum 832745472
+field sum 1099904
+field sqrsum 915120128
 bin	-inf	0
 bin	831	0
-bin	832	1203
+bin	832	1322
 bin	833	0
 statistic MultiCell.pgw.dnPpp.queue queueingTime:histogram
-field count 2231
-field mean 2.4527117884356785e-10
-field stddev 3.7057819089193444e-09
+field count 2762
+field mean 1.4459087617668357e-09
+field stddev 8.605516512102039e-09
 field min 0
 field max 6e-08
-field sum 5.471999999999999e-07
-field sqrsum 3.07584e-14
+field sum 3.9936e-06
+field sqrsum 2.1023999999999997e-13
 bin	-inf	0
 bin	-0.5	0
 bin	-0.48	0
@@ -2045,7 +2045,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	2231
+bin	0	2762
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -2072,16 +2072,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.pgw.dnPpp.queue outgoingPacketLengths:histogram
-field count 2231
+field count 2762
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1213664
-field sqrsum 660233216
+field sum 1502528
+field sqrsum 817375232
 bin	-inf	0
 bin	543	0
-bin	544	2231
+bin	544	2762
 bin	545	0
 statistic MultiCell.pgw.dnPpp.queue flowQueueingTime:histogram
 field count 0
@@ -2095,19 +2095,19 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.pgw.dnPpp.queue incomingPacketLengths:histogram
-field count 2231
+field count 2762
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1213664
-field sqrsum 660233216
+field sum 1502528
+field sqrsum 817375232
 bin	-inf	0
 bin	543	0
-bin	544	2231
+bin	544	2762
 bin	545	0
 statistic MultiCell.router.ppp[0].queue queueingTime:histogram
-field count 2231
+field count 2762
 field mean 0
 field stddev 0
 field min 0
@@ -2140,7 +2140,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	2231
+bin	0	2762
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -2167,16 +2167,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.router.ppp[0].queue outgoingPacketLengths:histogram
-field count 2231
+field count 2762
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1213664
-field sqrsum 660233216
+field sum 1502528
+field sqrsum 817375232
 bin	-inf	0
 bin	543	0
-bin	544	2231
+bin	544	2762
 bin	545	0
 statistic MultiCell.router.ppp[0].queue flowQueueingTime:histogram
 field count 0
@@ -2190,19 +2190,19 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.router.ppp[0].queue incomingPacketLengths:histogram
-field count 2231
+field count 2762
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1213664
-field sqrsum 660233216
+field sum 1502528
+field sqrsum 817375232
 bin	-inf	0
 bin	543	0
-bin	544	2231
+bin	544	2762
 bin	545	0
 statistic MultiCell.router.ppp[1].queue queueingTime:histogram
-field count 2211
+field count 2720
 field mean 0
 field stddev 0
 field min 0
@@ -2235,7 +2235,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	2211
+bin	0	2720
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -2262,16 +2262,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.router.ppp[1].queue outgoingPacketLengths:histogram
-field count 2211
+field count 2720
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1202784
-field sqrsum 654314496
+field sum 1479680
+field sqrsum 804945920
 bin	-inf	0
 bin	543	0
-bin	544	2211
+bin	544	2720
 bin	545	0
 statistic MultiCell.router.ppp[1].queue flowQueueingTime:histogram
 field count 0
@@ -2285,25 +2285,25 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.router.ppp[1].queue incomingPacketLengths:histogram
-field count 2211
+field count 2720
 field mean 544
 field stddev 0
 field min 544
 field max 544
-field sum 1202784
-field sqrsum 654314496
+field sum 1479680
+field sqrsum 804945920
 bin	-inf	0
 bin	543	0
-bin	544	2211
+bin	544	2720
 bin	545	0
 statistic MultiCell.eNodeB1.pppIf.queue queueingTime:histogram
-field count 1163
-field mean 9.162510748065348e-10
-field stddev 1.1613854672625828e-08
+field count 1273
+field mean 8.580047132757267e-09
+field stddev 5.0850773272887473e-08
 field min 0
-field max 2.664e-07
-field sum 1.0656e-06
-field sqrsum 1.577088e-13
+field max 7.992e-07
+field sum 1.09224e-05
+field sqrsum 3.38285376e-12
 bin	-inf	0
 bin	-0.5	0
 bin	-0.48	0
@@ -2330,7 +2330,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	1163
+bin	0	1273
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -2357,16 +2357,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.eNodeB1.pppIf.queue outgoingPacketLengths:histogram
-field count 1163
+field count 1273
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 967616
-field sqrsum 805056512
+field sum 1059136
+field sqrsum 881201152
 bin	-inf	0
 bin	831	0
-bin	832	1163
+bin	832	1273
 bin	833	0
 statistic MultiCell.eNodeB1.pppIf.queue flowQueueingTime:histogram
 field count 0
@@ -2380,16 +2380,16 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.eNodeB1.pppIf.queue incomingPacketLengths:histogram
-field count 1163
+field count 1273
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 967616
-field sqrsum 805056512
+field sum 1059136
+field sqrsum 881201152
 bin	-inf	0
 bin	831	0
-bin	832	1163
+bin	832	1273
 bin	833	0
 statistic MultiCell.eNodeB1.x2ppp[0].queue queueingTime:histogram
 field count 0
@@ -2480,13 +2480,13 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.eNodeB2.pppIf.queue queueingTime:histogram
-field count 1068
-field mean 5.404494382022472e-09
-field stddev 4.6536870916128945e-08
+field count 1489
+field mean 1.431296171927468e-09
+field stddev 1.118635466289524e-08
 field min 0
-field max 6.216e-07
-field sum 5.772e-06
-field sqrsum 2.34197568e-12
+field max 8.88e-08
+field sum 2.1312e-06
+field sqrsum 1.8925056000000003e-13
 bin	-inf	0
 bin	-0.5	0
 bin	-0.48	0
@@ -2513,7 +2513,7 @@ bin	-0.08000000000000002	0
 bin	-0.06	0
 bin	-0.03999999999999998	0
 bin	-0.020000000000000018	0
-bin	0	1068
+bin	0	1489
 bin	0.020000000000000018	0
 bin	0.040000000000000036	0
 bin	0.06000000000000005	0
@@ -2540,16 +2540,16 @@ bin	0.45999999999999996	0
 bin	0.48	0
 bin	0.5	0
 statistic MultiCell.eNodeB2.pppIf.queue outgoingPacketLengths:histogram
-field count 1068
+field count 1489
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 888576
-field sqrsum 739295232
+field sum 1238848
+field sqrsum 1030721536
 bin	-inf	0
 bin	831	0
-bin	832	1068
+bin	832	1489
 bin	833	0
 statistic MultiCell.eNodeB2.pppIf.queue flowQueueingTime:histogram
 field count 0
@@ -2563,16 +2563,16 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic MultiCell.eNodeB2.pppIf.queue incomingPacketLengths:histogram
-field count 1068
+field count 1489
 field mean 832
 field stddev 0
 field min 832
 field max 832
-field sum 888576
-field sqrsum 739295232
+field sum 1238848
+field sqrsum 1030721536
 bin	-inf	0
 bin	831	0
-bin	832	1068
+bin	832	1489
 bin	833	0
 statistic MultiCell.eNodeB2.x2ppp[0].queue queueingTime:histogram
 field count 0
