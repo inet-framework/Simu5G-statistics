@@ -1,8 +1,8 @@
 version 3
-run VoIP-UL-CrossLcg-0-20261118-09:49:30-1390667
+run VoIP-UL-CrossLcg-0-20261123-09:01:52-5859
 attr configname VoIP-UL-CrossLcg
-attr datetime 20261118-09:49:30
-attr datetimef 20261118-094930
+attr datetime 20261123-09:01:52
+attr datetimef 20261123-090152
 attr experiment VoIP-UL-CrossLcg
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network simu5g.simulations.nr.networks.SingleCell_Standalone
-attr processid 1390667
+attr processid 5859
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -78,7 +78,7 @@ config *.bearerConfigurator.drbProfiles "{\n    voice:  {gbr: true, packetDelayB
 config *.gnb.cellularNic.mac.schedulingDisciplineDl "\"QOS_PF\""
 config *.gnb.cellularNic.mac.schedulingDisciplineUl "\"QOS_PF\""
 config *.numUe 2
-config *.ue[*].cellularNic.nrPhy.dynamicCellAssociation false
+config *.ue[*].cellularNic.rrc.nrConnectionControl.dynamicCellAssociation false
 config *.ue[*].servingNodeId 0
 config *.ue[*].nrServingNodeId 1
 config *.ue[0].mobility.initialX 350m
@@ -881,7 +881,7 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:mean nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrPhy averageCqiDl:count 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver measuredSinrUl:mean 33.19880870792259
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver measuredSinrDl:mean 45.19880870792259
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:mean 32.037489726629815
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:mean 32.037628459336396
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrDl:mean nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.tx wastedGrantedBytes:sum 0
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRlc-um-1-1.tx sentPacketToLowerLayer:count 4548
@@ -6576,12 +6576,12 @@ scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrDl:vecto
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrDl:vector:starttime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrDl:vector:endtime nan
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:count 2403
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:sum 76986.08781309145
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:sum 76986.42118778537
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:sumweights 2403
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:mean 32.037489726629815
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:stddev 2.0332915002175693
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:mean 32.037628459336396
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:stddev 2.0333907514451366
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:min 29.2498356430296
-scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:max 34.025510152203644
+scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:max 34.06295300116291
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:starttime 0.013000000000000001
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver rcvdSinrUl:vector:endtime 19.985
 scalar SingleCell_Standalone.ue[0].cellularNic.nrRadio.receiver measuredSinrDl:vector:count 3334
