@@ -17,6 +17,22 @@ Simu5G repo for the tree, and set `PYTHON` (a python that loads OMNeT++'s scave 
 (opp_repl's source directory). A pass recorded against an older point rewrites files whose values equal
 the newer point's with only new run metadata (run id, date); keep the newer point's version of those.
 
+Writing a point's message
+-------------------------
+
+The subject names the Simu5G commit and a label: `Update statistical baselines for Simu5G dev (<hash>,
+<label>)`. Right after the opening paragraph, a section maps every commit the message names to its
+subject line, in the order of first mention, so that a reader need not look the hashes up:
+
+    Simu5G commits named here
+    -------------------------
+      c3ab8e2d4 LteSchedulerEnb: fix: a UE's allowed-band restriction also applied to the UEs scheduled after it in the slot
+      0363fed3f phy-fixes: tests/doc: chore: the model-deviation and open-defect lists leave the repository
+
+A commit of this repo is listed the same way, its subject marked `statistics:`; its hash changes when
+this history is rewritten. Then come the recording calls, the pass's counts, and the sections Method,
+What changed, Attribution and Why the new values are right.
+
 Analyzing a point
 -----------------
 
